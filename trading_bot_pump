@@ -1,85 +1,123 @@
 import requests
 import time
-import datetime
+import hmac
+import hashlib
 
-api_url = "https://poloniex.com/public"
-usdt_balance = 1000
+# Define the API URL and the USDT balance
+api_url = "https://api.poloniex.com/"
+api_key = "YOUR_API_KEY"
+secret_key = "YOUR_SECRET_KEY"
 
+# Define a function to generate the API signature
+def generate_signature(url_path, payload):
+    # Compose the request string
+    request_string = url_path + '\n' + payload
+    
+    # Generate the signature using HMAC-SHA256
+    signature = hmac.new(secret_key.encode(), request_string.encode(), hashlib.sha256).hexdigest()
+    
+    return signature
+
+# Define a function to make an authenticated request
+def make_request(method, url_path, params=None):
+    # Set the required headers
+    headers = {
+        'Content-Type': 'application/json',
+        'key': api_key,
+        'signatureMethod': 'HmacSHA256',
+        'signatureVersion': '2',
+        'signTimestamp': str(int(time.time() * 1000))
+    }
+    
+    # Generate the API signature
+    if params:
+        payload = '&'.join([f'{key}={params[key]}' for key in sorted(params.keys())])
+        signature = generate_signature(url_path, payload)
+        headers['signature'] = signature
+    else:
+        signature = generate_signature(url_path, '')
+        headers['signature'] = signature
+    
+    # Make the request
+    response = requests.request(method, api_url + url_path, headers=headers, params=params)
+    
+    # Check if the response is successful
+    if response.status_code == 200:
+        # Return the JSON data as a dictionary
+        return response.json()
+    else:
+        # Print an error message and return None
+        print(f"Error: {response.status_code}")
+        return None
+
+# Define a function to get the USDT balance
+def get_usdt_balance():
+    # Make a request to get the account balances
+    response = make_request('GET', '/account/balances')
+    
+    # Check if the response is valid
+    if response and 'balances' in response:
+        # Find the USDT balance
+        for balance in response['balances']:
+            if balance['currency'] == 'USDT':
+                return float(balance['available'])
+    
+    # Return None if the balance is not found or there was an error
+    return None
+
+# Define a function to get the current ticker data for all markets
 def get_ticker():
-    params = {"command": "returnTicker"}
-    response = requests.get(api_url, params=params)
-    if response.status_code == 200:
-        return response.json()
+    # Use the returnTicker method of the API
+    response = make_request('GET', '/public/ticker')
+    
+    # Return the ticker data
+    return response
+
+# Define a function to buy a coin at market price
+def buy(coin, amount):
+    # Use the buy method of the API
+    params = {
+        'symbol': coin,
+        'side': 'buy',
+        'type': 'market',
+        'quantity': str(amount)
+    }
+    
+    response = make_request('POST', '/orders', params)
+    
+    # Check if the response is successful
+    if response and 'orderId' in response:
+        # Return the order ID
+        return response['orderId']
     else:
-        print(f"Error: {response.status_code}")
+        # Print an error message and return None
+        print(f"Error: {response}")
         return None
 
-def buy(coin):
-    amount = (usdt_balance * 0.1) / ticker[coin]["last"]
-    params = {"command": "buy", "currencyPair": coin, "rate": ticker[coin]["last"], "amount": amount, "orderType": "fillOrKill"}
-    response = requests.post(api_url, params=params)
-    if response.status_code == 200:
-        return response.json()
+# Define a function to sell a coin at market price
+def sell(coin, amount):
+    # Use the sell method of the API
+    params = {
+        'symbol': coin,
+        'side': 'sell',
+        'type': 'market',
+        'quantity': str(amount)
+    }
+    
+    response = make_request('POST', '/orders', params)
+    
+    # Check if the response is successful
+    if response and 'orderId' in response:
+        # Return the order ID
+        return response['orderId']
     else:
-        print(f"Error: {response.status_code}")
+        # Print an error message and return None
+        print(f"Error: {response}")
         return None
 
-def sell(coin):
-    buy_price = db[coin]["buy_price"]
-    coin_amount = db[coin]["coin_amount"]
-    sell_price = buy_price * 2
-    params = {"command": "sell", "currencyPair": coin, "rate": sell_price, "amount": coin_amount, "orderType": "fillOrKill"}
-    response = requests.post(api_url, params=params)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        print(f"Error: {response.status_code}")
-        return None
+# Example usage
+usdt_balance = get_usdt_balance()
+print(f"USDT balance: {usdt_balance}")
 
-def save_price_data(data):
-    timestamp = datetime.datetime.now()
-    if 'price_data' not in globals():
-        globals()['price_data'] = {}
-    for coin, price in data.items():
-        if coin not in price_data:
-            price_data[coin] = []
-        price_data[coin].append((timestamp, price))
-
-prev_ticker = None
-db = {}
-elapsed_time = 0
-
-while True:
-    ticker = get_ticker()
-
-    for coin in ticker.keys():
-        if prev_ticker is not None:
-            curr_price = float(ticker[coin]["last"])
-            prev_price = float(prev_ticker[coin]["last"])
-            pct_change = ((curr_price - prev_price) / prev_price) * 100
-            
-            # Check if the price increased by 10% or more in less than 5 minutes
-            if pct_change >= 10 and elapsed_time <= 300:
-                result = buy(coin)
-                if result is not None:
-                    print(f"Bought {coin} at {curr_price}")
-                    db[coin] = {"buy_price": curr_price, "coin_amount": result["amount"]}
-
-        elif coin in db.keys():
-            buy_price = db[coin]["buy_price"]
-            pct_change = ((curr_price - buy_price) / buy_price) * 100
-            
-            # Sell the coin when the price is at least 100% higher than the buy price
-            if pct_change >= 100:
-                result = sell(coin)
-                if result is not None:
-                    print(f"Sold {coin} at {curr_price}")
-                    del db[coin]
-
-    elapsed_time += 30
-    if elapsed_time >= 300:
-        save_price_data(ticker)
-        elapsed_time = 0
-
-    prev_ticker = ticker
-    time.sleep(30)
+ticker_data = get_ticker()
+print(ticker_data)
