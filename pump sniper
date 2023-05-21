@@ -1,0 +1,114 @@
+python
+# Import the requests and time modules
+import requests
+import time
+
+# Define the API URL and the USDT balance
+api_url = "https://poloniex.com/public"
+usdt_balance = 1000 # Change this to your actual balance
+
+# Define a function to get the current ticker data for all markets
+def get_ticker():
+    # Use the returnTicker method of the API
+    params = {"command": "returnTicker"}
+    response = requests.get(api_url, params=params)
+    # Check if the response is successful
+    if response.status_code == 200:
+        # Return the JSON data as a dictionary
+        return response.json()
+    else:
+        # Print an error message and return None
+        print(f"Error: {response.status_code}")
+        return None
+
+# Define a function to buy a coin in market price by 10% of the balance
+def buy(coin):
+    # Calculate the amount of coins to buy
+    amount = (usdt_balance * 0.1) / ticker[coin]["last"]
+    # Use the buy method of the API
+    params = {"command": "buy", "currencyPair": coin, "rate": ticker[coin]["last"], "amount": amount, "orderType": "fillOrKill"}
+    response = requests.post(api_url, params=params)
+    # Check if the response is successful
+    if response.status_code == 200:
+        # Return the JSON data as a dictionary
+        return response.json()
+    else:
+        # Print an error message and return None
+        print(f"Error: {response.status_code}")
+        return None
+
+# Define a function to sell a coin in market price by 100% of the coin amount
+def sell(coin):
+    # Get the buy price and the coin amount from the database
+    buy_price = db[coin]["buy_price"]
+    coin_amount = db[coin]["coin_amount"]
+    # Calculate the sell price at +20% of the buy price
+    sell_price = buy_price * 1.2
+    # Use the sell method of the API
+    params = {"command": "sell", "currencyPair": coin, "rate": sell_price, "amount": coin_amount, "orderType": "fillOrKill"}
+    response = requests.post(api_url, params=params)
+    # Check if the response is successful
+    if response.status_code == 200:
+        # Return the JSON data as a dictionary
+        return response.json()
+    else:
+        # Print an error message and return None
+        print(f"Error: {response.status_code}")
+        return None
+
+# Define a variable to store the previous ticker data
+prev_ticker = None
+
+# Define a variable to store the database of trades (you can use any database you want)
+db = {}
+
+# Define an infinite loop to run the bot
+while True:
+    # Get the current ticker data for all markets
+    ticker = get_ticker()
+    
+    # Check if the ticker data is valid
+    if ticker is not None:
+        # Loop through all the coins in the ticker data
+        for coin in ticker.keys():
+            # Check if the previous ticker data exists
+            if prev_ticker is not None:
+                # Get the current and previous prices of the coin
+                curr_price = float(ticker[coin]["last"])
+                prev_price = float(prev_ticker[coin]["last"])
+                # Calculate the percentage change in 5 minutes
+                pct_change = ((curr_price - prev_price) / prev_price) * 100
+                
+                # Check if the percentage change is greater than or equal to 5%
+                if pct_change >= 5:
+                    # Buy the coin in market price by 10% of the balance
+                    result = buy(coin)
+                    # Check if the result is valid
+                    if result is not None:
+                        # Print a success message and store the buy price and coin amount in the database
+
+print(f"Bought {coin} at {curr_price}")
+                        db[coin] = {"buy_price": curr_price, "coin_amount": result["amount"]}
+                
+                # Check if the coin is in the database (meaning it was bought before)
+                elif coin in db.keys():
+                    # Get the buy price of the coin from the database
+                    buy_price = db[coin]["buy_price"]
+                    # Calculate the percentage change from the buy price
+                    pct_change = ((curr_price - buy_price) / buy_price) * 100
+                    
+                    # Check if the percentage change is greater than or equal to 20%
+                    if pct_change >= 20:
+                        # Sell the coin in market price by 100% of the coin amount
+                        result = sell(coin)
+                        # Check if the result is valid
+                        if result is not None:
+                            # Print a success message and delete the coin from the database
+                            print(f"Sold {coin} at {curr_price}")
+                            del db[coin]
+    
+    # Update the previous ticker data with the current ticker data            
+    prev_ticker = ticker
+    
+    # Wait for 5 minutes before repeating the loop (you can change this interval as you want)
+    time.sleep(300)
