@@ -1,0 +1,5875 @@
+   [1]NAV Navbar
+
+      [1] https://docs.legacy.poloniex.com/#returnchartdata
+
+   Logo
+   [2]shell
+   ____________________
+
+  https://docs.legacy.poloniex.com/#returnchartdata
+
+     * [3]Introduction
+     * [4]Getting Started
+          + [5]Sign Up
+          + [6]Create an API Key
+          + [7]Authenticate
+          + [8]Minimize Latency
+     * [9]HTTP API
+     * [10]Public HTTP API Methods
+          + [11]returnTicker
+          + [12]return24hVolume
+          + [13]returnOrderBook
+          + [14]returnTradeHistory (public)
+          + [15]returnChartData
+          + [16]returnCurrencies
+     * [17][DEL: Private HTTP API Methods :DEL]
+          + [18]returnBalances
+          + [19]returnCompleteBalances
+          + [20]returnDepositAddresses
+          + [21]generateNewAddress
+          + [22]returnDepositsWithdrawals
+          + [23]returnOpenOrders
+          + [24]returnTradeHistory (private)
+          + [25]returnOrderTrades
+          + [26]returnOrderStatus
+          + [27]buy
+          + [28]sell
+          + [29]cancelOrder
+          + [30]cancelAllOrders
+          + [31]cancelReplace
+          + [32]moveOrder
+          + [33]withdraw
+          + [34]returnFeeInfo
+          + [35]returnAvailableAccountBalances
+          + [36]transferBalance
+     * [37]Websocket API
+          + [38]Requests and Responses
+          + [39]Subscribing and Unsubscribing
+          + [40]Channel Descriptions
+          + [41][DEL: Account Notifications (Beta) :DEL]
+          + [42]Ticker Data
+          + [43]24 Hour Exchange Volume
+          + [44]Heartbeats
+          + [45]Price Aggregated Book
+     * [46]Reference
+          + [47]Currencies
+          + [48]Currency Pair IDs
+     * [49]Changelog
+          + [50]2023-02-28 Private HTTP API and Websockets
+            decommissioned
+          + [51]2022-07-13 KUB Listing
+          + [52]2022-07-06 WLKN Listing
+          + [53]2022-06-15 SHIT Listing
+          + [54]2022-05-31 USDH Listing
+          + [55]2022-05-31 HBB Listing
+          + [56]2022-05-26 XCN Listing
+          + [57]2022-05-25 FRAX Listing
+          + [58]2022-05-24 USDD_XRP,USDD_LTC,USDD_DOT,USDD_WLUNA
+            Market Listing
+          + [59]2022-05-24 MESH Listing
+          + [60]2022-05-19
+            USDD_BTC,USDD_ETH,USDD_TRX,USDD_BTT,USDD_NFT,USDD_JST,
+            USDD_WIN,USDD_SUN,USDD_TUSD,USDD_ELON,USDD_SHIB,USDD_D
+            OGE Market Listing
+          + [61]2022-05-17 GAL Listing
+          + [62]2022-05-12 USDC_USDD Market Listing
+          + [63]2022-05-11 FITFI Listing
+          + [64]2022-05-10 DAR Listing
+          + [65]2022-05-05 USDD Listing
+          + [66]2022-04-27 CAW Listing
+          + [67]2022-04-20 CEEK Listing
+          + [68]2022-04-19 NYM Listing
+          + [69]2022-04-19 CULT Listing
+          + [70]2022-04-15 ONSTON Listing
+          + [71]2022-04-14 Delisting markets for TRX_BRG and
+            USDT_BRG
+          + [72]2022-04-13 GMT Listing
+          + [73]2022-04-12 GEIST Listing
+          + [74]2022-04-07 STG Listing
+          + [75]2022-03-30 NVIR Listing
+          + [76]2022-03-29 AERGO Listing
+          + [77]2022-03-29 WLUNA Listing
+          + [78]2022-03-24 LQDR Listing
+          + [79]2022-03-23 SPIRIT Listing
+          + [80]2022-03-22 STRONG Listing
+          + [81]2022-03-18 APE Listing
+          + [82]2022-03-16 JPEG Listing
+          + [83]2022-03-09 ALPINE Listing
+          + [84]2022-03-08 MAGIC Listing
+          + [85]2022-03-08 X2Y2 Listing
+          + [86]2022-03-08 UMEE Listing
+          + [87]2022-03-03 VOXEL Listing
+          + [88]2022-03-03 RNDR Listing
+          + [89]2022-03-03 RND Listing
+          + [90]2022-03-03 SUKU Listing
+          + [91]2022-03-02 TITAN Listing
+          + [92]2022-02-23 ORCA Listing
+          + [93]2022-02-23 SAMO Listing
+          + [94]2022-02-23 ATLAS Listing
+          + [95]2022-02-23 POLIS Listing
+          + [96]2022-02-23 FIDA Listing
+          + [97]2022-02-23 STEP Listing
+          + [98]2020-06-19 Delisting Markets for BTC_BCHA,
+            USDT_BCHA and USDT_BZRX
+          + [99]2022-02-17 SHPING Listing
+          + [100]2022-02-17 VRA Listing
+          + [101]2022-02-17 HUNT Listing
+          + [102]2022-02-17 NCT Listing
+          + [103]2022-02-16 LIT Listing
+          + [104]2022-02-16 STRK Listing
+          + [105]2022-02-16 UNFI Listing
+          + [106]2022-02-15 GODS Listing
+          + [107]2022-02-15 LOKA Listing
+          + [108]2022-02-15 MQST Listing
+          + [109]2022-02-08 FTM Listing
+          + [110]2022-01-26 LOOKS Listing
+          + [111]2022-01-26 BTRFLY Listing
+          + [112]2022-01-19 CTC Listing
+          + [113]2022-01-13 METIS Listing
+          + [114]2021-01-13 FREE Listing
+          + [115]2021-01-13 HIGH Listing
+          + [116]2021-01-13 SOS Listing
+          + [117]2022-01-12 QI Listing
+          + [118]2022-01-12 JOE Listing
+          + [119]2022-01-06 ADA Listing
+          + [120]2022-01-05 BICO Listing
+          + [121]2021-12-30 PYR Listing
+          + [122]2021-12-30 NCR Listing
+          + [123]2021-12-29 REQ Listing
+          + [124]2021-12-29 VADER Listing
+          + [125]2021-12-29 TIME Listing
+          + [126]2021-12-24 JBX Listing
+          + [127]2021-12-24 RBN Listing
+          + [128]2021-12-23 BLZ Listing
+          + [129]2021-12-23 GF Listing
+          + [130]2021-12-23 SFP Listing
+          + [131]2021-12-14 REVV Listing
+          + [132]2021-12-09 GODZ Listing
+          + [133]2021-12-09 SSG Listing
+          + [134]2021-12-09 BNX Listing
+          + [135]2021-12-08 GMEEBSC Listing
+          + [136]2021-12-07 DORA Listing
+          + [137]2021-12-01 XDEFI Listing
+          + [138]2021-12-01 MPL Listing
+          + [139]2021-12-01 PSP Listing
+          + [140]2021-11-30 NEXO Listing
+          + [141]2021-11-30 ANGLE Listing
+          + [142]2021-11-30 PRINTS Listing
+          + [143]2021-11-30 UDT Listing
+          + [144]2021-11-30 RARE Listing
+          + [145]2021-11-30 CRO Listing
+          + [146]2021-11-26 PEOPLE Listing
+          + [147]2021-11-25 ANY Listing
+          + [148]2021-11-25 DYP Listing
+          + [149]2021-11-25 TRIBE Listing
+          + [150]2021-11-25 KEEP Listing
+          + [151]2021-11-24 FREN Listing
+          + [152]2021-11-24 HEX Listing
+          + [153]2021-11-24 FXS Listing
+          + [154]2021-11-24 MC Listing
+          + [155]2021-11-23 POLYDOGE Listing
+          + [156]2021-11-23 RACA Listing
+          + [157]2021-11-22 SOL Listing
+          + [158]2021-11-22 BOBA Listing
+          + [159]2021-11-17 O3 Listing
+          + [160]2021-11-10 DOE Listing
+          + [161]2021-11-08 USDC_SHIB Market Listing
+          + [162]2021-11-08 SQUID Listing
+          + [163]2021-11-03 ERN Listing
+          + [164]2021-11-03 LEASH Listing
+          + [165]2021-11-03 eRSDL Listing
+          + [166]2021-11-02 ILV Listing
+          + [167]2021-11-02 SUPER Listing
+          + [168]2021-11-02 TLM Listing
+          + [169]2021-11-02 OGN Listing
+          + [170]2021-11-02 SLP Listing
+          + [171]2021-10-27 LATTE Listing
+          + [172]2021-10-26 IDIA Listing
+          + [173]2021-10-25 EFI Listing
+          + [174]2021-10-22 WOOBSC Listing
+          + [175]2021-10-22 WOO Listing
+          + [176]2021-10-21 WNCG Listing
+          + [177]2021-10-20 CHZ Listing
+          + [178]2021-10-20 ENJ Listing
+          + [179]2021-10-20 SPELL Listing
+          + [180]2021-10-20 CHESS Listing
+          + [181]2021-10-20 ICE Listing
+          + [182]2021-10-20 MLN Listing
+          + [183]2021-10-13 TOKE Listing
+          + [184]2021-10-13 FLOKIBSC Listing
+          + [185]2021-10-13 FLOKI Listing
+          + [186]2021-10-13 BTRST Listing
+          + [187]2021-10-13 BIFI Listing
+          + [188]2021-10-13 UMBBSC Listing
+          + [189]2021-10-13 UMB Listing
+          + [190]2021-09-16 markets listings
+          + [191]2021-09-15 LDO Listing
+          + [192]2021-09-15 XCADBSC Listing
+          + [193]2021-09-15 XCAD Listing
+          + [194]2021-09-14 GALABSC Listing
+          + [195]2021-09-14 GALA Listing
+          + [196]2021-09-09 BP Listing
+          + [197]2021-09-08 DYDX Listing
+          + [198]2021-09-03 AGLD Listing
+          + [199]2021-09-06 MATTER Listing
+          + [200]2021-09-02 DFA Listing
+          + [201]2021-08-27 LUMI Listing
+          + [202]2021-08-27 OSK Listing
+          + [203]2021-08-16 C98ETH Listing
+          + [204]2021-08-16 CLVBSC Listing
+          + [205]2021-08-16 CLV Listing
+          + [206]2021-08-12 ACH1 Listing
+          + [207]2021-08-09 BUSDBSC Listing
+          + [208]2021-08-06 PERP Listing
+          + [209]2021-07-30 C98 Listing
+          + [210]2021-07-26 ALPACA Listing
+          + [211]2021-07-26 BabyDoge Listing
+          + [212]2021-07-23 CAKE，XVS，EPS，AUTO，BURGER, NRV Listing
+          + [213]2021-07-01 POL Listing
+          + [214]2021-06-30 OKB Listing
+          + [215]2021-06-18 Multi Channel Websocket Subscriptions
+          + [216]2021-08-17 AUDIO Listing
+          + [217]2021-08-17 RD Listing
+          + [218]2021-08-16 ALICE Listing
+          + [219]2021-08-16 YGG Listing
+          + [220]2021-07-12 YFX Listing
+          + [221]2021-07-12 AXS Listing
+          + [222]2021-07-02 USDCTRON Listing
+          + [223]2021-08-30 COOL Listing
+          + [224]2021-08-30 MASK Listing
+          + [225]2021-08-30 GLYPH Listing
+          + [226]2021-08-30 PUNK Listing
+          + [227]2021-08-20 MBOX Listing
+          + [228]2021-08-20 BIT Listing
+          + [229]2021-06-08 Millisecond Websocket Timestamps
+          + [230]2021-05-28 GTC Listing
+          + [231]2021-05-21 NFT Listing
+          + [232]2021-05-18 MVL Listing
+          + [233]2021-04-28 April 2021 markets delistings
+          + [234]2021-04-28 KCS Listing
+          + [235]2021-04-27 ELON, MIST Listing
+          + [236]2021-04-25 LUSD, LQTY, WHALE, NFTX, MIR, UST,
+            DEGO Listing
+          + [237]2021-04-23 FORTH Listing
+          + [238]2021-04-22 KLV Listing
+          + [239]2021-04-21 B20 Listing
+          + [240]2021-04-17 SHIB, AKITA Listing
+          + [241]2021-04-16 LIVE Listing
+          + [242]2021-04-14 Update multiChain currency
+            documentation
+          + [243]2021-04-13 FIL Listing
+          + [244]2021-04-08 SFI Listing
+          + [245]2021-04-06 BTCST Listing
+          + [246]2021-04-01 postOnly field added to returnTicker
+            and returnOrderBook endpoints. postOnly and
+            Maintenance Mode fields added to Ticker Data websocket
+          + [247]2021-03-18 ADD Listing
+          + [248]2021-03-17 BDP Listing
+          + [249]2021-02-22 BRG Listing
+          + [250]2021-02-19 VSP Listing
+          + [251]2021-02-16 ZKS Listing
+          + [252]2021-02-10 Swap Currencies API
+          + [253]2021-02-05 ALPHA Listing
+          + [254]2020-02-03 TUSD Market Listing
+          + [255]2021-01-22 FTT, SRM Listing and new LPT market
+            added
+          + [256]2021-01-21 TRU, WETH Listing
+          + [257]2021-01-20 ADABEAR, ADABULL, LTCBEAR, LTCBULL,
+            XLMBEAR, XLMBULL Listing
+          + [258]2021-01-19 TUSD Listing
+          + [259]2021-01-14 COMBO Listing
+          + [260]2021-01-13 BOND and PBTC35A Listing
+          + [261]2021-01-12 CUDOS Listing
+          + [262]2021-01-06 LON Listing
+          + [263]2020-12-30 WBTCTRON, BAC, BAS, and REEF Listing
+          + [264]2020-12-24 ONEINCH Listing
+          + [265]2020-12-21 ESD and XFLR Listing
+          + [266]2020-12-18 SUN Listing
+          + [267]2020-12-18 GRT Listing
+          + [268]2020-12-17 DOT Listing
+          + [269]2020-12-16 FARM Listing
+          + [270]2020-12-08 BADGER Listing
+          + [271]2020-12-07 COVER Listing
+          + [272]2020-12-04 API3, FRONT Listing
+          + [273]2020-12-01 NU Listing
+          + [274]2020-11-30 GLM Listing, GNT Delisting
+          + [275]2020-11-25 WBTC Listing
+          + [276]2020-11-24 ZLOT, HEGIC Listing
+          + [277]2020-11-23 MPH Listing
+          + [278]2020-11-20 KP3R Listing
+          + [279]2020-11-17 SENSO Listing
+          + [280]2020-11-15 BCH Listing, BCHABC, BCHN, TRUMPWIN,
+            TRUMPLOSE Delisting
+          + [281]2020-11-11 STRAT Delisting
+          + [282]2020-11-05 returnOpenOrders output field added
+          + [283]2020-10-29 INJ Listing
+          + [284]2020-10-27 Added multiChain Currencies
+          + [285]2020-10-16 BID Listing
+          + [286]2020-10-09 BCHA, BCHN Listing
+          + [287]2020-10-08 AAVE Listing
+          + [288]2020-09-28 POLS Listing
+          + [289]2020-09-29 BREE, VALUE Listing
+          + [290]2020-09-28 RFUEL Listing
+          + [291]2020-09-25 AMP Listing
+          + [292]2020-09-25 SAND Listing
+          + [293]2020-09-23 REPV2, RARI, MEXP Listing
+          + [294]2020-09-22 GHST CVP Listing
+          + [295]2020-09-21 MEME Listing
+          + [296]2020-09-18 DHT Listing
+          + [297]2020-09-17 UNI Listing
+          + [298]2020-09-16 ADEL AKRO Listing
+          + [299]2020-09-15 M messages [300]websocket-api
+          + [301]2020-09-14 HGET Listing
+          + [302]2020-09-11 SUN Listing
+          + [303]2020-09-10 CREAM Listing
+          + [304]2020-09-09 FUND, SWRV, FSW Listings
+          + [305]2020-09-04 PEARL, ANK, JFI, CRT, SAL, CORN
+            Listings
+          + [306]2020-09-02 YFV, YFL, TAI Listings
+          + [307]2020-09-01 FCT2, SUSHI, YFII Listings
+          + [308]2020-08-26 RSR and WNXM Listing
+          + [309]2020-08-25 DMG Listing
+          + [310]2020-08-21 OPT, SWINGBY, and PRQ Listings
+          + [311]2020-08-18 BLY Listing
+          + [312]2020-08-18 OCEAN Listing
+          + [313]2020-08-17 OM Listing
+          + [314]2020-08-13 DOT, DEXT, MCB, and CRV Listings
+          + [315]2020-08-12 SBREE, PERX, and TRB Listings
+          + [316]2020-08-11 DOS, DIA, ZAP Listings
+          + [317]2020-08-10 BAND Listing
+          + [318]2020-08-06 GEEQ Listing
+          + [319]2020-08-05 [320]transferBalance update
+          + [321]2020-08-02 TRADE and EXE Listings
+          + [322]2020-08-02 TEND Listing
+          + [323]2020-08-01 SWAP Listings
+          + [324]2020-07-31 KTON and RING Listings
+          + [325]2020-07-30 UMA Listing
+          + [326]2020-07-27 PLT Listing
+          + [327]2020-07-26 DEC Listing
+          + [328]2020-07-24 TRUMPWIN and TRUMPLOSE Listings
+          + [329]2020-07-22 STPT Listings
+          + [330]2020-07-21 YFI Listing
+          + [331]2020-07-18 MTA Listing
+          + [332]2020-07-17 SXP Listings
+          + [333]2020-07-13 BZRX Listing
+          + [334]2020-07-09 STAKE Listing
+          + [335]2020-06-30 Withdraw API changes
+          + [336]2020-06-25 WRX Listings
+          + [337]2020-06-24 LEND, REN, LRC, and BAL Listings
+          + [338]2020-06-19 Delisting Markets for BTC_GRIN,
+            ETH_REP and USDT_NXT
+          + [339]2020-06-19 XFIL and CUSDT Listings
+          + [340]2020-06-17 COMP Listings
+          + [341]2020-06-12 BCHC Listing
+          + [342]2020-06-10 Token Fee API changes
+          + [343]2020-06-05 BNB, BUSD, MDT Listings
+          + [344]2020-05-22 CHR Listings
+          + [345]2020-05-20 Delisting Markets for BTC_BCN ad
+            BTC_BTT
+          + [346]2020-05-15 EOSBEAR, EOSBULL, LINKBEAR, LINKBULL,
+            XRPBEAR, XRPBULL Listings
+          + [347]2020-05-12 AVA Listings
+          + [348]2020-05-08 New Markets for BCN, STEEM, LINK, BTT
+          + [349]2020-05-08 FXC Listings
+          + [350]2020-05-07 JST Listings
+          + [351]2020-05-05 SWFTC Listings
+          + [352]2020-05-01 NEO Listings
+          + [353]2020-04-29 DAI Listings
+          + [354]2020-04-23 BVOL and IBVOL Listings
+          + [355]2020-04-17 MKR Listing
+          + [356]2020-04-14 BCHBEAR, BCHBULL, ETHBEAR, ETHBULL
+            Listings
+          + [357]2020-04-10 MATIC Listing
+          + [358]2020-04-09 BSVBEAR and BSVBULL Listings
+          + [359]2020-04-02 SNX Listing
+          + [360]2020-03-31 PAX and USDJ Listings
+          + [361]2020-03-26 BULL, BEAR, TRXBULL, TRXBEAR Listings
+          + [362]2020-03-24 XTZ Listing
+          + [363]2020-03-12 LINK Listing
+          + [364]2020-03-05 STEEM Listing
+          + [365]2020-02-13 WIN Listing
+          + [366]2020-02-06 BTT Listing
+          + [367]2020-01-22 Clarifications to returnOpenOrders doc
+          + [368]2020-01-16 ETHBNT Listing
+          + [369]2019-12-30 Currency delistings
+          + [370]2019-11-19 Cancel order by clientOrderId
+          + [371]2019-11-12 TRX Listing
+          + [372]2019-10-15 Currency delistings
+          + [373]2019-08-20 Updates to clientOrderId documentation
+          + [374]2019-08-16 XMR base delisting
+          + [375]2019-08-06 "k" and "p" account notifications
+          + [376]2019-07-29 Updates to clientOrderId documentation
+          + [377]2019-07-24 Add clientOrderId to private http
+            methods and websocket messages
+          + [378]2019-07-12 Newly listed USDC/T market IDs
+          + [379]2019-06-26 Add currencyToWithdrawAs to withdraw
+          + [380]2019-06-13 Add adjustments to
+            returnDepositWithdrawals
+          + [381]2019-06-12 Update returnTradeHistory response to
+            reflect new max
+          + [382]2019-06-12 Additional fields to channel 1000 o
+            message
+          + [383]2019-06-04 cancelAllOrders trading method added
+          + [384]2019-05-09 Additional fields to channel 1000 t
+            message
+          + [385]2019-05-08 Additional fields to buy and sell
+            response
+          + [386]2019-04-04 Additional fields to
+            returnDepositsWithdrawals response.
+          + [387]2019-03-29 TLS 1.2 or greater required.
+          + [388]2019-03-28 Add minimize latency instructions.
+          + [389]2019-03-22 Margin parameters clarified.
+          + [390]2018-12-27 API documentation overhaul
+          + [391]2018-09-25 Order status trading method added
+          + [392]2018-09-16 Account notification channel added
+
+Introduction
+
+     Setup
+
+# make sure you have curl installed
+
+   Poloniex provides both HTTP and websocket APIs for interacting
+   with the exchange. Both allow read access to public market data
+   and private read access to your account. Private write access
+   to your account is available via the private HTTP API.
+
+   The public HTTP endpoint is accessed via GET requests while the
+   private endpoint is accessed via HMAC-SHA512 signed POST
+   requests using [393]API keys. Both types of HTTP endpoints
+   return results in JSON format.
+
+    [393] https://poloniex.com/apiKeys
+
+   The websocket API allows push notifications about the public
+   order books, lend books and your private account. Similarly to
+   the HTTP API, it requires HMAC-SHA512 signed requests using
+   [394]API keys for requests related to your private account.
+   Please note that the legacy Private HTTP API and Websockets
+   Channel (Account Notifications) have been decommissioned as of
+   Feb 28th, 2023.
+
+    [394] https://poloniex.com/apiKeys
+
+Getting Started
+
+Sign Up
+
+   If you do not have a Poloniex account yet, use the button below
+   to sign up.
+
+   [395]Sign Up
+
+    [395] https://poloniex.com/signup/
+
+Create an API Key
+
+   Once you are verified and have an account, you can create an
+   API Key.
+
+   Enabling IP address restrictions for API keys is strongly
+   recommended. Withdrawals are disabled by default and must be
+   enabled on a per key basis.
+
+   As the name implies, your secret must remain private! If you
+   suspect your key has been compromised, immediately disable that
+   key and generate a new one.
+
+Authenticate
+
+# Find the HMAC-SHA512 signature of your POST parameters
+# using your secret key. Set the nonce to the current
+# milliseconds. (available with date +%s00000)
+ echo -n "command=returnBalances&nonce=154264078495300" | \
+openssl sha512 -hmac $API_SECRET
+# You will use this signature as a header in your request.
+# For example:
+ curl -X POST \
+     -d "command=returnBalances&nonce=154264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+   TLS 1.2 or greater is required. The public endpoint does not
+   require API keys or nonces. So if you are only interested in
+   the public endpoints, skip ahead [396]here.
+
+    [396] https://docs.legacy.poloniex.com/#public-http-api-methods
+
+   Private HTTP endpoints are authenticated using HMAC-SHA512
+   signed POST request.
+
+   Private HTTP endpoints also require a nonce, which must be an
+   integer greater than the previous nonce used. There is no
+   requirement that nonces increase by a specific amount, so the
+   current epoch time in milliseconds is an easy choice. As each
+   API key has its own nonce tracking, using a different key for
+   each client process can greatly simplify nonce management.
+
+Minimize Latency
+
+   If you will be performing high-frequency trading, you may wish
+   to locate your bots as close to our servers as possible. As
+   Poloniex uses Cloudflare for all requests, you can minimize
+   network latency by positioning your client near the Cloudflare
+   gateway in Dublin, Ireland. You can identify which Cloudflare
+   gateway your client is accessing by running this command on the
+   same machine as your bot:
+
+   curl -s https://www.cloudflare.com/cdn-cgi/trace
+
+   Cloudflare’s Dublin data center will return a “colo” field of
+   “DUB”. If you get a different “colo” value, you can look up the
+   location at [397]https://www.cloudflarestatus.com.
+
+    [397] https://www.cloudflarestatus.com/
+
+HTTP API
+
+   Please note that the Private HTTP API endpoints have been
+   decommissioned as of Feb 28th, 2023.
+
+   The HTTP API allows read access to public market data through
+   the public endpoint and read / write access to your private
+   account via the private endpoint.
+     * Public HTTP Endpoint: https://poloniex.com/public
+     * [DEL: Private HTTP Endpoint:
+       https://poloniex.com/tradingApi :DEL]
+
+   Please note that there is a default limit of 6 calls per
+   second. If you require more than this, please consider
+   optimizing your application using the websocket-based push API,
+   the "moveOrder" command, or the "all" parameter where
+   appropriate.
+
+   Making more than 6 calls per second to the API, or repeatedly
+   and needlessly fetching excessive amounts of data, can result
+   in rate limit. Please be careful.
+   If your account's volume is over $5 million in 30 day volume,
+   you may be eligible for an API rate limit increase. Please
+   email api-support@poloniex.com.
+
+   While the adapter aims to mimic existing error messages, there
+   maybe instances where native NTS messages maybe sent back. For
+   a list of NTS error messages and description, refer to his
+   [398]page.
+
+    [398] https://docs.poloniex.com/#error-codes
+
+Public HTTP API Methods
+
+   The public HTTP API allows read access to public market data.
+   Public HTTP URL: `https://poloniex.com/public`
+
+   There are seven public methods, all of which take HTTP GET
+   requests and return output in JSON format. No authentication is
+   necessary but you must not excessively use any API endpoint.
+
+returnTicker
+
+curl "https://poloniex.com/public?command=returnTicker"
+
+     Example output:
+
+{
+  "BTC_BTS": {
+    "id": 14,
+    "last": "0.00000090",
+    "lowestAsk": "0.00000091",
+    "highestBid": "0.00000089",
+    "percentChange": "-0.02173913",
+    "baseVolume": "0.28698296",
+    "quoteVolume": "328356.84081156",
+    "isFrozen": "0",
+    "postOnly": "0",
+    "high24hr": "0.00000093",
+    "low24hr": "0.00000087"
+  },
+  ...
+  "USDT_BTC": {
+    "id": 121,
+    "last": "49180.04839060",
+    "lowestAsk": "49180.04839060",
+    "highestBid": "49180.04839059",
+    "percentChange": "0.03239621",
+    "baseVolume": "21455272.54522586",
+    "quoteVolume": "443.41063575",
+    "isFrozen": "0",
+    "postOnly": "0",
+    "high24hr": "49752.00000000",
+    "low24hr": "46906.00000001"
+  },
+  ...
+}
+
+   Retrieves summary information for each currency pair listed on
+   the exchange. Fields include:
+    Field                            Description
+id            Id of the [399]currency pair.
+last          Execution price for the most recent trade for this pair.
+lowestAsk     Lowest current purchase price for this asset.
+highestBid    Highest current sale price for this asset.
+percentChange Price change percentage.
+baseVolume    Base units traded in the last 24 hours.
+quoteVolume   Quoted units traded in the last 24 hours.
+isFrozen      Indicates if this market is currently trading or not.
+postOnly      Indicates that orders posted to the market (new or
+              move) must be non-matching orders (no taker orders) or
+              canceling open orders. Any orders that would match will be
+              rejected.
+high24hr      The highest execution price for this pair within the
+              last 24 hours.
+low24hr       The lowest execution price for this pair within the
+              last 24 hours.
+
+return24hVolume
+
+curl "https://poloniex.com/public?command=return24hVolume"
+
+     Example output:
+
+{
+  "BTC_BTS": {
+    "BTC": "0.28698296",
+    "BTS": "328356.84081156"
+  },
+  "BTC_DASH": {
+    "BTC": "2.76826447",
+    "DASH": "772.39249875"
+  },
+  ...
+  "USDT_GALA": {
+    "USDT": "159400.83431099",
+    "GALA": "1404670.60477026"
+  },
+  "USDT_LDO": {
+    "USDT": "820.43295648",
+    "LDO": "176.31494943"
+  },
+  "totalBNB": "80.61963620",
+  "totalBTC": "506.66466525",
+  "totalBUSD": "15973.37129908",
+  ...
+}
+
+   Returns the 24-hour volume for all markets as well as totals
+   for primary currencies.
+
+   Primary currencies include BTC, ETH, USDT, USDC and show the
+   total amount of those tokens that have traded within the last
+   24 hours.
+
+returnOrderBook
+
+curl "https://poloniex.com/public?command=returnOrderBook&currencyPair=B
+TC_ETH&depth=10"
+
+     Example output for a selected market:
+
+{
+  "asks": 
+    ["0.06888014", 0.1],
+    ["0.06888703", 0.3],
+    ["0.06890651", 1],
+    ["0.06896540", 0.6],
+    ["0.06898010", 1.75],
+    ...
+  ],
+  "bids": 
+    ["0.06887324", 3.1627875],
+    ["0.06886100", 2.8904],
+    ["0.06885672", 3],
+    ["0.06885041", 1],
+    ["0.06884079", 1],
+    ...
+  ],
+  "isFrozen": "0",
+  "postOnly": "0",
+  "seq": 1262665345
+}
+
+     Example output for all markets:
+
+{
+  "BNB_BTC": {
+    "asks": 
+      ["113.90282403", 0.02483093],
+      ["113.90282404", 0.01847366],
+      ["114.03696289", 0.06077702],
+      ["114.13419224", 0.08432126],
+      ["114.34696465", 0.13130041],
+      ["114.83432417", 0.00386902],
+      ...
+    ],
+    "bids": 
+      ["113.61773972", 2.41307615],
+      ["113.61773971", 0.0445437],
+      ["113.44830015", 0.08592003],
+      ["113.38887620", 0.13449067],
+      ["112.90808778", 0.00386902],
+      ["112.11320237", 0.00386902],
+      ["111.32391303", 0.00386902],
+      ...
+    ],
+    "isFrozen": "0",
+    "postOnly": "0",
+    "seq": 25226402
+  },
+  "BTC_AAVE": {
+    "asks": 
+      ["0.00609332", 2.67066169],
+      ["0.00609549", 0.6],
+      ["0.00610125", 0.03944773],
+      [ "0.00610277", 0.03944773 ],
+      [ "0.00610429", 0.06565988 ],
+      [ "0.00611402", 0.08562535 ],
+      ...
+    ],
+    "bids": 
+      [ "0.00606959", 3.04364294 ],
+      [ "0.00606821", 2.275409 ],
+      [ "0.00606176", 0.03944773 ],
+      [ "0.00606117", 0.6 ],
+      [ "0.00606024", 0.03944773 ],
+      ["0.00605872", 0.06565988],
+      ...
+    ],
+    "isFrozen": "0",
+    "postOnly": "0",
+    "seq": 35130519
+  },
+  ...
+}
+
+   Returns the order book for a given market, as well as a
+   sequence number used by websockets for synchronization of book
+   updates and an indicator specifying whether the market is
+   frozen. You may set currencyPair to "all" to get the order
+   books of all markets.
+   Consider using the [400]Websocket API over HTTP if you are
+   looking for fresh and full order book depth.
+   Request Parameter                   Description
+   currencyPair      A string that defines the market, "USDT_BTC" for
+                     example. Use "all" for all markets.
+   depth (optional)  Default depth is 50. Max depth is 100.
+    Field                          Description
+   asks     An array of price aggregated offers in the book ordered
+            from low to high price.
+   bids     An array of price aggregated bids in the book ordered from
+            high to low price.
+   isFrozen Indicates if trading the market is currently disabled
+            or not.
+   postOnly Indicates that orders posted to the market (new or
+            move) must be non-matching orders (no taker orders) or
+            canceling open orders. Any orders that would match will be
+            rejected.
+   seq      An always-incrementing sequence number for this market.
+
+returnTradeHistory (public)
+
+curl "https://poloniex.com/public?command=returnTradeHistory&currencyPai
+r=BTC_ETH"
+curl "https://poloniex.com/public?command=returnTradeHistory&currencyPai
+r=BTC_ETH&start=1410158341&end=1410499372"
+
+     Example output:
+
+
+  {
+    "globalTradeID": 606194436,
+    "tradeID": 52944618,
+    "date": "2021-10-05 12:54:30",
+    "type": "buy",
+    "rate": "0.06915192",
+    "amount": "0.00000028",
+    "total": "0.00000001",
+    "orderNumber": 971265513397
+  },
+  {
+    "globalTradeID": 606194367,
+    "tradeID": 52944617,
+    "date": "2021-10-05 12:54:21",
+    "type": "sell",
+    "rate": "0.06915191",
+    "amount": "0.01312015",
+    "total": "0.00090728",
+    "orderNumber": 971265497413
+  },
+  ...
+  {
+    "globalTradeID": 606171120,
+    "tradeID": 52944420,
+    "date": "2021-10-05 11:53:25",
+    "type": "buy",
+    "rate": "0.06904785",
+    "amount": "0.00167444",
+    "total": "0.00011561",
+    "orderNumber": 971243851081
+  },
+  {
+    "globalTradeID": 606171032,
+    "tradeID": 52944419,
+    "date": "2021-10-05 11:53:09",
+    "type": "sell",
+    "rate": "0.06903077",
+    "amount": "0.00189262",
+    "total": "0.00013064",
+    "orderNumber": 971243752180
+  }
+]
+
+   Returns the past 200 trades for a given market, or up to 1,000
+   trades between a range specified in UNIX timestamps by the
+   "start" and "end" GET parameters. Fields include:
+   Field Description
+   globalTradeID The globally unique ID associated with this
+   trade.
+   tradeID The ID unique only to this currency pair associated
+   with this trade.
+   date The UTC date and time of the trade execution.
+   type Designates this trade as a buy or a sell from the side of
+   the taker.
+   rate The price. Units are market quote currency. Eg USDT_BTC
+   market, the value of this field would be around 10,000.
+   Naturally this will be dated quickly but should give the idea.
+   amount The number of units transacted in this trade.
+   total The total price in base units for this trade.
+   orderNumber The order number for this trade.
+
+returnChartData
+
+curl "https://poloniex.com/public?command=returnChartData&currencyPair=B
+TC_XMR&start=1546300800&end=1546646400&period=14400"
+
+     Example output:
+
+
+  {
+    "date": 1546300800000,
+    "high": 0.01232199,
+    "low": 0.012105,
+    "open": 0.01227412,
+    "close": 0.01224702,
+    "volume": 11.47474031,
+    "quoteVolume": 938.52999477,
+    "weightedAverage": 0.01222629
+  },
+  {
+    "date": 1546315200000,
+    "high": 0.01235758,
+    "low": 0.01218015,
+    "open": 0.01225446,
+    "close": 0.01223056,
+    "volume": 6.96543437,
+    "quoteVolume": 567.59424307,
+    "weightedAverage": 0.01227185
+  },
+  ...
+  {
+    "date": 1546632000000,
+    "high": 0.0132792,
+    "low": 0.01295671,
+    "open": 0.01319002,
+    "close": 0.01305004,
+    "volume": 24.87041766,
+    "quoteVolume": 1899.11915962,
+    "weightedAverage": 0.01309576
+  },
+  {
+    "date": 1546646400000,
+    "high": 0.01327921,
+    "low": 0.01304031,
+    "open": 0.01305003,
+    "close": 0.01319001,
+    "volume": 16.09959947,
+    "quoteVolume": 1221.53356545,
+    "weightedAverage": 0.01317982
+  }
+]
+
+   Returns candlestick chart data. Required GET parameters are
+   "currencyPair", "period" (candlestick period in seconds; valid
+   values are 300, 900, 1800, 7200, 14400, and 86400), "start",
+   and "end". "Start" and "end" are given in UNIX timestamp format
+   and used to specify the date range for the data returned.
+   Fields include:
+
+Input Fields
+
+      Field                           Description
+   currencyPair A string that defines the market, "USDT_BTC" for
+                example.
+   period       Candlestick period in seconds. Valid values are 300,
+                900, 1800, 7200, 14400, and 86400.
+   start        The start of the window in seconds since the unix epoch.
+   end          The end of the window in seconds since the unix epoch.
+
+Output Fields
+
+   Field Description
+   date The UTC date for this candle in miliseconds since the Unix
+   epoch.
+   high The highest price for this asset within this candle.
+   low The lowest price for this asset within this candle.
+   open The price for this asset at the start of the candle.
+   close The price for this asset at the end of the candle.
+   volume The total amount of this asset transacted within this
+   candle.
+   quoteVolume The total amount of base currency transacted for
+   this asset within this candle.
+   weightedAverage The average price paid for this asset within
+   this candle.
+
+returnCurrencies
+
+curl "https://poloniex.com/public?command=returnCurrencies"
+
+     Example output:
+
+{
+  "1CR": {
+        "id": 1,
+        "name": "1CRedit",
+        "humanType": "BTC Clone",
+        "currencyType": "address",
+        "txFee": "0.01000000",
+        "minConf": 10000,
+        "depositAddress": null,
+        "disabled": 1,
+        "frozen": 0,
+        "hexColor": "068485",
+        "blockchain": "1CR",
+        "delisted": 1,
+        "isGeofenced": 0
+    },
+    "AAVE": {
+        "id": 446,
+        "name": "Aave",
+        "humanType": "Sweep to Main Account",
+        "currencyType": "address",
+        "txFee": "0.62301334",
+        "minConf": 12,
+        "depositAddress": null,
+        "disabled": 0,
+        "frozen": 0,
+        "hexColor": "8179a9",
+        "blockchain": "ETH",
+        "delisted": 0,
+        "isGeofenced": 0
+    },
+    ...
+    "ZLOT": {
+    "id": 460,
+    "name": "zLOT",
+    "humanType": "Sweep to Main Account",
+    "currencyType": "address",
+    "txFee": "0.84628508",
+    "minConf": 12,
+    "depositAddress": null,
+    "disabled": 0,
+    "frozen": 0,
+    "hexColor": "DAE2E3",
+    "blockchain": "ETH",
+    "delisted": 0,
+    "isGeofenced": 0
+    },
+    "ZRX": {
+    "id": 293,
+    "name": "0x",
+    "humanType": "Sweep to Main Account",
+    "currencyType": "address",
+    "txFee": "46.96471883",
+    "minConf": 12,
+    "depositAddress": null,
+    "disabled": 0,
+    "frozen": 0,
+    "hexColor": "003831",
+    "blockchain": "ETH",
+    "delisted": 0,
+    "isGeofenced": 0
+    }
+}
+
+   Returns information about currencies.
+   Request Parameter Description
+   includeMultiChainCurrencies (optional) A boolean that indicates
+   if multi chain currencies are included (default value is
+   false). Additionally adds a new row for each currency on their
+   respective chain (i.e USDT, USDTETH, USDTTRON will all have
+   entries).
+   Field Description
+   id ID of the currency.
+   name Name of the currency.
+   humanType The type of blockchain the currency runs on.
+   currencyType The type of the currency.
+   txFee The network fee necessary to withdraw this currency.
+   minConf The minimum number of blocks necessary before a deposit
+   can be credited to an account.
+   depositAddress If available, the deposit address for this
+   currency.
+   disabled Designates whether (1) or not (0) deposits and
+   withdrawals are disabled.
+   frozen Designates whether (1) or not (0) trading for this
+   currency is disabled for trading.
+   blockchain The blockchain the currency runs on.
+   delisted Designates whether (1) or not (0) this currency has
+   been delisted from the exchange.
+   isGeofenced Designates whether this currency is available (1)
+   or not (0) to this customer due to geofencing restrictions.
+
+   If the currency lists a deposit address, deposits to that
+   address must be accompanied by a deposit message unique to your
+   account. See the [401]Balances, Deposits & Withdrawals page for
+   more information.
+
+    [401] https://poloniex.com/balances
+
+[DEL: Private HTTP API Methods :DEL]
+
+   The private HTTP API allows read / write access to your private
+   account.
+   [DEL: Private HTTP URL: `https://poloniex.com/tradingApi` :DEL]
+   Please note that the Private HTTP API has been decommissioned
+   as of Feb 28th, 2023.
+
+   All calls to the trading API are sent via HTTP using POST
+   parameters to https://poloniex.com/tradingApi and must contain
+   the following headers:
+     * Key - Your API key.
+     * Sign - The query's POST data signed by your key's "secret"
+       according to the HMAC-SHA512 method.
+
+   Additionally, all queries must include a "nonce" or "timestamp"
+   POST parameter.
+
+   The nonce parameter is an integer which must always be greater
+   than the previous nonce used and does not need to increase by
+   one. Using the epoch in milliseconds is an easy choice here but
+   be careful about time synchronization if using the same API key
+   across multiple servers.
+
+   The timestamp parameter is an integer corresponding to the
+   epoch in seconds. The timestamp parameter is valid for +/- 5
+   seconds.
+
+   All responses from the trading API are in JSON format. In the
+   event of an error, the response will always be of the following
+   format:
+
+   { "error": "<error message>" }
+
+   When placing orders there are currently the following minimum
+   order sizes according to the quote currency.
+     Quote   Minimum Total Order
+   BTC       0.0001
+   ETH       0.0001
+   USD (any) 1
+   TRX       100
+   BNB       0.06
+
+   There are several methods accepted by the trading API, each of
+   which is specified by the "command" POST parameter:
+
+returnBalances
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=returnBalances&nonce=154264078495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=returnBalances&nonce=154264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{"1CR":"0.00000000",
+  "ABY":"0.00000000",
+  "AC":"0.00000000",
+  ...
+  "SPELL":"0.00000000",
+  "ICE":"0.02380926",
+  "CHESS":"0.00000000"}
+
+   Returns all of your balances available for trade after having
+   deducted all open orders.
+
+returnCompleteBalances
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=returnCompleteBalances&nonce=154264078495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=returnCompleteBalances&nonce=154264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{ "1CR":
+  {"available":"0.00000000",
+    "onOrders":"0.00000000",
+    "btcValue":"0.00000000"},
+  "ABY":
+  {"available":"0.00000000",
+    "onOrders":"0.00000000",
+    "btcValue":"0.00000000"},
+  "AC":
+  {"available":"0.00000000",
+    "onOrders":"0.00000000",
+    "btcValue":"0.00000000"},
+  ...
+  "SPELL":
+  {"available":"0.00000000",
+    "onOrders":"0.00000000",
+    "btcValue":"0.00000000"},
+  "ICE":
+  {"available":"0.00000000",
+    "onOrders":"0.00000000",
+    "btcValue":"0.00000000"},
+  "CHESS":
+  {"available":"0.00000000",
+    "onOrders":"0.00000000",
+    "btcValue":"0.00000000"}}
+
+   Returns all of your balances, including available balance,
+   balance on orders, and the estimated BTC value of your balance.
+   By default, this call is limited to your exchange account; set
+   the "account" POST parameter to "all" to include your margin
+   and lending accounts.
+
+   Please note that this call will not return balances for your
+   futures account. Please refer to
+   [402]https://futures-docs.poloniex.com/ for information on how
+   to access your futures balance.
+     Field                 Description
+   available Number of tokens not reserved in orders.
+   onOrders  Number of tokens in open orders.
+   btcValue  The BTC value of this token's balance.
+
+    [402] https://futures-docs.poloniex.com/
+
+returnDepositAddresses
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=returnDepositAddresses&nonce=154264078495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=returnDepositAddresses&nonce=154264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{"AAVE":"0xae8d0d7c520daebb1580dabaa91f3ccf8ae492f5",
+  "AMP":"0xae8d0d7c520daebb1580dabaa91f3ccf8ae492f5",
+  "ATOM":"cosmos18clcz526q274gdvmjv820f45pua03rhn4xplkz",
+  ...
+  "XLMBEAR":"0xae8d0d7c520daebb1580dabaa91f3ccf8ae492f5",
+  "XLMBULL":"0xae8d0d7c520daebb1580dabaa91f3ccf8ae492f5",
+  "XYM":"bqz8hDK2mm"}
+
+   Returns all of your deposit addresses.
+
+   Some currencies use a common deposit address for everyone on
+   the exchange and designate the account for which this payment
+   is destined by including a payment ID field. In these cases,
+   use returnCurrencies to look up the mainAccount for the
+   currency to find the deposit address and use the address
+   returned here in the payment ID field. Note: returnCurrencies
+   will only include a mainAccount property for currencies which
+   require a payment ID.
+
+generateNewAddress
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=generateNewAddress&nonce=154264078495300&currency=ETH"
+| \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=generateNewAddress&nonce=154264078495300&currency=ETH"
+\
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{"success":1,
+  "response":"0xae8d0d7c520daebb1580dabaa91f3ccf8ae492f5"}
+
+   Generates a new deposit address for the currency specified by
+   the "currency" POST parameter.
+
+   As of September 16th 2020, only one address per currency per
+   user may be generated. If your already have an address for a
+   currency, you will not be able to generate a new address.
+
+   Reach out to Customer Service if you’d like to create more than
+   one address.
+
+   Some currencies use a common deposit address for everyone on
+   the exchange and designate the account for which this payment
+   is destined by including a payment ID field. In these cases,
+   use returnCurrencies to look up the mainAccount for the
+   currency to find the deposit address and use the address
+   returned here in the payment ID field. Note: returnCurrencies
+   will only include a mainAccount property for currencies which
+   require a payment ID.
+
+Input Fields
+
+    Field                   Description
+   currency The currency to use for the deposit address.
+
+Output Field
+
+    Field                     Description
+   success  Denotes the success or failure of the operation.
+   response The newly created address.
+
+returnDepositsWithdrawals
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=returnDepositsWithdrawals&start=1539954535&end=15403145
+35&nonce=154264078495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=returnDepositsWithdrawals&start=1539954535&end=15403145
+35&nonce=154264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{ "adjustments":
+    [ { "currency": "STR",
+      "amount": "2.38291827",
+      "timestamp": 1538419390,
+      "status": "COMPLETE",
+      "category": "adjustment",
+      "adjustmentTitle": "Stellar Inflation",
+      "adjustmentDesc": "Your Stellar inflation reward for the week of J
+un 11, 2019.",
+      "adjustmentHelp":
+      "https://poloniex.freshdesk.com/support/solutions/articles/1000278
+072-stellar-inflation-what-is-it-and-other-frequently-asked-questions"
+    }],
+  "deposits":
+   [ { "depositNumber": 7397520,
+       "currency": "BTC",
+       "address": "131rdg5Rzn6BFufnnQaHhVa5ZtRU1J2EZR",
+       "amount": "0.06830697",
+       "confirmations": 1,
+       "txid": "3a4b9b2404f6e6fb556c3e1d46a9752f5e70a93ac1718605c992b80a
+acd8bd1d",
+       "timestamp": 1506005439,
+       "status": "COMPLETE" },
+     { "depositNumber": 7397521,
+       "currency": "BCH",
+       "address": "1FhCkdKeMGa621mCpAtFYzeVfUBnHbooLj",
+       "amount": "10.00000000",
+       "confirmations": 5,
+       "txid": "eb2e0914105b02fbe6e17913d74b4e5950c1ba122eb71afdfc49e2c5
+8b272456",
+       "timestamp": 1508436102,
+       "status": "COMPLETE" },
+        ...
+     { "depositNumber": 7397519,
+       "currency": "BTC",
+       "address": "131rdg5Rzn6BFufnnQaHhVa5ZtRU1J2EZR",
+       "amount": "1.49998357",
+       "confirmations": 1,
+       "txid": "b05bdec7430a56b5a5ed34af4a31a54859dda9b7c88a5586bc5d6540
+cdfbfc7a",
+       "timestamp": 1537304458,
+       "status": "COMPLETE" },
+     { "depositNumber": 7397518,
+       "currency": "ETH",
+       "address": "0xb7e033598cb94ef5a35349316d3a2e4f95f308da",
+       "amount": "29.99825341",
+       "confirmations": 53,
+       "txid": "0xf7e7eeb44edcad14c0f90a5fffb1cbb4b80e8f9652124a0838f690
+6ca939ccd2",
+       "timestamp": 1537305507,
+       "status": "COMPLETE" } ],
+  "withdrawals":
+   [ { "withdrawalNumber": 7397527,
+       "currency": "ETC",
+       "address": "0x26419a62055af459d2cd69bb7392f5100b75e304",
+       "amount": "13.19951600",
+       "fee": "0.01000000",
+       "timestamp": 1506010932,
+       "status": "COMPLETE: 0x423346392f82ac16e8c2604f2a604b7b2382d0e9d8
+030f673821f8de4b5f5a30",
+       "ipAddress": "1.2.3.4",
+       "paymentID": null
+     },
+     { "withdrawalNumber": 7704882,
+       "currency": "ETH",
+       "address": "0x00c90335F92FfcD26C8c915c79d7aB424454B7c7",
+       "amount": "0.01318826",
+       "fee": "0.00500000",
+       "timestamp": 1507908127,
+       "status": "COMPLETE: 0xbd4da74e1a0b81c21d056c6f58a5b306de85d21ddf
+89992693b812bb117eace4",
+       "ipAddress": "1.2.3.4",
+       "paymentID": null
+     },
+      ...
+     { "withdrawalNumber": 11967216,
+       "currency": "ZRX",
+       "address": "0x3B2E298b401D1E11cE6ee82b54792CA435CE81eC",
+       "amount": "1535.58403218",
+       "fee": "5.00000000",
+       "timestamp": 1538419390,
+       "status": "COMPLETE: 0x52f9e37f29944f20b624df4d7a0ea5a09173e6ea04
+8d49fb05c29585f1d74032",
+       "ipAddress": "1.2.3.4",
+       "paymentID": null
+     },
+     { "withdrawalNumber": 12017755,
+       "currency": "STR",
+       "address": "GACNWS3R4FJUMHLDNMFGUQZD33FBRE4IODAPK5G7AVX7S2VEJRT2X
+XHQ",
+       "amount": "7281.99772728",
+       "fee": "0.00001000",
+       "timestamp": 1539709673,
+       "status": "COMPLETE: 2d27ae26fa9c70d6709e27ac94d4ce2fde19b3986926
+e9f3bfcf3e2d68354ec5",
+       "ipAddress": "1.2.3.4",
+       "paymentID": "MEMOTEXT"
+     } ]
+}
+
+   Returns your adjustment, deposit, and withdrawal history within
+   a range window, specified by the "start" and "end" POST
+   parameters, both of which should be given as UNIX timestamps.
+   Note that only adjustments intended to be shown in the UI will
+   be returned
+
+Input Fields
+
+   Field                        Description
+   start The start date of the range window in UNIX timestamp
+         format.
+   end   The end date of the range window in UNIX timestamp format.
+
+Adjustment Output Fields
+
+        Field                          Description
+   currency        The currency of this adjustment.
+   amount          The total value of this adjustment.
+   timestamp       The timestamp in UNIX timestamp format of when this
+                   adjustment was credited.
+   status          The status of the adjustment (only COMPLETE).
+   category        Always adjustment.
+   adjustmentTitle The type of adjustment.
+   adjustmentDesc  A human-readable description of the adjustment.
+   adjustmentHelp  A help center link to describe the adjustment.
+
+Deposit Output Fields
+
+       Field                          Description
+   depositNumber The unique Poloniex specific deposit ID for this
+                 deposit.
+   currency      The currency of this deposit.
+   address       The address to which this deposit was sent.
+   amount        The total value of the deposit. (network fees will not
+                 be included in this)
+   confirmations The total number of confirmations for this
+                 deposit.
+   txid          The blockchain transaction ID of this deposit.
+   timestamp     The timestamp in UNIX timestamp format of when this
+                 deposit was first noticed.
+   status        The current status of this deposit. (either PENDING or
+                 COMPLETE)
+
+Withdrawal Output Fields
+
+   Field Description
+   withdrawalNumber The unique Poloniex specific withdrawal ID for
+   this withdrawal.
+   currency The currency of this withdrawal.
+   address The address to which the withdrawal was made.
+   amount The total amount withdrawn including the fee.
+   fee The fee paid to the exchange for this withdrawal.
+   timestamp The Unix timestamp of the withdrawal.
+   status The status of the withdrawal (one of PENDING, AWAITING
+   APPROVAL, COMPLETE or COMPLETE ERROR) and optionally the
+   transaction ID of the withdrawal.
+   ipAddress The IP address which initiated the withdrawal
+   request.
+   paymentID The paymentID specified for this withdrawal. If none
+   were specified, the field will be null.
+
+returnOpenOrders
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=returnOpenOrders&currencyPair=BTC_ETH&nonce=15426407849
+5300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=returnOpenOrders&currencyPair=BTC_ETH&nonce=15426407849
+5300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output for a single market:
+
+[ { "orderNumber": "514514894224",
+    "type": "buy",
+    "rate": "0.00001000",
+    "startingAmount": "100.00000000",
+    "amount": "100.00000000",
+    "total": "0.00100000",
+    "date": "2018-10-23 17:38:53",
+    "margin": 0,
+    "clientOrderId": "12345" },
+  { "orderNumber": "514515104014",
+    "type": "buy",
+    "rate": "0.00002000",
+    "startingAmount": "100.00000000",
+    "amount": "100.00000000",
+    "total": "0.00200000",
+    "date": "2018-10-23 17:39:46",
+    "margin": 0,
+    "clientOrderId": "12346" },
+    ...
+  { "orderNumber": "514515150967",
+    "type": "buy",
+    "rate": "0.00003000",
+    "startingAmount": "100.00000000",
+    "amount": "100.00000000",
+    "total": "0.00300000",
+    "date": "2018-10-23 17:39:55",
+    "margin": 0,
+    "clientOrderId": "12347"} ]
+
+     Example output for all markets:
+
+{ "BTC_BTS":[],
+  "BTC_DOGE":[],
+  "BTC_DASH":[],
+  ...
+  "BTC_ETH":
+   [ { "orderNumber": "514515459658",
+       "type": "buy",
+       "rate": "0.00001000",
+       "startingAmount": "100.00000000",
+       "amount": "100.00000000",
+       "total": "0.00100000",
+       "date": "2018-10-23 17:41:15",
+       "margin": 0,
+       "clientOrderId": "12345"},
+      ...
+     { "orderNumber": "514515389728",
+       "type": "buy",
+       "rate": "0.00003000",
+       "startingAmount": "100.00000000",
+       "amount": "100.00000000",
+       "total": "0.00300000",
+       "date": "2018-10-23 17:40:55",
+       "margin": 0,
+       "clientOrderId": "12346"} ],
+  "BTC_FCT": [],
+  ...
+  "USDJ_TRX":[],
+  "USDJ_BTT":[],
+  "BNB_BTC":[]}
+
+   Returns your open orders for a given market, specified by the
+   "currencyPair" POST parameter, e.g. "BTC_ETH". Set
+   "currencyPair" to "all" to return open orders for all markets.
+   Note that the "startingAmount" is not the order placement
+   amount but it is the starting amount of the open order in the
+   book, which excludes any amount that was immediately filled
+   before the order is posted on the book.
+
+Input Fields
+
+      Field                       Description
+   currencyPair A string that defines the market, "USDT_BTC" for
+                example. Use "all" for all markets.
+
+Output Fields
+
+   Field Description
+   orderNumber The number uniquely identifying this order.
+   type Denotes this order as a "buy" or "sell".
+   rate The price. Units are market quote currency. Eg USDT_BTC
+   market, the value of this field would be around 10,000.
+   Naturally this will be dated quickly but should give the idea.
+   startingAmount The size of the original order.
+   amount The amount left to fill in this order.
+   total The total cost of this order in base units.
+   date The UTC date of order creation.
+   margin Denotes this as a margin order (1) or not. (0)
+   clientOrderId User specified 64-bit integer identifier.
+
+returnTradeHistory (private)
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=returnTradeHistory&currencyPair=BTC_ETH&nonce=154264078
+495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=returnTradeHistory&currencyPair=BTC_ETH&nonce=154264078
+495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output for a single market:
+
+[ { "globalTradeID": 394700861,
+    "tradeID": 45210354,
+    "date": "2018-10-23 18:01:58",
+    "type": "buy",
+    "rate": "0.03117266",
+    "amount": "0.00000652",
+    "total": "0.00000020",
+    "orderNumber": "104768235093" },
+  { "globalTradeID": 394700815,
+    "tradeID": 45210353,
+    "date": "2018-10-23 18:01:08",
+    "type": "buy",
+    "rate": "0.03116000",
+    "amount": "5.93292717",
+    "total": "0.18487001",
+    "orderNumber": "104768235092" },
+  ...
+  { "globalTradeID": 394699047,
+    "tradeID": 45210256,
+    "date": "2018-10-23 17:30:32",
+    "type": "sell",
+    "rate": "0.03114533",
+    "amount": "0.01934000",
+    "total": "0.00060235",
+    "orderNumber": "104768235091" },
+  { "globalTradeID": 394698946,
+    "tradeID": 45210255,
+    "date": "2018-10-23 17:28:55",
+    "type": "sell",
+    "rate": "0.03114126",
+    "amount": "0.00018753",
+    "total": "0.00000583",
+    "orderNumber": "104768235090" } ]
+
+     Example output for all markets:
+
+{ "BTC_BCH":
+   [ { "globalTradeID": 394131412,
+       "tradeID": "5455033",
+       "date": "2018-10-16 18:05:17",
+       "rate": "0.06935244",
+       "amount": "1.40308443",
+       "total": "0.09730732",
+       "fee": "0.00100000",
+       "orderNumber": "104768235081",
+       "type": "sell",
+       "category": "exchange" },
+      ...
+     { "globalTradeID": 394126818,
+       "tradeID": "5455007",
+       "date": "2018-10-16 16:55:34",
+       "rate": "0.06935244",
+       "amount": "0.00155709",
+       "total": "0.00010798",
+       "fee": "0.00200000",
+       "orderNumber": "104768179137",
+       "type": "sell",
+       "category": "exchange" } ],
+  ...
+  "BTC_STR":
+   [ { "globalTradeID": 394127362,
+       "tradeID": "13536351",
+       "date": "2018-10-16 17:03:43",
+       "rate": "0.00003432",
+       "amount": "3696.05342780",
+       "total": "0.12684855",
+       "fee": "0.00200000",
+       "orderNumber": "96238912841",
+       "type": "buy",
+       "category": "exchange" },
+      ...
+     { "globalTradeID": 394127361,
+       "tradeID": "13536350",
+       "date": "2018-10-16 17:03:43",
+       "rate": "0.00003432",
+       "amount": "3600.53748129",
+       "total": "0.12357044",
+       "fee": "0.00200000",
+       "orderNumber": "96238912841",
+       "type": "buy",
+       "category": "exchange" } ] }
+
+   Returns your trade history for a given market, specified by the
+   "currencyPair" POST parameter. You may specify "all" as the
+   currencyPair to receive your trade history for all markets. You
+   may optionally specify a range via "start" and/or "end" POST
+   parameters, given in UNIX timestamp format; if you do not
+   specify a range, it will be limited to one day. You may
+   optionally limit the number of entries returned using the
+   "limit" parameter, up to a maximum of 10,000. If the "limit"
+   parameter is not specified, no more than 500 entries will be
+   returned.
+
+Input Fields
+
+      Field                       Description
+   currencyPair A string that defines the market, "USDT_BTC" for
+                example. Use "all" for all markets.
+
+Output Fields
+
+   Field Description
+   globalTradeID The globally unique identifier of this trade.
+   tradeID The identifier of this trade unique only within this
+   trading pair.
+   date The UTC date at which this trade executed.
+   rate The price. Units are market quote currency. Eg USDT_BTC
+   market, the value of this field would be around 10,000.
+   Naturally this will be dated quickly but should give the idea.
+   amount The amount transacted in this trade.
+   total The total cost in base units of this trade.
+   fee The fee paid for this trade.
+   orderNumber The order number to which this trade is associated.
+   type Denotes a "buy" or a "sell" execution.
+   category Denotes if this was a standard or margin exchange.
+
+returnOrderTrades
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=returnOrderTrades&orderNumber=96238912841&nonce=1542640
+78495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=returnOrderTrades&orderNumber=9623891284&nonce=15426407
+8495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+[ { "globalTradeID": 394127362,
+    "tradeID": 13536351,
+    "currencyPair": "BTC_STR",
+    "type": "buy",
+    "rate": "0.00003432",
+    "amount": "3696.05342780",
+    "total": "0.12684855",
+    "fee": "0.00200000",
+    "date": "2018-10-16 17:03:43" },
+  { "globalTradeID": 394127361,
+    "tradeID": 13536350,
+    "currencyPair": "BTC_STR",
+    "type": "buy",
+    "rate": "0.00003432",
+    "amount": "3600.53748129",
+    "total": "0.12357044",
+    "fee": "0.00200000",
+    "date": "2018-10-16 17:03:43" } ]
+
+   Returns all trades involving a given order, specified by the
+   "orderNumber" POST parameter. If no trades for the order have
+   occurred or you specify an order that does not belong to you,
+   you will receive an error. See the documentation here for how
+   to use the information from returnOrderTrades and
+   returnOrderStatus to determine various status information about
+   an order.
+
+Input Fields
+
+      Field                      Description
+   orderNumber The order number whose trades you wish to query.
+
+Output Fields
+
+   Field Description
+   globalTradeID The globally unique identifier of this trade.
+   tradeID The identifier of this trade unique only within this
+   trading pair.
+   currencyPair A string that defines the market, "USDT_BTC" for
+   example.
+   type Denotes a "buy" or a "sell" execution.
+   rate The price. Units are market quote currency. Eg USDT_BTC
+   market, the value of this field would be around 10,000.
+   Naturally this will be dated quickly but should give the idea.
+   amount The amount transacted in this trade.
+   total The total cost in base units of this trade.
+   fee The fee paid for this trade.
+   date The UTC date at which this trade executed.
+
+returnOrderStatus
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=returnOrderStatus&orderNumber=96238912841&nonce=1542640
+78495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=returnOrderStatus&orderNumber=9623891284&nonce=15426407
+8495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{ "result":
+   { "6071071":
+      { "status": "Open",
+        "rate": "0.40000000",
+        "amount": "1.00000000",
+        "currencyPair": "BTC_ETH",
+        "date": "2018-10-17 17:04:50",
+        "total": "0.40000000",
+        "type": "buy",
+        "startingAmount": "1.00000" } },
+  "success": 1 }
+
+   Returns the status of a given order, specified by the
+   "orderNumber" POST parameter. If the specified orderNumber is
+   not open, or it is not yours, you will receive an error.
+
+   Note that returnOrderStatus, in concert with returnOrderTrades,
+   can be used to determine various status information about an
+   order:
+     * If returnOrderStatus returns status: "Open", the order is
+       fully open.
+     * If returnOrderStatus returns status: "Partially filled",
+       the order is partially filled, and returnOrderTrades may be
+       used to find the list of those fills.
+     * If returnOrderStatus returns an error and returnOrderTrades
+       returns an error, then the order was cancelled before it
+       was filled.
+     * If returnOrderStatus returns an error and returnOrderTrades
+       returns a list of trades, then the order had fills and is
+       no longer open (due to being completely filled, or
+       partially filled and then cancelled).
+
+Input Fields
+
+      Field                 Description
+   orderNumber The identifier of the order to return.
+
+Output Field
+
+   Field Description
+   status Designates this order's fill state.
+   rate The price. Units are market quote currency. Eg USDT_BTC
+   market, the value of this field would be around 10,000.
+   Naturally this will be dated quickly but should give the idea.
+   amount The amount of tokens remaining unfilled in this order.
+   currencyPair A string that defines the market, "USDT_BTC" for
+   example.
+   date The UTC date this order was created.
+   total The total value of this order.
+   type Designates a buy or a sell order.
+   startingAmount The original order's amount.
+
+buy
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=buy&currencyPair=BTC_ETH&rate=0.01&amount=1&clientOrder
+Id=12345&nonce=154264078495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=buy&currencyPair=BTC_ETH&rate=0.01&amount=1&clientOrder
+Id=12345&nonce=154264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{ "orderNumber": "514845991795",
+  "resultingTrades":
+   [ { "amount": "3.0",
+       "date": "2018-10-25 23:03:21",
+       "rate": "0.0002",
+       "total": "0.0006",
+       "tradeID": "251834",
+       "type": "buy" } ],
+  "fee": "0.01000000",
+  "clientOrderId": "12345",
+  "currencyPair": "BTC_ETH" }
+
+   Places a limit buy order in a given market. Required POST
+   parameters are "currencyPair", "rate", and "amount". If
+   successful, the method will return the order number.
+
+   You may optionally set "fillOrKill", "immediateOrCancel",
+   "postOnly" to 1. A fill-or-kill order will either fill in its
+   entirety or be completely aborted. An immediate-or-cancel order
+   can be partially or completely filled, but any portion of the
+   order that cannot be filled immediately will be canceled rather
+   than left on the order book. A post-only order will only be
+   placed if no portion of it fills immediately; this guarantees
+   you will never pay the taker fee on any part of the order that
+   fills.
+
+Input Fields
+
+   Field Description
+   currencyPair A string that defines the market, "USDT_BTC" for
+   example.
+   rate The price. Units are market quote currency. Eg USDT_BTC
+   market, the value of this field would be around 10,000.
+   Naturally this will be dated quickly but should give the idea.
+   amount The total amount offered in this buy order.
+   fillOrKill (optional) Set to "1" if this order should either
+   fill in its entirety or be completely aborted.
+   immediateOrCancel (optional) Set to "1" if this order can be
+   partially or completely filled, but any portion of the order
+   that cannot be filled immediately will be canceled.
+   postOnly (optional) Set to "1" if you want this buy order to
+   only be placed if no portion of it fills immediately.
+   clientOrderId (optional) 64-bit Integer value used for tracking
+   order across http responses and "o", "n" & "t" web socket
+   messages. Must be unique across all open orders for each
+   account.
+
+Output Fields
+
+   Field Description
+   orderNumber The identification number of the newly created
+   order.
+   resultingTrades An array of the trades that were executed, if
+   any, on order placement.
+   amount The amount of tokens remaining unfilled in this order.
+   date The UTC date this order was created.
+   rate The price. Units are market quote currency. Eg USDT_BTC
+   market, the value of this field would be around 10,000.
+   Naturally this will be dated quickly but should give the idea.
+   total The total value of this order.
+   tradeID The identifier for this trade.
+   type Designates a buy or a sell order. (always "buy" in this
+   case)
+   fee The fee multiplier for this trade.
+   currencyPair A string that defines the market, "USDT_BTC" for
+   example.
+   clientOrderId (optional) User specified 64-bit integer
+   identifier.
+   tokenFee The total fee paid, if any, using a token to pay fees.
+   tokenFeeCurrency The currency used to pay fees if any token fee
+   was used.
+
+sell
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=sell&currencyPair=BTC_ETH&rate=10.0&amount=1&clientOrde
+rId=12345&nonce=154264078495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=sell&currencyPair=BTC_ETH&rate=10.0&amount=1&clientOrde
+rId=12345&nonce=154264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{ "orderNumber": "514845991926",
+  "resultingTrades":
+   [ { "amount": "1.0",
+       "date": "2018-10-25 23:03:21",
+       "rate": "10.0",
+       "total": "10.0",
+       "tradeID": "251869",
+       "type": "sell" } ],
+  "fee": "0.01000000",
+  "clientOrderId": "12345",
+  "currencyPair": "BTC_ETH" }
+
+   Places a sell order in a given market. Required POST parameters
+   are "currencyPair", "rate", and "amount". If successful, the
+   method will return the order number.
+
+   You may optionally set "fillOrKill", "immediateOrCancel",
+   "postOnly" to 1. A fill-or-kill order will either fill in its
+   entirety or be completely aborted. An immediate-or-cancel order
+   can be partially or completely filled, but any portion of the
+   order that cannot be filled immediately will be canceled rather
+   than left on the order book. A post-only order will only be
+   placed if no portion of it fills immediately; this guarantees
+   you will never pay the taker fee on any part of the order that
+   fills.
+
+Input Fields
+
+   Field Description
+   currencyPair A string that defines the market, "USDT_BTC" for
+   example.
+   rate The price. Units are market quote currency. Eg USDT_BTC
+   market, the value of this field would be around 10,000.
+   Naturally this will be dated quickly but should give the idea.
+   amount The total amount offered in this sell order.
+   fillOrKill (optional) Set to "1" if this order should either
+   fill in its entirety or be completely aborted.
+   immediateOrCancel (optional) Set to "1" if this order can be
+   partially or completely filled, but any portion of the order
+   that cannot be filled immediately will be canceled.
+   postOnly (optional) Set to "1" if you want this sell order to
+   only be placed if no portion of it fills immediately.
+   clientOrderId (optional) 64-bit Integer value used for tracking
+   order across "o", "n" & "t" web socket messages. Must be unique
+   across all open orders for each account.
+
+Output Fields
+
+   Field Description
+   orderNumber The identification number of the newly created
+   order.
+   resultingTrades An array of the trades that were executed, if
+   any, on order placement.
+   amount The amount of tokens remaining unfilled in this order.
+   date The UTC date this order was created.
+   rate The price. Units are market quote currency. Eg USDT_BTC
+   market, the value of this field would be around 10,000.
+   Naturally this will be dated quickly but should give the idea.
+   total The total value of this order.
+   tradeID The identifier for this trade.
+   type Designates a buy or a sell order. (always "sell" in this
+   case)
+   fee The fee multiplier for this trade.
+   currencyPair A string that defines the market, "USDT_BTC" for
+   example.
+   clientOrderId (optional) User specified 64-bit integer
+   identifier.
+   tokenFee The total fee paid, if any, using a token to pay fees.
+   tokenFeeCurrency The currency used to pay fees if any token fee
+   was used.
+
+cancelOrder
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=cancelOrder&orderNumber=514845991795&nonce=154264078495
+300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=cancelOrder&orderNumber=514845991795&nonce=154264078495
+300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{ "success": 1,
+  "amount": "50.00000000",
+  "clientOrderId": "12345",
+  "message": "Order #514845991795 canceled." }
+
+   Cancels an order you have placed in a given market. Requires
+   exactly one of "orderNumber" or "clientOrderId" POST
+   parameters. If successful, the method will return a success of
+   1.
+
+Input Fields
+
+       Field                        Description
+   orderNumber   (Optional) The identity number of the order to be
+                 canceled.
+   clientOrderId (Optional) User specified 64-bit integer
+                 identifier.
+
+Output Fields
+
+       Field                           Description
+   success       A boolean indication of the success or failure of this
+                 operation.
+   amount        The remaining unfilled amount that was canceled in this
+                 operation.
+   message       A human readable description of the result of the
+                 action.
+   clientOrderId (optional) If clientOrderId exists on the open
+                 order it will be returned in the cancelOrder response.
+
+cancelAllOrders
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=cancelAllOrders&nonce=1559587794133" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=cancelAllOrders&nonce=1559587794133" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2f2caf61...a3bc7818ced466e8f" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{ "success": 1,
+  "message": "Orders canceled",
+  "orderNumbers": 
+    503749,
+    888321,
+    7315825,
+    7316824 ] }
+
+   Cancels all open orders in a given market or, if no market is
+   provided, all open orders in all markets. Optional POST
+   parameter is "currencyPair". If successful, the method will
+   return a success of 1 along with a json array of orderNumbers
+   representing the orders that were canceled. Please note that
+   cancelAllOrders can only be called 1 time per 2 minutes.
+
+Input Fields
+
+      Field                     Description
+   currencyPair (optional) A string that defines the market,
+                "USDT_BTC" for example.
+
+Output
+
+      Field                          Description
+   success      A boolean indication of the success or failure of this
+                operation.
+   message      A human readable description of the result of the
+                action.
+   orderNumbers array of orderNumbers representing the orders that
+                were canceled.
+
+cancelReplace
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=cancelReplace&orderNumber=514851026755&rate=0.00015&cli
+entOrderId=12345&nonce=154264078495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=cancelReplace&orderNumber=514851026755&rate=0.00015&non
+ce=154264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{
+  "success": 1,
+  "amount": "1.00000000",
+  "message": "Order #514851232549 canceled.",
+  "fee": "0.00250000",
+  "currencyPair": "BTC_ETH",
+  "placed": {
+    "success": 1,
+    "orderNumber": "514851232550",
+    "resultingTrades": [],
+    "tokenFee": 0,
+    "tokenFeeCurrency": null,
+    "fee": "0.00250000",
+    "currencyPair": "BTC_ETH"
+  }
+}
+
+   Cancels an order and places a new one of the same type in two
+   separate operations. Meaning, the system will attempt to cancel
+   the existing order first, which may fail or succeed. If the
+   cancel is successful, the place will be attempted. Required
+   POST parameters are "orderNumber" and "rate"; you may
+   optionally specify "amount" if you wish to change the amount of
+   the new order. "postOnly" or "immediateOrCancel" may be
+   specified for exchange orders, but will have no effect on
+   margin orders.
+
+Input Fields
+
+   Field Description
+   orderNumber The identity number of the order to be canceled.
+   clientOrderId (optional) User specified 64-bit integer
+   identifier to be associated with the new order being placed.
+   Must be unique across all open orders for each account.
+   rate The price. Units are market quote currency. Eg USDT_BTC
+   market, the value of this field would be around 10,000.
+   Naturally this will be dated quickly but should give the idea.
+   amount (optional) The amount of tokens in this order.
+
+Canceled Output Fields
+
+       Field                          Description
+   success       A boolean indication of the success or failure of the
+                 cancellation.
+   amount        The remaining unfilled amount that was canceled.
+   message       A human readable description of the result of the
+                 cancellation.
+   clientOrderId (optional) User specified 64-bit integer
+                 identifier associated with the canceled order.
+   fee           The fee multiplier for the canceled older.
+   currencyPair  A string that defines the market, "USDT_BTC" for
+                 example.
+   placed        The new order (see placed output fields).
+
+Placed Output Fields
+
+      Field                            Description
+ success          A boolean indication of the success or failure of this
+                  operation.
+ orderNumber      The newly created order number.
+ resultingTrades  An array of the trades that were executed, if
+                  any, on order placement.
+ tokenFee         The total fee paid, if any, using a token to pay fees.
+ tokenFeeCurrency The currency used to pay fees if any token fee
+                  was used.
+ message          (optional) A human-readable message summarizing the
+                  activity.
+ fee              The fee multiplier for this order.
+ clientOrderId    (optional) Client specified 64-bit integer
+                  identifier.
+ currencyPair     A string that defines the market, "USDT_BTC" for
+                  example.
+
+moveOrder
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=moveOrder&orderNumber=514851026755&rate=0.00015&clientO
+rderId=12345&nonce=154264078495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=moveOrder&orderNumber=514851026755&rate=0.00015&nonce=1
+54264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{ "success": 1,
+  "orderNumber": "514851232549",
+  "resultingTrades": { "BTC_ETH": [] },
+  "clientOrderId": "12345",
+  "fee": "0.00050000",
+  "currencyPair": "BTC_ETH" }
+
+   MoveOrder is the same as cancelReplace
+
+Input Fields
+
+   Field Description
+   orderNumber The identity number of the order to be canceled.
+   clientOrderId (optional) User specified 64-bit integer
+   identifier to be associated with the new order being placed.
+   Must be unique across all open orders for each account.
+   rate The price. Units are market quote currency. Eg USDT_BTC
+   market, the value of this field would be around 10,000.
+   Naturally this will be dated quickly but should give the idea.
+   amount (optional) The amount of tokens in this order.
+
+Output Fields
+
+       Field                           Description
+  success         A boolean indication of the success or failure of this
+                  operation.
+  orderNumber     The identity number of the newly created order.
+  resultingTrades An array of the trades that were executed, if
+                  any, on order placement.
+  clientOrderId   (optional) User specified 64-bit integer
+                  identifier associated with the new order placed.
+  fee             The fee multiplier for this order.
+  currencyPair    A string that defines the market, "USDT_BTC" for
+                  example.
+
+withdraw
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=withdraw&currency=ETH&amount=2&address=0x84a90e21d9d02e
+30ddcea56d618aa75ba90331ff&nonce=154264078495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=withdraw&currency=ETH&amount=2&address=0x84a90e21d9d02e
+30ddcea56d618aa75ba90331ff&nonce=154264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{ "response": "Withdrew 2.0 ETH.",
+  "withdrawalNumber": 12085427 }
+
+   Immediately places a withdrawal for a given currency, with no
+   email confirmation. In order to use this method, withdrawal
+   privilege must be enabled for your API key. Required POST
+   parameters are "currency", "amount", and "address".
+
+   For withdrawals which support payment IDs, (such as XMR) you
+   may optionally specify a "paymentId" parameter.
+
+   For currencies where there are multiple networks to choose from
+   (like USDT or BTC), you can specify the chain by setting the
+   "currency" parameter to be a multiChain currency name, like
+   USDTTRON, USDTETH, or BTCTRON. You can get information on these
+   currencies, like fees or if they"re disabled, by [403]adding
+   the "includeMultiChainCurrencies" optional parameter to the
+   returnCurrencies endpoint. The previous method of choosing a
+   network using the optional "currencyToWithdrawAs" parameter
+   will continue to function as it used to, but is no longer
+   recommended.
+
+    [403] https://poloniex.com/public?command=returnCurrencies&includeMultiChainCurrencies=true
+
+MultiChain Currencies
+
+   Currency                      Description
+   USDT     Withdraw Tether (USDT) on OMNI (will no longer be
+            supported after April 30, 2021) - [404]Token
+   USDTTRON Withdraw Tether (USDT) on TRON - [405]Contract Address
+   USDTETH  Withdraw Tether (USDT) on ETH - [406]Contract Address
+   BTC      Withdraw BTC normally
+   BTCTRON  Withdraw BTC on TRON - [407]Contract Address
+   ETH      Withdraw ETH normally
+   ETHTRON  Withdraw ETH on TRON - [408]Contract Address
+   WBTC     Withdraw Wrapped Bitcoin (WBTC) on ETH - [409]Contract
+            Address
+   WBTCTRON Withdraw Wrapped Bitcoin (WBTC) on TRON -
+            [410]Contract Address
+   LTC      Withdraw LTC normally
+   LTCTRON  Withdraw LTC on TRON - [411]Contract Address
+   TUSD     Withdraw TrueUSD (TUSD) on ETH - [412]Contract Address
+   TUSDTRON Withdraw TrueUSD (TUSD) on TRON - [413]Contract
+            Address
+
+    [404] https://www.omniexplorer.info/asset/31
+    [405] https://tronscan.org/#/token20/TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+    [406] https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7
+    [407] https://tronscan.org/#/token20/TN3W4H6rK2ce4vX9YnFQHwKENnHjoxb3m9
+    [408] https://tronscan.org/#/token20/THb4CqiFdwNHsWsQCs4JhzwjMWys4aqCbF
+    [409] https://etherscan.io/token/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+    [410] https://tronscan.org/#/token20/TXpw8XeWYeTUd4quDskoUqeQPowRh4jY65
+    [411] https://tronscan.org/#/token20/TR3DLthpnDdCGabhVDbD3VMsiJoCXY3bZd
+    [412] https://etherscan.io/token/0x0000000000085d4780B73119b644AE5ecd22b376
+    [413] https://tronscan.org/#/token20/TUpMhErZL2fhh4sVNULAbNKLokS4GjC1F4
+
+Output Fields
+
+   Field Description
+   response String response that shows a summary of the
+   withdrawal.
+   withdrawalNumber Withdrawal reference ID that can be matched
+   with results from the returnDepositsWithdrawals API to poll for
+   status updates.
+
+returnFeeInfo
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=returnFeeInfo&nonce=154264078495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=returnFeeInfo&nonce=154264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{ "makerFee": "0.00100000",
+  "takerFee": "0.00200000",
+  "marginMakerFee": "0.00100000",
+  "marginTakerFee": "0.00200000",
+  "thirtyDayVolume": "106.08463302",
+  "nextTier": 500000 }
+
+   If you are enrolled in the maker-taker fee schedule, returns
+   your current trading fees and trailing 30-day volume in BTC.
+   This information is updated once every 24 hours.
+
+Output Fields
+
+       Field                           Description
+  makerFee        The fee you pay when your order executes after having
+                  not matched when it was initially placed.
+  takerFee        The fee you pay when your order matches an existing
+                  offer.
+  marginMakerFee  The fee you pay when your margin order executes
+                  after having not matched when it was initially placed.
+  marginTakerFee  The fee you pay when your margin order matches
+                  an existing offer.
+  thirtyDayVolume The total trading volume for your account.
+  nextTier        The volume necessary to reach the next fee tier.
+
+returnAvailableAccountBalances
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=returnAvailableAccountBalances&nonce=154264078495300" |
+ \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=returnAvailableAccountBalances&nonce=154264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+ { "exchange":
+   { "BTC": "0.10000000",
+     "EOS": "5.18012931",
+     "ETC": "3.39980734",
+     "SC": "120.00000000",
+     "USDC": "23.79999938",
+     "ZEC": "0.02380926" },
+  "margin":
+   { "BTC": "0.50000000" },
+  "lending":
+   { "BTC": "0.14804126",
+     "ETH": "2.69148073",
+     "LTC": "1.75862721",
+     "XMR": "5.25780982" } }
+
+   Returns your balances sorted by account. You may optionally
+   specify the "account" POST parameter if you wish to fetch only
+   the balances of one account. Please note that balances in your
+   margin account may not be accessible if you have any open
+   margin positions or orders.
+
+   Please note that this call will not return balances for your
+   futures account. Please refer to
+   [414]https://futures-docs.poloniex.com/ for information on how
+   to access your futures balance.
+
+    [414] https://futures-docs.poloniex.com/
+
+Output Fields
+
+    Field                        Description
+   exchange The assets available to trade in your exchange
+            account.
+   margin   The assets available to trade in your margin account.
+   lending  The assets available to trade in your lending account.
+
+transferBalance
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "command=transferBalance&currency=BTC&amount=0.5&fromAccount=len
+ding&toAccount=exchange&nonce=154264078495300" | \
+openssl sha512 -hmac $API_SECRET
+
+curl -X POST \
+     -d "command=transferBalance&currency=BTC&amount=0.5&fromAccount=len
+ding&toAccount=exchange&nonce=154264078495300" \
+     -H "Key: 7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J" \
+     -H "Sign: 2a7849ecf...ae71161c8e9a364e21d9de9" \
+     https://poloniex.com/tradingApi
+
+     Example output:
+
+{ "success": 1,
+  "message": "Transferred 0.50000000 BTC from lending to exchange accoun
+t." }
+
+   Transfers funds from one account to another (e.g. from your
+   exchange account to your margin account). Required POST
+   parameters are "currency", "amount", "fromAccount", and
+   "toAccount".
+
+   Please note that transfers which include the futures account
+   must include an exchange or lending account.
+
+Input Fields
+
+      Field                       Description
+   currency    The currency to transfer.
+   amount      The amount of assets to transfer in this request.
+   fromAccount The account from which this value should be moved
+               (exchange, margin, lending, or futures).
+   toAccount   The account to which this value should be moved
+               (exchange, margin, lending, or futures).
+
+Output Fields
+
+    Field                      Description
+   success The success or failure message for this transfer.
+   message A human readable message summarizing this transfer.
+
+Websocket API
+
+# Install your favorite websocket command line tool.
+# Our examples use https://github.com/hashrocket/ws
+# which can be installed with this command:
+
+go get -u github.com/hashrocket/ws
+
+   Websockets can be read by any standard websocket library. Data
+   is organized into channels to which an API client may
+   subscribe.
+   Websocket URL: `wss://api2.poloniex.com` Please note that the
+   Account Notifications Channel has been decommissioned as of Feb
+   28th, 2023.
+
+   While the adapter aims to mimic existing error messages, there
+   maybe instances where native NTS messages maybe sent back. For
+   a list of NTS error messages and description, refer to his
+   [415]page.
+
+    [415] https://docs.poloniex.com/#error-codes
+
+Requests and Responses
+
+   There are two type of requests supported; subscribe and
+   unsubscribe. The requests are for a specific channel. For
+   non-book requests, the first response is always an
+   acknowledgement of the request. All channel updates are of the
+   following format
+
+   [<channel>, <sequence id>, <update data...>]
+
+   <sequence id> is a number increasing by one with each update
+   and is unique within its channel. The sequence-id is always
+   null for non-book channels.
+
+Subscribing and Unsubscribing
+
+# Public channels
+ws wss://api2.poloniex.com
+> {"command": "subscribe", "channel": 1002}
+
+# Private channels
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "nonce=154264078495300" | openssl sha512 -hmac $API_SECRET
+ws wss://api2.poloniex.com
+> {"command": "subscribe", "channel": 1000, "sign": "e832d65f...8a522df8
+", "key": "7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J", "payload": "nonce=15426
+4078495300"}
+
+   To receive updates from a channel you must subscribe to it. To
+   subscribe to a public channel (all except the account
+   notifications channel), determine its channel ID (provided with
+   the description of each channel, and summarized here), send a
+   JSON message in the following format:
+
+   { "command": "subscribe", "channel": "<channel id>" }
+
+   To subscribe to a private channel, the parameters described in
+   the authentication section are required in the subscription
+   message. Just like the trading API, an integer nonce must be
+   chosen that is greater than the previous nonce used; for this
+   purpose the current epoch time in milliseconds is a reasonable
+   choice. As each API key has its own nonce tracking, using a
+   different key for each client process can greatly simplify
+   nonce management. If the chosen nonce is 1234, provide a
+   "payload" parameter consisting of nonce=1234, a "key" parameter
+   with your API key, and a "sign" parameter with the HMAC-SHA512
+   signature of the payload signed by your secret:
+
+   { "command": "subscribe", "channel": "<channel id>", "key":
+   "<your API key>", "payload": "nonce=<epoch ms>", "sign":
+   "<hmac_sha512(secret).update("nonce=<epoch ms>").hexdigest()>"
+   }
+
+   In all cases the first message will be an acknowledgement of
+   the subscription:
+
+   [<channel id>, 1]
+
+   To unsubscribe, send an unsubscribe message with the channel
+   ID:
+
+   { "command": "unsubscribe", "channel": <channel id> }
+
+   You can subscribe and unsubscribe to multiple channels at the
+   same time using the following format:
+
+   { "command": "subscribe", "channel": "<channel id>,<channel
+   id>,...<channel id>" }
+
+   { "command": "unsubscribe", "channel": "<channel id>,<channel
+   id>,...<channel id>" }
+
+   You will receive an acknowledgement for each channel. If one of
+   the channels you are subscribing to is a private channel, the
+   authentication parameters are required.
+
+Channel Descriptions
+
+   The following <channel ids> are supported:
+       Channel      Type               Name
+   1000            Private Account Notifications (Beta)
+   1002            Public  Ticker Data
+   1003            Public  24 Hour Exchange Volume
+   1010            Public  Heartbeat
+   <currency pair> Public  Price Aggregated Book
+
+   Additionally, as described below, each market has its own
+   aggregated book channel.
+
+[DEL: Account Notifications (Beta) :DEL]
+
+# Note: set the nonce to the current milliseconds. For example: date +%s
+00000
+echo -n "nonce=154264078495300" | openssl sha512 -hmac $API_SECRET
+ws wss://api2.poloniex.com
+> {"command": "subscribe", "channel": 1000, "sign": "e832d65f...8a522df8
+", "key": "7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J", "payload": "nonce=15426
+4078495300"}
+< [1010]
+< [1000,"",[["n",225,807230187,0,"1000.00000000","0.10000000","2018-11-0
+7 16:42:42"],["b",267,"e","-0.10000000","0.90000000"]]]
+< [1010]
+< [1000,"",[["o",807230187,"0.00000000", "f"],["b",267,"e","0.10000000",
+"1.00000000"]]]
+
+   Please note that this channel has been decommissioned as of Feb
+   28th, 2023. Notice: Before using this channel, please be aware
+   that it is a beta feature. We will not make breaking API
+   changes, but we may undertake changes such as adding extra data
+   fields to the ends of arrays, or adding new message types. Your
+   code should be tolerant of this. We have made all reasonable
+   efforts to ensure its correctness, but you use this channel at
+   your own risk during the beta phase.
+
+   The account notifications channel (id 1000) provides real-time
+   updates of trade and balance changes on your account. You can
+   (and should) use it to track your account's trading activity
+   (instead of relying on repeated calls to the trading API). It
+   is an authenticated websocket endpoint, so subscribing to it
+   requires the parameters discussed in the subscribing section:
+
+   { "command": "subscribe", "channel": "1000", "key": "<your API
+   key>", "payload": "nonce=<epoch ms>", "sign":
+   "<hmac_sha512(secret).update("nonce=<epoch ms>").hexdigest()>"
+   }
+
+   The first message is acknowledgement of the subscription.
+
+   [1000, 1]
+
+   Subsequent messages represent updates to your account. In
+   general, a message consists of a combination of updates of
+   different types. Each update is an array of data, where the
+   first element is a character denoting the type of the update,
+   and subsequent elements are various parameters:
+
+   [ 1000, null, [ ["b", DATA_1, DATA_2, DATA_3, DATA_4], ["n",
+   DATA_1, DATA_2, DATA_3, DATA_4, DATA_5, DATA_6] ] ]
+
+   A given message may contain multiple updates, multiple types of
+   updates, and multiple updates of the same type. There is no
+   ordering guarantee of update types within a single message.
+   Effectively, each message is a record of all of the changes to
+   your account induced by a single action. There are four types
+   of updates, as described below:
+     * p messages represent an acknowledgement that an order is
+       pending. They are in the format ["p", <order number>,
+       <currency pair id>, "<rate>", "<amount>", "<order type>",
+       "<clientOrderId>", "<epoch_ms>"]. Currency pair IDs may be
+       found in the reference table. The order type is either 0 or
+       1 (sell or buy).
+     * b updates represent an available balance update. They are
+       in the format ["b", <currency id>, "<wallet>", "<amount>",
+       "<balance>"]. Currency IDs may be found in the reference
+       table, or using the returnCurrencies REST call. The wallet
+       can be e (exchange), m (margin), or l (lending). Thus, a b
+       update representing a deduction of 0.06 BTC from the
+       exchange wallet, with an ending balance of 0.94 BTC, will
+       look like ["b", 28, "e", "-0.06000000", "0.94000000"].
+     * n updates represent a newly created limit order. They are
+       in the format ["n", <currency pair id>, <order number>,
+       <order type>, "<rate>", "<amount>", "<date>", "<original
+       amount ordered>" "<clientOrderId>"]. Currency pair IDs are
+       described here, the order type can either be 0 (sell) or 1
+       (buy), the date is formatted according to the format string
+       Y-m-d H:i:s and clientOrderId will be a string if present
+       or null. Thus, an n update representing a complete unfilled
+       buy order for 2 ETH at rate 0.03 BTC per ETH with a
+       clientOrderId of 12345 will look like ["n", 148, 6083059,
+       1, "0.03000000", "2.00000000", "2018-09-08 04:54:09",
+       "2.00000000", "12345"].
+     * o updates represent an order update. They are in the format
+       ["o", <order number>, "<new amount>", "<order type>",
+       "<clientOrderId>"] and order type is one of: f, s, or c,
+       corresponding to a fill, self-trade, or cancelled order,
+       respectively. Canceled orders have an additional field
+       "<canceledAmount>" and are therefore in the format ["o",
+       <order number>, "<new amount>", "c", "<clientOrderId>",
+       "<canceledAmount>"] Self-trade and partially-filled orders
+       have an additional field "<totalAmount>". and are therefore
+       in the format ["o", <order number>, "<new amount>",
+       "s"|"f", "<clientOrderId>", "<totalAmount>"].
+     * m updates represent an margin position update. They are in
+       the format ["m", <order number>, "<currency>", "<amount>",
+       "<clientOrderId>"]. Currency IDs may be found in the
+       reference table, or using the returnCurrencies REST call.
+       ClientOrderId will be a string if present or null. Thus, a
+       m update representing a deduction of 0.06 BTC from a margin
+       position will look like this ["m", 23432933, 28,
+       "-0.06000000", "null"].
+
+   Order type    Amount           Interpretation
+   f          > 0.00000000 partially filled order
+   f          = 0.00000000 completely filled order
+   c          > 0.00000000 partially cancelled order
+   c          = 0.00000000 completely cancelled order
+   s          > 0.00000000 partially filled self-trade
+   s          = 0.00000000 completely filled self-trade
+
+   Thus, an o update representing a partially filled limit order
+   with a new amount of 1.5 and a clientOrderId of 12345 will look
+   like: ["o", 6083059, "1.50000000", "f", "12345"].
+     * t updates represent a trade notification. They are in the
+       format ["t", <trade ID>, "<rate>", "<amount>", "<fee
+       multiplier>", <funding type>, <order number>, <total fee>,
+       <date>, "<clientOrderId>", "<trade total>", "<epoch_ms>"].
+       The fee multiplier is the fee schedule applied to the trade
+       (for instance, if a trade had a trading fee of 0.25%, the
+       fee multiplier will be '0.00250000'). The funding type
+       represents the funding used for the trade, and may be 0
+       (exchange wallet), 1 (borrowed funds), 2 (margin funds), or
+       3 (lending funds). Note that while the trade ID will always
+       be distinct, the order number may be shared across multiple
+       t updates if multiple trades were required to fill a limit
+       order. The total fee is (amount * rate) * fee multiplier.
+       The date is formatted according to the format string Y-m-d
+       H:i:s and clientOrder will be a string if present or null.
+       Trade total is the amount if the user has sold or (amount *
+       rate) if the user has bought. A t update representing a
+       purchase of 0.5 ETH at rate 0.03 BTC per ETH using exchange
+       funds with a fee schedule of 0.25% and a clientOrderId of
+       12345 will look like: ["t", 12345, "0.03000000",
+       "0.50000000", "0.00250000", 0, 6083059, "0.00000375",
+       "2018-09-08 05:54:09", "12345", "0.015", "1522877119341"]
+     * k updates represent an update indicating an API order has
+       been killed, due to specified constraints not being
+       matched. A postOnly or fillOrKill order that doesn't
+       successfully execute will generate a k message. k messages
+       are in the format ["k", <order number>, "<clientOrderId>"].
+
+   As mentioned above, a single logical action may cause a message
+   with multiple updates. For instance, placing a limit order to
+   buy ETH using BTC, which is immediately partially fulfilled,
+   will cause an update with 5 parts: a p message with the newly
+   placed pending order for the BTC_ETH market, a b update with a
+   positive ETH balance (the ETH that was immediately bought), a b
+   update with a negative BTC balance update (the BTC removed from
+   the user's funds to pay for the ETH), a t update representing
+   the trade in which the order was partially fulfilled and then
+   the remaining amount becomes open, and an n update with the new
+   limit order for the rest of the requested ETH.
+
+   Note that many actions do not have explicit notification types,
+   but rather are represented by the underlying trade and balance
+   changes:
+     * Stop-limit orders immediately cause a b notification (that
+       the appropriate balance has been decremented to reserve an
+       asset for the limit order). When they are triggered they
+       cause notifications commensurate with a standard limit
+       order being placed (n or t updates depending on whether the
+       limit was immediately fulfilled).
+     * Margin liquidations cause a notification with t updates for
+       whatever trades were performed during the liquidation, and
+       b updates for the m (margin) wallet balance changes.
+     * Accepted loan offers cause a notification with b updates
+       for the resulting l (lending) wallet balance changes.
+     * Self-trades generate o updates. This is because in a
+       self-trade, the trader is both the maker AND the taker, and
+       receives relevant messages for both parties.
+
+   There are currently no notifications of transfers between
+   wallets initiated via the transfers page or the transferBalance
+   trading API call.
+
+Ticker Data
+
+ws wss://api2.poloniex.com
+> {"command": "subscribe", "channel": 1002}
+< [1002,1]
+< [1002,null,[149,"219.42870877","219.85995997","219.00000016","0.018305
+08","1617829.38863451","7334.31837942",0,"224.44803729","214.87902002",0
+,0]]
+< [1002,null,[150,"0.00000098","0.00000099","0.00000098","0.01030927","2
+3.24910068","23685243.40788439",0,"0.00000100","0.00000096",0,0]]
+< [1002,null,[162,"0.00627869","0.00630521","0.00627608","0.01665689","1
+7.99294312","2849.74975814",0,"0.00640264","0.00615185",0,0]]
+
+   Subscribe to ticker updates for all currency pairs.
+
+   Subscription example
+
+   { "command": "subscribe", "channel": 1002 }
+
+   The first message is acknowledgement of the subscription.
+
+   [<id>, 1]
+
+   Subsequent messages are ticker updates.
+
+   [ <id>, null, [ <currency pair id>, "<last trade price>",
+   "<lowest ask>", "<highest bid>", "<percent change in last 24
+   hours>", "<base currency volume in last 24 hours>", "<quote
+   currency volume in last 24 hours>", <is frozen>, "<highest
+   trade price in last 24 hours>", "<lowest trade price in last 24
+   hours>", "<post only>", "<maintenance mode>" ], ... ]
+
+   For example:
+
+   [ 1002, null, [ 149, "382.98901522", "381.99755898",
+   "379.41296309", "-0.04312950", "14969820.94951828",
+   "38859.58435407", 0, "412.25844455", "364.56122072", 0, 0 ] ]
+
+   The <currency pair id> is from the [416]currency pair ID list.
+
+    [416] https://docs.legacy.poloniex.com/#returnchartdata?shell#reference
+
+24 Hour Exchange Volume
+
+ws wss://api2.poloniex.com
+> {"command": "subscribe", "channel": 1003}
+< [1003,null,["2018-11-07 16:26",5804,{"BTC":"3418.409","ETH":"2645.921"
+,"USDT":"10832502.689","USDC":"1578020.908"}]]
+
+   Subscribe to 24 hour exchange volume statistics. Updates are
+   sent every 20 seconds.
+
+   Subscription example for exchange volume
+
+   { "command": "subscribe", "channel": 1003 }
+
+   The first response is acknowledgement of subscription
+
+   [<channel id>, 1]
+
+   For example:
+
+   [1003, 1]
+
+   Subsequent responses are exchange volume update sent every 20
+   seconds. Base currencies are BTC, ETH, USDT and USDC.
+
+   [ <channel id>, null, [ "<time as YYYY-MM-DD HH:SS>", "<number
+   of users online>", { "<base currency>": "<24 hours volume>",
+   ... } ] ]
+
+   For example
+
+   [ 1003, null, [ "2018-09-30 21:33", 8592, { "BTC": "6482.518",
+   "ETH": "1315.332", "USDT": "42935638.731", "USDC":
+   "76034823.390" } ] ]
+
+Heartbeats
+
+# Heartbeats (1010) will arrive automatically - you can see them simply
+by connecting
+ws wss://api2.poloniex.com
+< [1010]
+< [1010]
+< [1010]
+
+   When no messages have been sent out for one second, the server
+   will send a heartbeat message as follows. Absence of heartbeats
+   indicates a protocol or networking issue and the client
+   application is expected to close the socket and try again.
+
+   [1010]
+
+Price Aggregated Book
+
+ws wss://api2.poloniex.com
+> {"command": "subscribe", "channel": "BTC_ETH"}
+< [148,599758718,[["i",{"currencyPair":"BTC_ETH","orderBook":[{"0.033424
+99":"0.98174196","0.03343000":"45.80780000", ... "0.00000001":"1462262.0
+0000000"}]}, "1522877119341"]]]
+< [148,599758719,[["o",1,"0.03315496","0.00000000", "1522877119341"],["o
+",1,"0.03315498","99.33100000", "1522877119341"]]]
+< [148,599758720,[["o",0,"0.03383499","0.00000000", "1522877119341"]]]
+< [148,599758721,[["o",0,"0.03342499","0.24289338", "1522877119341"]]]
+
+     Example output:
+
+  { currencyPair: 'BTC_ETH',
+    orderBook:
+     [ { '0.03119500': '8.87619723',
+         '0.03120486': '2.15539849',
+         '0.03120500': '50.78890000',
+...
+         '3777.70000000': '0.00100000',
+         '4999.00000000': '0.05000000',
+         '5000.00000000': '0.20000000' },
+       { '0.03118500': '50.78940000',
+         '0.03117855': '10.55121501',
+         '0.03117841': '6.20027213',
+...
+         '0.00000003': '20000.00000000',
+         '0.00000002': '670207.00000000',
+         '0.00000001': '1462262.00000000' } ] } ]
+
+   Subscribe to price aggregated depth of book by [417]currency
+   pair. Response includes an initial book snapshot, book
+   modifications, and trades. Book modification updates with 0
+   quantity should be treated as removal of the price level. Note
+   that the updates are price aggregated and do not contain
+   individual orders.
+
+   Subscription example for BTC_BTS pair (id is 14). You can
+   either subscribe using the currency pair ID or name. Currency
+   pair IDs are listed in the [418]currency pair ID list.
+
+   { "command":"subscribe", "channel": 14 }
+
+   Or
+
+   { "command": "subscribe", "channel": "BTC_BTS" }
+
+   The first response is the initial dump of the book. NOTE: An
+   "i" message can occur after the initial subscription under
+   certain circumstances. When this occurs the client is required
+   to reset the state of the price aggregated book.
+
+   [ <channel id>, <sequence number>, [ [ "i", { "currencyPair":
+   "<currency pair name>", "orderBook": [ { "<lowest ask price>":
+   "<lowest ask size>", "<next ask price>": "<next ask size>", ...
+   }, { "<highest bid price>": "<highest bid size>", "<next bid
+   price>": "<next bid size>", ... } ] }, "<epoch_ms>" ] ] ]
+
+   For example:
+
+   [ 14, 8767, [ [ "i", { "currencyPair": "BTC_BTS", "orderBook":
+   [ { "0.00001853": "2537.5637", "0.00001854": "1567238.172367"
+   }, { "0.00001841": "3645.3647", "0.00001840": "1637.3647" } ]
+   }, "1522877119341"] ] ]
+
+   Subsequent responses are updates to the book and trades
+
+   [ <channel id>, <sequence number>, [ ["o", <1 for bid 0 for
+   ask>, "<price>", "<size>", "<epoch_ms>"], ["o", <1 for bid 0
+   for ask>, "<price>", "<size>", "<epoch_ms>"], ["t", "<trade
+   id>", <1 for buy 0 for sell>, "<price>", "<size>", <timestamp>,
+   "<epoch_ms>"] ] ... ]
+
+   For example
+
+   [ 14, 8768, [ ["o", 1, "0.00001823", "5534.6474",
+   "1522877119341"], ["o", 0, "0.00001824",
+   "6575.464","1522877119341"], ["t", "42706057", 1, "0.05567134",
+   "0.00181421", 1522877119, "1522877119341"] ] ]
+
+Reference
+
+Currencies
+
+   This is a list of currency IDs. They are used in b messages in
+   the account notifications websockets channel, and can also be
+   retrieved using the returnCurrencies REST call.
+   ID  Currency
+   1   1CR
+   446 AAVE
+   2   ABY
+   3   AC
+   4   ACH
+   560 ACH1
+   668 ADA
+   488 ADABEAR
+   489 ADABULL
+   503 ADD
+   430 ADEL
+   5   ADN
+   6   AEON
+   719 AERGO
+   7   AERO
+   579 AGLD
+   8   AIR
+   510 AKITA
+   429 AKRO
+   565 ALICE
+   556 ALPACA
+   463 ALPHA
+   712 ALPINE
+   275 AMP
+   656 ANGLE
+   420 ANK
+   640 ANY
+   720 APE
+   9   APH
+   464 API3
+   258 ARCH
+   285 ARDR
+   672 ATLAS
+   313 ATOM
+   567 AUDIO
+   10  AUR
+   548 AUTO
+   344 AVA
+   621 AVAX
+   11  AXIS
+   553 AXS
+   506 B20
+   555 BabyDoge
+   477 BAC
+   468 BADGER
+   369 BAL
+   12  BALLS
+   390 BAND
+   13  BANK
+   476 BAS
+   302 BAT
+   14  BBL
+   15  BBR
+   16  BCC
+   292 BCH
+   447 BCHA
+   308 BCHABC
+   339 BCHBEAR
+   340 BCHBULL
+   360 BCHC
+   448 BCHN
+   309 BCHSV
+   17  BCN
+   269 BCY
+   18  BDC
+   19  BDG
+   502 BDP
+   322 BEAR
+   20  BELA
+   677 BICO
+   449 BID
+   595 BIFI
+   568 BIT
+   273 BITCNY
+   21  BITS
+   272 BITUSD
+   22  BLK
+   23  BLOCK
+   24  BLU
+   406 BLY
+   680 BLZ
+   343 BNB
+   25  BNS
+   305 BNT
+   662 BNX
+   633 BOBA
+   481 BOND
+   26  BONES
+   27  BOST
+   570 BP
+   441 BREE
+   500 BRG
+   341 BSVBEAR
+   342 BSVBULL
+   28  BTC
+   29  BTCD
+   30  BTCS
+   505 BTCST
+   445 BTCTRON
+   31  BTM
+   695 BTRFLY
+   597 BTRST
+   32  BTS
+   320 BTT
+   323 BULL
+   33  BURN
+   34  BURST
+   324 BUSD
+   547 BURGER
+   559 BUSDBSC
+   346 BVOL
+   372 BZRX
+   35  C2
+   557 C98
+   563 C98ETH
+   36  CACH
+   37  CAI
+   544 CAKE
+   730 CAW
+   38  CC
+   39  CCN
+   728 CEEK
+   40  CGA
+   41  CHA
+   617 CHESS
+   358 CHR
+   607 CHZ
+   42  CINNI
+   43  CLAM
+   561 CLV
+   562 CLVBSC
+   44  CNL
+   45  CNMT
+   46  CNOTE
+   483 COMBO
+   47  COMM
+   361 COMP
+   48  CON
+   577 COOL
+   49  CORG
+   424 CORN
+   465 COVER
+   427 CREAM
+   650 CRO
+   422 CRT
+   401 CRV
+   50  CRYPT
+   692 CTC
+   480 CUDOS
+   723 CULT
+   51  CURE
+   364 CUSDT
+   294 CVC
+   435 CVP
+   52  CYC
+   325 DAI
+   279 DAO
+   732 DAR
+   60  DASH
+   277 DCR
+   379 DEC
+   518 DEGO
+   397 DEXT
+   573 DFA
+   53  DGB
+   432 DHT
+   391 DIA
+   54  DICE
+   55  DIEM
+   56  DIME
+   57  DIS
+   404 DMG
+   58  DNS
+   632 DOE
+   59  DOGE
+   647 DORA
+   392 DOS
+   400 DOT
+   61  DRKC
+   62  DRM
+   63  DSH
+   64  DVK
+   585 DYDX
+   644 DYP
+   65  EAC
+   66  EBT
+   67  ECC
+   618 EFI
+   68  EFL
+   520 ELON
+   69  EMC2
+   70  EMO
+   71  ENC
+   606 ENJ
+   298 EOS
+   355 EOSBEAR
+   354 EOSBULL
+   532 eRSDL
+   546 EPS
+   614 ERN
+   472 ESD
+   283 ETC
+   267 ETH
+   333 ETHBEAR
+   319 ETHBNT
+   334 ETHBULL
+   73  EXE
+   270 EXP
+   74  FAC
+   469 FARM
+   75  FCN
+   271 FCT
+   413 FCT2
+   76  FIBRE
+   674 FIDA
+   362 FIL
+   736 FITFI
+   77  FLAP
+   78  FLDC
+   254 FLO
+   598 FLOKI
+   599 FLOKIBSC
+   79  FLT
+   307 FOAM
+   519 FORTH
+   80  FOX
+   81  FRAC
+   739 FRAX
+   690 FREE
+   641 FREN
+   82  FRK
+   462 FRONT
+   83  FRQ
+   426 FSW
+   484 FTT
+   659 FTM
+   410 FUND
+   84  FVZ
+   351 FXC
+   643 FXS
+   85  FZ
+   86  FZN
+   735 GAL
+   589 GALA
+   590 GALABSC
+   93  GAME
+   724 GEIST
+   679 GF
+   660 GMEEBSC
+   87  GAP
+   296 GAS
+   88  GDN
+   388 GEEQ
+   89  GEMZ
+   90  GEO
+   436 GHST
+   91  GIAR
+   92  GLB
+   457 GLM
+   575 GLYPH
+   94  GML
+   716 GMT
+   291 GNO
+   95  GNS
+   290 GNT
+   681 GODS
+   664 GODZ
+   96  GOLD
+   97  GPC
+   98  GPUC
+   261 GRC
+   99  GRCX
+   314 GRIN
+   100 GRS
+   470 GRT
+   537 GTC
+   101 GUE
+   102 H2O
+   741 HBB
+   459 HEGIC
+   642 HEX
+   428 HGET
+   689 HIGH
+   103 HIRO
+   104 HOT
+   105 HUC
+   260 HUGE
+   705 HUNT
+   106 HVC
+   107 HYP
+   108 HZ
+   347 IBVOL
+   616 ICE
+   596 IDIA
+   109 IFC
+   613 ILV
+   265 INDEX
+   452 INJ
+   263 IOC
+   110 ITC
+   111 IXC
+   683 JBX
+   421 JFI
+   112 JLH
+   666 JOE
+   113 JPC
+   715 JPEG
+   345 JST
+   114 JUG
+   504 KCS
+   115 KDC
+   646 KEEP
+   116 KEY
+   511 KLV
+   301 KNC
+   455 KP3R
+   382 KTON
+   743 KUB
+   605 LATTE
+   280 LBC
+   117 LC
+   118 LCL
+   591 LDO
+   119 LEAF
+   533 LEASH
+   366 LEND
+   120 LGC
+   327 LINK
+   357 LINKBEAR
+   356 LINKBULL
+   685 LIT
+   508 LIVE
+   699 LOKA
+   121 LOL
+   478 LON
+   696 LOOKS
+   303 LOOM
+   122 LOVE
+   312 LPT
+   123 LQD
+   713 LQDR
+   512 LQTY
+   368 LRC
+   278 LSK
+   124 LTBC
+   125 LTC
+   490 LTCBEAR
+   491 LTCBULL
+   494 LTCTRON
+   126 LTCX
+   513 LUSD
+   711 MAGIC
+   127 MAID
+   306 MANA
+   576 MASK
+   128 MAST
+   338 MATIC
+   578 MATTER
+   129 MAX
+   569 MBOX
+   639 MC
+   398 MCB
+   130 MCN
+   359 MDT
+   131 MEC
+   433 MEME
+   733 MESH
+   132 METH
+   693 METIS
+   439 MEXP
+   133 MIL
+   134 MIN
+   135 MINT
+   516 MIR
+   521 MIST
+   328 MKR
+   602 MLN
+   136 MMC
+   137 MMNXT
+   138 MMXIV
+   139 MNTA
+   140 MON
+   456 MPH
+   653 MPL
+   703 MQST
+   141 MRC
+   142 MRS
+   374 MTA
+   144 MTS
+   145 MUN
+   525 MVL
+   146 MYR
+   147 MZC
+   148 N5X
+   149 NAS
+   150 NAUT
+   151 NAV
+   152 NBT
+   687 NCR
+   702 NCT
+   348 NEO
+   153 NEOS
+   395 NEST
+   658 NEXO
+   526 NFT
+   527 NFTETH
+   515 NFTX
+   154 NL
+   155 NMC
+   310 NMR
+   156 NOBL
+   157 NOTE
+   158 NOXT
+   159 NRS
+   549 NRV
+   160 NSR
+   161 NTX
+   461 NU
+   721 NVIR
+   288 NXC
+   162 NXT
+   163 NXTI
+   729 NYM
+   403 OCEAN
+   609 OGN
+   539 OKB
+   405 OM
+   295 OMG
+   143 OMNI
+   473 ONEINCH
+   727 ONSTON
+   164 OPAL
+   407 OPT
+   648 ORCA
+   627 O3
+   165 PAND
+   289 PASC
+   166 PAWN
+   329 PAX
+   482 PBTC35A
+   419 PEARL
+   649 PEOPLE
+   558 PERP
+   399 PERX
+   167 PIGGY
+   168 PINK
+   380 PLT
+   169 PLX
+   170 PMC
+   540 POL
+   673 POLIS
+   444 POLS
+   311 POLY
+   638 POLYDOGE
+   171 POT
+   172 PPC
+   173 PRC
+   655 PRINTS
+   408 PRQ
+   174 PRT
+   657 PSP
+   175 PTS
+   574 PUNK
+   686 PYR
+   176 Q2C
+   177 QBK
+   178 QCN
+   665 QI
+   179 QORA
+   180 QTL
+   304 QTUM
+   523 QUICK
+   620 RACABSC
+   274 RADS
+   651 RARE
+   438 RARI
+   682 RBN
+   181 RBY
+   566 RD
+   182 RDD
+   475 REEF
+   367 REN
+   284 REP
+   437 REPV2
+   669 REQ
+   624 REVV
+   440 RFUEL
+   183 RIC
+   383 RING
+   707 RND
+   498 RNDR
+   411 RSR
+   184 RZR
+   423 SAL
+   671 SAMO
+   434 SAND
+   282 SBD
+   396 SBREE
+   268 SC
+   185 SDC
+   454 SENSO
+   678 SFP
+   509 SHIB
+   186 SHIBE
+   744 SHIT
+   187 SHOPX
+   698 SHPING
+   188 SILK
+   189 SJCX
+   608 SLP
+   190 SLR
+   191 SMC
+   300 SNT
+   335 SNX
+   192 SOC
+   586 SOL
+   688 SOS
+   193 SPA
+   615 SPELL
+   714 SPIRIT
+   194 SQL
+   628 SQUID
+   195 SRCC
+   196 SRG
+   487 SRM
+   197 SSD
+   663 SSG
+   371 STAKE
+   281 STEEM
+   675 STEP
+   722 STG
+   297 STORJ
+   350 STPT
+   198 STR
+   287 STRAT
+   704 STRK
+   718 STRONG
+   701 SUKU
+   199 SUM
+   200 SUN
+   612 SUPER
+   414 SUSHI
+   384 SWAP
+   201 SWARM
+   349 SWFTC
+   409 SWINGBY
+   425 SWRV
+   202 SXC
+   373 SXP
+   203 SYNC
+   204 SYS
+   205 TAC
+   418 TAI
+   385 TEND
+   631 TIME
+   708 TITAN
+   611 TLM
+   600 TOKE
+   206 TOR
+   386 TRADE
+   394 TRB
+   645 TRIBE
+   479 TRU
+   378 TRUMPLOSE
+   377 TRUMPWIN
+   207 TRUST
+   315 TRX
+   330 TRXBEAR
+   331 TRXBULL
+   332 TUSD
+   507 TUSDTRON
+   208 TWE
+   654 UDT
+   209 UIS
+   210 ULTC
+   381 UMA
+   593 UMB
+   594 UMBBSC
+   709 UMEE
+   706 UNFI
+   431 UNI
+   211 UNITY
+   212 URO
+   299 USDC
+   543 USDCTRON
+   734 USDD
+   213 USDE
+   742 USDH
+   337 USDJ
+   214 USDT
+   318 USDTETH
+   316 USDTTRON
+   517 UST
+   215 UTC
+   216 UTIL
+   217 UVC
+   684 VADER
+   442 VALUE
+   218 VIA
+   219 VOOT
+   276 VOX
+   691 VOXEL
+   700 VRA
+   220 VRC
+   499 VSP
+   221 VTC
+   453 WBTC
+   474 WBTCTRON
+   222 WC
+   223 WDC
+   495 WETH
+   748 WLKN
+   717 WLUNA
+   514 WHALE
+   224 WIKI
+   321 WIN
+   601 WNCG
+   412 WNXM
+   225 WOLF
+   603 WOO
+   604 WOOBSC
+   363 WRX
+   226 X13
+   710 X2Y2
+   227 XAI
+   228 XAP
+   229 XBC
+   230 XC
+   587 XCAD
+   588 XCADBSC
+   231 XCH
+   738 XCN
+   233 XCP
+   234 XCR
+   652 XDEFI
+   235 XDN
+   402 XDOT
+   236 XDP
+   256 XEM
+   365 XFIL
+   471 XFLR
+   237 XHC
+   238 XLB
+   492 XLMBEAR
+   493 XLMBULL
+   239 XMG
+   240 XMR
+   241 XPB
+   242 XPM
+   243 XRP
+   353 XRPBEAR
+   352 XRPBULL
+   244 XSI
+   245 XST
+   246 XSV
+   336 XTZ
+   247 XUSD
+   253 XVC
+   545 XVS
+   248 XXC
+   522 XOR
+   249 YACC
+   250 YANG
+   251 YC
+   375 YFI
+   415 YFII
+   417 YFL
+   554 YFX
+   564 YGG
+   252 YIN
+   393 ZAP
+   286 ZEC
+   497 ZKS
+   460 ZLOT
+   293 ZRX
+   72  eTOK
+
+Currency Pair IDs
+
+   This is a list of IDs for currency pairs. They serve as the
+   channel IDs for price aggregated books, and are used in
+   returned data from a few other websocket channels as well.
+   Id  Currency Pair
+   336 BNB_BTC
+   462 BTC_AAVE
+   733 BTC_ADA
+   438 BTC_AKRO
+   451 BTC_AMP
+   177 BTC_ARDR
+   253 BTC_ATOM
+   324 BTC_AVA
+   668 BTC_AVAX
+   210 BTC_BAT
+   475 BTC_BCH
+   238 BTC_BCHSV
+   468 BTC_BID
+   232 BTC_BNT
+   14  BTC_BTS
+   333 BTC_CHR
+   194 BTC_CVC
+   24  BTC_DASH
+   162 BTC_DCR
+   27  BTC_DOGE
+   496 BTC_DOT
+   201 BTC_EOS
+   171 BTC_ETC
+   148 BTC_ETH
+   266 BTC_ETHBNT
+   382 BTC_EXE
+   494 BTC_FARM
+   414 BTC_FCT2
+   544 BTC_FIL
+   246 BTC_FOAM
+   489 BTC_FRONT
+   742 BTC_FTM
+   432 BTC_FUND
+   317 BTC_FXC
+   198 BTC_GAS
+   482 BTC_GLM
+   436 BTC_HGET
+   473 BTC_INJ
+   553 BTC_KLV
+   207 BTC_KNC
+   351 BTC_LEND
+   275 BTC_LINK
+   213 BTC_LOOM
+   250 BTC_LPT
+   355 BTC_LRC
+   163 BTC_LSK
+   50  BTC_LTC
+   229 BTC_MANA
+   295 BTC_MATIC
+   342 BTC_MDT
+   302 BTC_MKR
+   309 BTC_NEO
+   248 BTC_NMR
+   69  BTC_NXT
+   196 BTC_OMG
+   249 BTC_POLY
+   221 BTC_QTUM
+   353 BTC_REN
+   445 BTC_REPV2
+   454 BTC_SAND
+   150 BTC_SC
+   478 BTC_SENSO
+   204 BTC_SNT
+   290 BTC_SNX
+   690 BTC_SOL
+   630 BTC_SRM
+   168 BTC_STEEM
+   200 BTC_STORJ
+   369 BTC_STPT
+   89  BTC_STR
+   379 BTC_SWAP
+   312 BTC_SWFTC
+   403 BTC_SWINGBY
+   364 BTC_SXP
+   523 BTC_TRU
+   263 BTC_TRX
+   514 BTC_TUSD
+   486 BTC_WBTC
+   359 BTC_WRX
+   112 BTC_XEM
+   114 BTC_XMR
+   117 BTC_XRP
+   277 BTC_XTZ
+   178 BTC_ZEC
+   192 BTC_ZRX
+   340 BUSD_BNB
+   341 BUSD_BTC
+   306 DAI_BTC
+   307 DAI_ETH
+   669 ETH_AVAX
+   358 ETH_BAL
+   211 ETH_BAT
+   190 ETH_BCH
+   347 ETH_COMP
+   202 ETH_EOS
+   172 ETH_ETC
+   515 ETH_TUSD
+   179 ETH_ZEC
+   193 ETH_ZRX
+   284 PAX_BTC
+   285 PAX_ETH
+   453 TRX_AMP
+   326 TRX_AVA
+   597 TRX_BABYDOGE
+   339 TRX_BNB
+   271 TRX_BTT
+   335 TRX_CHR
+   267 TRX_ETH
+   431 TRX_FUND
+   319 TRX_FXC
+   316 TRX_JST
+   553 TRX_KLV
+   276 TRX_LINK
+   297 TRX_MATIC
+   344 TRX_MDT
+   311 TRX_NEO
+   569 TRX_NFT
+   422 TRX_PEARL
+   292 TRX_SNX
+   274 TRX_STEEM
+   371 TRX_STPT
+   498 TRX_SUN
+   314 TRX_SWFTC
+   405 TRX_SWINGBY
+   366 TRX_SXP
+   420 TRX_TAI
+   535 TRX_VSP
+   273 TRX_WIN
+   361 TRX_WRX
+   268 TRX_XRP
+   279 TRX_XTZ
+   527 TUSD_BTC
+   528 TUSD_ETH
+   600 TUSD_TRU
+   254 USDC_ATOM
+   667 USDC_AVAX
+   477 USDC_BCH
+   239 USDC_BCHSV
+   224 USDC_BTC
+   627 USDC_BTT
+   608 USDC_BNB
+   734 USDC_ADA
+   256 USDC_DASH
+   243 USDC_DOGE
+   257 USDC_EOS
+   258 USDC_ETC
+   225 USDC_ETH
+   741 USDC_FTM
+   252 USDC_GRIN
+   244 USDC_LTC
+   609 USDC_LINK
+   625 USDC_MANA
+   624 USDC_MATIC
+   666 USDC_SHIB
+   691 USDC_SOL
+   628 USDC_SRM
+   242 USDC_STR
+   264 USDC_TRX
+   513 USDC_TUSD
+   782 USDC_USDD
+   226 USDC_USDT
+   626 USDC_XEM
+   241 USDC_XMR
+   240 USDC_XRP
+   245 USDC_ZEC
+   784 USDD_BTC
+   787 USDD_BTT
+   796 USDD_DOGE
+   799 USDD_DOT
+   794 USDD_ELON
+   785 USDD_ETH
+   802 USDD_FRAX
+   805 USDD_HBB
+   798 USDD_LTC
+   789 USDD_JST
+   788 USDD_NFT
+   795 USDD_SHIB
+   810 USDD_SHIT
+   808 USDD_KUB
+   791 USDD_SUN
+   786 USDD_TRX
+   792 USDD_TUSD
+   806 USDD_USDH
+   790 USDD_WIN
+   821 USDD_WLKN
+   793 USDD_WLUNA
+   797 USDD_XRP
+   288 USDJ_BTC
+   781 USDT_FITFI
+   801 USDT_FRAX
+   780 USDT_GAL
+   803 USDT_HBB
+   809 USDT_SHIT
+   807 USDT_KUB
+   779 USDT_USDD
+   323 USDJ_BTT
+   289 USDJ_TRX
+   463 USDT_AAVE
+   601 USDT_ACH1
+   711 USDT_ADA
+   516 USDT_ADABEAR
+   517 USDT_ADABULL
+   540 USDT_ADD
+   439 USDT_ADEL
+   764 USDT_AERGO
+   623 USDT_AGLD
+   550 USDT_AKITA
+   437 USDT_AKRO
+   604 USDT_ALICE
+   596 USDT_ALPACA
+   529 USDT_ALPHA
+   757 USDT_ALPINE
+   452 USDT_AMP
+   701 USDT_ANGLE
+   423 USDT_ANK
+   682 USDT_ANY
+   765 USDT_APE
+   491 USDT_API3
+   714 USDT_ATLAS
+   255 USDT_ATOM
+   588 USDT_AUTO
+   606 USDT_AUDIO
+   325 USDT_AVA
+   659 USDT_AVAX
+   593 USDT_AXS
+   551 USDT_B20
+   504 USDT_BAC
+   493 USDT_BADGER
+   357 USDT_BAL
+   387 USDT_BAND
+   212 USDT_BAT
+   476 USDT_BCH
+   298 USDT_BCHBEAR
+   299 USDT_BCHBULL
+   345 USDT_BCHC
+   259 USDT_BCHSV
+   320 USDT_BCN
+   539 USDT_BDP
+   280 USDT_BEAR
+   718 USDT_BICO
+   469 USDT_BID
+   636 USDT_BIFI
+   607 USDT_BIT
+   401 USDT_BLY
+   721 USDT_BLZ
+   337 USDT_BNB
+   706 USDT_BNX
+   509 USDT_BOND
+   611 USDT_BP
+   457 USDT_BREE
+   293 USDT_BSVBEAR
+   294 USDT_BSVBULL
+   121 USDT_BTC
+   542 USDT_BTCST
+   738 USDT_BTRFLY
+   637 USDT_BTRST
+   270 USDT_BTT
+   281 USDT_BULL
+   338 USDT_BUSD
+   587 USDT_BURGER
+   304 USDT_BVOL
+   598 USDT_C98
+   584 USDT_CAKE
+   775 USDT_CAW
+   773 USDT_CEEK
+   656 USDT_CHESS
+   334 USDT_CHR
+   646 USDT_CHZ
+   602 USDT_CLV
+   511 USDT_COMBO
+   346 USDT_COMP
+   620 USDT_COOL
+   427 USDT_CORN
+   433 USDT_CREAM
+   695 USDT_CRO
+   425 USDT_CRT
+   397 USDT_CRV
+   735 USDT_CTC
+   508 USDT_CUDOS
+   768 USDT_CULT
+   350 USDT_CUSDT
+   443 USDT_CVP
+   308 USDT_DAI
+   777 USDT_DAR
+   122 USDT_DASH
+   374 USDT_DEC
+   561 USDT_DEGO
+   395 USDT_DEXT
+   262 USDT_DGB
+   441 USDT_DHT
+   389 USDT_DIA
+   674 USDT_DOE
+   692 USDT_DORA
+   216 USDT_DOGE
+   388 USDT_DOS
+   407 USDT_DOT
+   616 USDT_DFA
+   630 USDT_DYDX
+   686 USDT_DYP
+   657 USDT_EFI
+   563 USDT_ELON
+   645 USDT_ENJ
+   203 USDT_EOS
+   330 USDT_EOSBEAR
+   329 USDT_EOSBULL
+   574 USDT_eRSDL
+   586 USDT_EPS
+   653 USDT_ERN
+   500 USDT_ESD
+   173 USDT_ETC
+   149 USDT_ETH
+   300 USDT_ETHBEAR
+   301 USDT_ETHBULL
+   383 USDT_EXE
+   495 USDT_FARM
+   413 USDT_FCT2
+   716 USDT_FIDA
+   545 USDT_FIL
+   638 USDT_FLOKI
+   562 USDT_FORTH
+   731 USDT_FREE
+   683 USDT_FREN
+   490 USDT_FRONT
+   429 USDT_FSW
+   524 USDT_FTT
+   704 USDT_FTM
+   430 USDT_FUND
+   318 USDT_FXC
+   685 USDT_FXS
+   633 USDT_GALA
+   769 USDT_GEIST
+   720 USDT_GF
+   661 USDT_GMEE
+   385 USDT_GEEQ
+   444 USDT_GHST
+   483 USDT_GLM
+   618 USDT_GLYPH
+   761 USDT_GMT
+   722 USDT_GODS
+   708 USDT_GODZ
+   261 USDT_GRIN
+   497 USDT_GRT
+   578 USDT_GTC
+   484 USDT_HEGIC
+   684 USDT_HEX
+   435 USDT_HGET
+   730 USDT_HIGH
+   750 USDT_HUNT
+   305 USDT_IBVOL
+   655 USDT_ICE
+   639 USDT_IDIA
+   652 USDT_ILV
+   474 USDT_INJ
+   724 USDT_JBX
+   424 USDT_JFI
+   710 USDT_JOE
+   760 USDT_JPEG
+   315 USDT_JST
+   541 USDT_KCS
+   688 USDT_KEEP
+   552 USDT_KLV
+   480 USDT_KP3R
+   377 USDT_KTON
+   575 USDT_LEASH
+   644 USDT_LATTE
+   634 USDT_LDO
+   352 USDT_LEND
+   322 USDT_LINK
+   332 USDT_LINKBEAR
+   331 USDT_LINKBULL
+   726 USDT_LIT
+   548 USDT_LIVE
+   744 USDT_LOKA
+   505 USDT_LON
+   739 USDT_LOOKS
+   526 USDT_LPT
+   758 USDT_LQDR
+   555 USDT_LQTY
+   356 USDT_LRC
+   218 USDT_LSK
+   123 USDT_LTC
+   518 USDT_LTCBEAR
+   519 USDT_LTCBULL
+   556 USDT_LUSD
+   614 USDT_LUMI
+   756 USDT_MAGIC
+   231 USDT_MANA
+   619 USDT_MASK
+   296 USDT_MATIC
+   610 USDT_MBOX
+   681 USDT_MC
+   396 USDT_MCB
+   343 USDT_MDT
+   442 USDT_MEME
+   778 USDT_MESH
+   736 USDT_METIS
+   448 USDT_MEXP
+   559 USDT_MIR
+   564 USDT_MIST
+   303 USDT_MKR
+   640 USDT_MLN
+   481 USDT_MPH
+   698 USDT_MPL
+   748 USDT_MQST
+   367 USDT_MTA
+   728 USDT_NCR
+   747 USDT_NCT
+   310 USDT_NEO
+   566 USDT_MVL
+   703 USDT_NEXO
+   568 USDT_NFT
+   589 USDT_NRV
+   488 USDT_NU
+   558 USDT_NFTX
+   766 USDT_NVIR
+   774 USDT_NYM
+   400 USDT_OCEAN
+   648 USDT_OGN
+   579 USDT_OKB
+   399 USDT_OM
+   501 USDT_ONEINCH
+   772 USDT_ONSTON
+   402 USDT_OPT
+   693 USDT_ORCA
+   665 USDT_O3
+   612 USDT_OSK
+   286 USDT_PAX
+   510 USDT_PBTC35A
+   421 USDT_PEARL
+   694 USDT_PEOPLE
+   599 USDT_PERP
+   392 USDT_PERX
+   580 USDT_POL
+   715 USDT_POLIS
+   460 USDT_POLS
+   680 USDT_POLYDOGE
+   700 USDT_PRINTS
+   406 USDT_PRQ
+   702 USDT_PSP
+   617 USDT_PUNK
+   727 USDT_PYR
+   709 USDT_QI
+   223 USDT_QTUM
+   566 USDT_QUICK
+   658 USDT_RACA
+   696 USDT_RARE
+   447 USDT_RARI
+   723 USDT_RBN
+   605 USDT_RD
+   502 USDT_REEF
+   354 USDT_REN
+   446 USDT_REPV2
+   712 USDT_REQ
+   662 USDT_REVV
+   456 USDT_RFUEL
+   378 USDT_RING
+   752 USDT_RND
+   532 USDT_RNDR
+   411 USDT_RSR
+   426 USDT_SAL
+   713 USDT_SAMO
+   455 USDT_SAND
+   219 USDT_SC
+   479 USDT_SENSO
+   543 USDT_SFI
+   719 USDT_SFP
+   549 USDT_SHIB
+   743 USDT_SHPING
+   647 USDT_SLP
+   291 USDT_SNX
+   689 USDT_SOL
+   729 USDT_SOS
+   654 USDT_SPELL
+   759 USDT_SPIRIT
+   670 USDT_SQUID
+   525 USDT_SRM
+   707 USDT_SSG
+   362 USDT_STAKE
+   321 USDT_STEEM
+   717 USDT_STEP
+   767 USDT_STG
+   370 USDT_STPT
+   125 USDT_STR
+   749 USDT_STRK
+   763 USDT_STRONG
+   746 USDT_SUKU
+   581 USDT_SUN
+   651 USDT_SUPER
+   415 USDT_SUSHI
+   380 USDT_SWAP
+   313 USDT_SWFTC
+   404 USDT_SWINGBY
+   428 USDT_SWRV
+   365 USDT_SXP
+   419 USDT_TAI
+   381 USDT_TEND
+   673 USDT_TIME
+   753 USDT_TITAN
+   650 USDT_TLM
+   641 USDT_TOKE
+   384 USDT_TRADE
+   393 USDT_TRB
+   687 USDT_TRIBE
+   507 USDT_TRU
+   265 USDT_TRX
+   282 USDT_TRXBEAR
+   283 USDT_TRXBULL
+   512 USDT_TUSD
+   699 USDT_UDT
+   376 USDT_UMA
+   635 USDT_UMB
+   754 USDT_UMEE
+   751 USDT_UNFI
+   440 USDT_UNI
+   804 USDT_USDH
+   287 USDT_USDJ
+   560 USDT_UST
+   725 USDT_VADER
+   458 USDT_VALUE
+   732 USDT_VOXEL
+   745 USDT_VRA
+   534 USDT_VSP
+   487 USDT_WBTC
+   522 USDT_WETH
+   820 USDT_WLKN
+   762 USDT_WLUNA
+   557 USDT_WHALE
+   272 USDT_WIN
+   642 USDT_WNCG
+   412 USDT_WNXM
+   643 USDT_WOO
+   360 USDT_WRX
+   755 USDT_X2Y2
+   632 USDT_XCAD
+   800 USDT_XCN
+   697 USDT_XDEFI
+   629 USDT_XEM
+   499 USDT_XFLR
+   520 USDT_XLMBEAR
+   521 USDT_XLMBULL
+   126 USDT_XMR
+   127 USDT_XRP
+   328 USDT_XRPBEAR
+   327 USDT_XRPBULL
+   278 USDT_XTZ
+   565 USDT_XOR
+   585 USDT_XVS
+   368 USDT_YFI
+   416 USDT_YFII
+   418 USDT_YFL
+   594 USDT_YFX
+   603 USDT_YGG
+   390 USDT_ZAP
+   180 USDT_ZEC
+   531 USDT_ZKS
+   485 USDT_ZLOT
+   220 USDT_ZRX
+
+Changelog
+
+   Recent changes and additions to the Poloniex API.
+
+2023-02-28 Private HTTP API and Websockets decommissioned
+
+   The private endpoints of our HTTP API and private Account
+   Notifications channel of our Websockets API have been
+   decommissioned.
+
+2022-07-13 KUB Listing
+
+   Listing of Bitkub Coin ERC20 token (KUB), and the following
+   market(s) USDT_KUB,USDD_KUB.
+
+2022-07-06 WLKN Listing
+
+   Listing of Walken SOL token (WLKN), and the following market(s)
+   USDT_WLKN,USDD_WLKN.
+
+2022-06-15 SHIT Listing
+
+   Listing of I will poop it NFT ERC20 token (SHIT), and the
+   following market(s) USDT_SHIT,USDD_SHIT.
+
+2022-05-31 USDH Listing
+
+   Listing of USDH SOL token (USDH), and the following market(s)
+   USDT_USDH,USDD_USDH.
+
+2022-05-31 HBB Listing
+
+   Listing of Hubble SOL token (HBB), and the following market(s)
+   USDT_HBB,USDD_HBB.
+
+2022-05-26 XCN Listing
+
+   Listing of Chain ERC20 token (XCN), and the following market(s)
+   USDT_XCN.
+
+2022-05-25 FRAX Listing
+
+   Listing of Frax ERC20 token (FRAX), and the following market(s)
+   USDT_FRAX,USDD_FRAX.
+
+2022-05-24 USDD_XRP,USDD_LTC,USDD_DOT,USDD_WLUNA Market Listing
+
+   Listing of the following markets:
+   USDD_XRP,USDD_LTC,USDD_DOT,USDD_WLUNA
+
+2022-05-24 MESH Listing
+
+   Listing of Meshswap Protocol POLYGON token (MESH), and the
+   following market(s) USDT_MESH.
+
+2022-05-19
+USDD_BTC,USDD_ETH,USDD_TRX,USDD_BTT,USDD_NFT,USDD_JST,USDD_WIN,USDD_S
+UN,USDD_TUSD,USDD_ELON,USDD_SHIB,USDD_DOGE Market Listing
+
+   Listing of the following markets:
+   USDD_BTC,USDD_ETH,USDD_TRX,USDD_BTT,USDD_NFT,USDD_JST,USDD_WIN,
+   USDD_SUN,USDD_TUSD,USDD_ELON,USDD_SHIB,USDD_DOGE.
+
+2022-05-17 GAL Listing
+
+   Listing of Project Galaxy ERC20 token (GAL), and the following
+   market(s) USDT_GAL.
+
+2022-05-12 USDC_USDD Market Listing
+
+   Listing of the following markets: USDC_USDD.
+
+2022-05-11 FITFI Listing
+
+   Listing of Step App AVALANCHE token (FITFI), and the following
+   market(s) USDT_FITFI.
+
+2022-05-10 DAR Listing
+
+   Listing of Mines of Dalarnia BEP20 token (DAR), and the
+   following market(s) USDT_DAR.
+
+2022-05-05 USDD Listing
+
+   Listing of USDD TRC20 token (USDD),and the following market(s)
+   USDT_USDD.
+
+2022-04-27 CAW Listing
+
+   Listing of A Hunters Dream ERC20 token (CAW), and the following
+   market(s) USDT_CAW.
+
+2022-04-20 CEEK Listing
+
+   Listing of CEEK Smart VR Token ERC20 token (CEEK), and the
+   following market(s) USDT_CEEK.
+
+2022-04-19 NYM Listing
+
+   Listing of Nym ERC20 token (NYM), and the following market(s)
+   USDT_NYM.
+
+2022-04-19 CULT Listing
+
+   Listing of Cult DAO ERC20 token (CULT), and the following
+   market(s) USDT_CULT.
+
+2022-04-15 ONSTON Listing
+
+   Listing of Onston ERC20 token (ONSTON), and the following
+   market(s) USDT_ONSTON.
+
+2022-04-14 Delisting markets for TRX_BRG and USDT_BRG
+
+   Delisted the following markets: TRX_BRG, USDT_BRG
+
+2022-04-13 GMT Listing
+
+   Listing of STEPN SOL token (GMT), and the following market(s)
+   USDT_GMT.
+
+2022-04-12 GEIST Listing
+
+   Listing of Geist Finance FTM token (GEIST), and the following
+   market(s) USDT_GEIST.
+
+2022-04-07 STG Listing
+
+   Listing of Stargate Finance ERC20 token (STG), and the
+   following market(s) USDT_STG.
+
+2022-03-30 NVIR Listing
+
+   Listing of NvirWorld ERC20 token (NVIR), and the following
+   market(s) USDT_NVIR.
+
+2022-03-29 AERGO Listing
+
+   Listing of Aergo ERC20 token (AERGO), and the following
+   market(s) USDT_AERGO.
+
+2022-03-29 WLUNA Listing
+
+   Listing of Wrapped Terra ERC20 token (WLUNA), and the following
+   market(s) USDT_WLUNA.
+
+2022-03-24 LQDR Listing
+
+   Listing of LiquidDriver FTM token (LQDR), and the following
+   market(s) USDT_LQDR.
+
+2022-03-23 SPIRIT Listing
+
+   Listing of SpiritSwap FTM token (SPIRIT), and the following
+   market(s) USDT_SPIRIT.
+
+2022-03-22 STRONG Listing
+
+   Listing of Strong ERC20 token (STRONG), and the following
+   market(s) USDT_STRONG.
+
+2022-03-18 APE Listing
+
+   Listing of ApeCoin ERC20 token (APE), and the following
+   market(s) USDT_APE.
+
+2022-03-16 JPEG Listing
+
+   Listing of JPEG ERC20 token (JPEG), and the following market(s)
+   USDT_JPEG.
+
+2022-03-09 ALPINE Listing
+
+   Listing of Alpine F1 Team Fan Token BEP20 token (ALPINE), and
+   the following market(s) USDT_ALPINE.
+
+2022-03-08 MAGIC Listing
+
+   Listing of Magic ERC20 token (MAGIC), and the following
+   market(s) USDT_MAGIC.
+
+2022-03-08 X2Y2 Listing
+
+   Listing of X2Y2 ERC20 token (X2Y2), and the following market(s)
+   USDT_X2Y2.
+
+2022-03-08 UMEE Listing
+
+   Listing of Umee ERC20 token (UMEE), and the following market(s)
+   USDT_UMEE.
+
+2022-03-03 VOXEL Listing
+
+   Listing of VOXEL POLYGON token (VOXEL), and the following
+   market(s) USDT_VOXEL.
+
+2022-03-03 RNDR Listing
+
+   Listing of Render Token ERC20 token (RNDR), and the following
+   market(s) USDT_RNDR.
+
+2022-03-03 RND Listing
+
+   Listing of Random ERC20 token (RND), and the following
+   market(s) USDT_RND.
+
+2022-03-03 SUKU Listing
+
+   Listing of SUKU ERC20 token (SUKU), and the following market(s)
+   USDT_SUKU.
+
+2022-03-02 TITAN Listing
+
+   Listing of TitanSwap ERC20 token (TITAN), and the following
+   market(s) USDT_TITAN.
+
+2022-02-23 ORCA Listing
+
+   Listing of ORCA SOL token (ORCA), and the following market(s)
+   USDT_ORCA.
+
+2022-02-23 SAMO Listing
+
+   Listing of Samoyedcoin SOL token (SAMO), and the following
+   market(s) USDT_SAMO.
+
+2022-02-23 ATLAS Listing
+
+   Listing of Star Atlas SOL token (ATLAS), and the following
+   market(s) USDT_ATLAS.
+
+2022-02-23 POLIS Listing
+
+   Listing of Star Atlas DAO SOL token (POLIS), and the following
+   market(s) USDT_POLIS.
+
+2022-02-23 FIDA Listing
+
+   Listing of Bonfida SOL token (FIDA), and the following
+   market(s) USDT_FIDA.
+
+2022-02-23 STEP Listing
+
+   Listing of Step Finance Atlas DAO SOL token (STEP), and the
+   following market(s) USDT_STEP.
+
+2020-06-19 Delisting Markets for BTC_BCHA, USDT_BCHA and USDT_BZRX
+
+   Delisted the following markets BTC_BCHA, USDT_BCHA and
+   USDT_BZRX.
+
+2022-02-17 SHPING Listing
+
+   Listing of Shping ERC20 token (SHPING), and the following
+   market(s) USDT_SHPING.
+
+2022-02-17 VRA Listing
+
+   Listing of Verasity ERC20 token (VRA), and the following
+   market(s) USDT_VRA.
+
+2022-02-17 HUNT Listing
+
+   Listing of HUNT ERC20 token (HUNT), and the following market(s)
+   USDT_HUNT.
+
+2022-02-17 NCT Listing
+
+   Listing of PolySwarm ERC20 token (NCT), and the following
+   market(s) USDT_NCT.
+
+2022-02-16 LIT Listing
+
+   Listing of Litentry ERC20 token (LIT), and the following
+   market(s) USDT_LIT.
+
+2022-02-16 STRK Listing
+
+   Listing of Strike ERC20 token (STRK), and the following
+   market(s) USDT_STRK.
+
+2022-02-16 UNFI Listing
+
+   Listing of Unifi Protocol DAO ERC20 token (UNFI), and the
+   following market(s) USDT_UNFI.
+
+2022-02-15 GODS Listing
+
+   Listing of Gods Unchained ERC20 token (GODS), and the following
+   market(s) USDT_GODS.
+
+2022-02-15 LOKA Listing
+
+   Listing of League of Kingdoms ERC20 token (LOKA), and the
+   following market(s) USDT_LOKA.
+
+2022-02-15 MQST Listing
+
+   Listing of MonsterQuest BEP20 token (MQST), and the following
+   market(s) USDT_MQST.
+
+2022-02-08 FTM Listing
+
+   Listing of Fantom Coin (FTM), and the following market(s)
+   USDT_FTM, USDC_FTM and BTC_FTM.
+
+2022-01-26 LOOKS Listing
+
+   Listing of LooksRare ERC20 token (LOOKS), and the following
+   market(s) USDT_LOOKS.
+
+2022-01-26 BTRFLY Listing
+
+   Listing of Redacted Cartel ERC20 token (BTRFLY), and the
+   following market(s) USDT_BTRFLY.
+
+2022-01-19 CTC Listing
+
+   Listing of Creditcoin ERC20 token (CTC), and the following
+   market(s) USDT_CTC.
+
+2022-01-13 METIS Listing
+
+   Listing of Metis Token ERC20 token (METIS), and the following
+   market(s) USDT_METIS.
+
+2021-01-13 FREE Listing
+
+   Listing of FreeRossDAO ERC20 token (FREE), and the following
+   market(s) USDT_FREE.
+
+2021-01-13 HIGH Listing
+
+   Listing of Highstreet ERC20 token (HIGH), and the following
+   market(s) USDT_HIGH.
+
+2021-01-13 SOS Listing
+
+   Listing of OpenDAO ERC20 token (SOS), and the following
+   market(s) USDT_SOS.
+
+2022-01-12 QI Listing
+
+   Listing of BENQI AVAX-C-CHAIN (QI), and the following market(s)
+   USDT_QI.
+
+2022-01-12 JOE Listing
+
+   Listing of JOE AVAX-C-CHAIN (JOE), and the following market(s)
+   USDT_JOE.
+
+2022-01-06 ADA Listing
+
+   Listing of Cardano native token (ADA), and the following
+   market(s) USDT_ADA, USDC_ADA, BTC_ADA.
+
+2022-01-05 BICO Listing
+
+   Listing of Biconomy ERC20 token (BICO), and the following
+   market(s) USDT_BICO.
+
+2021-12-30 PYR Listing
+
+   Listing of Vulcan Forged ERC20 token (PYR), and the following
+   market(s) USDT_PYR.
+
+2021-12-30 NCR Listing
+
+   Listing of Neos Credits ERC20 token (NCR), and the following
+   market(s) USDT_NCR.
+
+2021-12-29 REQ Listing
+
+   Listing of Request ERC20 token (REQ), and the following
+   market(s) USDT_REQ.
+
+2021-12-29 VADER Listing
+
+   Listing of Vader ERC20 token (VADER), and the following
+   market(s) USDT_VADER.
+
+2021-12-29 TIME Listing
+
+   Listing of Wonderland AVAX-C-CHAIN token (TIME), and the
+   following market(s) USDT_TIME.
+
+2021-12-24 JBX Listing
+
+   Listing of Juicebox ERC20 token (JBX), and the following
+   market(s) USDT_JBX.
+
+2021-12-24 RBN Listing
+
+   Listing of Ribbon ERC20 token (RBN), and the following
+   market(s) USDT_RBN.
+
+2021-12-23 BLZ Listing
+
+   Listing of Bluzelle ERC20 token (BLZ), and the following
+   market(s) USDT_BLZ.
+
+2021-12-23 GF Listing
+
+   Listing of GuildFi Token ERC20 token (GF), and the following
+   market(s) USDT_GF.
+
+2021-12-23 SFP Listing
+
+   Listing of SafePal Token BEP20 token (SFP), and the following
+   market(s) USDT_SFP.
+
+2021-12-14 REVV Listing
+
+   Listing of REVV Polygon token (REVVPOLY), and the following
+   market(s) USDT_REVV.
+
+2021-12-09 GODZ Listing
+
+   Listing of CryptoGodz BEP20 token (GODZ), and the following
+   market(s) USDT_GODZ.
+
+2021-12-09 SSG Listing
+
+   Listing of Surviving Soldiers BEP20 token (SSG), and the
+   following market(s) USDT_SSG.
+
+2021-12-09 BNX Listing
+
+   Listing of BinaryX BEP20 token (BNX), and the following
+   market(s) USDT_BNX.
+
+2021-12-08 GMEEBSC Listing
+
+   Listing of GAMEE BEP20 token (GMEEBSC), and the following
+   market(s) USDT_GMEE.
+
+2021-12-07 DORA Listing
+
+   Listing of Dorayaki ERC20 token (DORA), and the following
+   market(s) USDT_DORA.
+
+2021-12-01 XDEFI Listing
+
+   Listing of XDEFI ERC20 token (XDEFI), and the following
+   market(s) USDT_XDEFI.
+
+2021-12-01 MPL Listing
+
+   Listing of Maple Token ERC20 token (MPL), and the following
+   market(s) USDT_MPL.
+
+2021-12-01 PSP Listing
+
+   Listing of ParaSwap ERC20 token (PSP), and the following
+   market(s) USDT_PSP.
+
+2021-11-30 NEXO Listing
+
+   Listing of Nexo ERC20 token (NEXO), and the following market(s)
+   USDT_NEXO.
+
+2021-11-30 ANGLE Listing
+
+   Listing of ANGLE ERC20 token (ANGLE), and the following
+   market(s) USDT_ANGLE.
+
+2021-11-30 PRINTS Listing
+
+   Listing of Fingerprints ERC20 token (PRINTS), and the following
+   market(s) USDT_PRINTS.
+
+2021-11-30 UDT Listing
+
+   Listing of Unlock Discount Token ERC20 token (UDT), and the
+   following market(s) USDT_UDT.
+
+2021-11-30 RARE Listing
+
+   Listing of SuperRare ERC20 token (RARE), and the following
+   market(s) USDT_RARE.
+
+2021-11-30 CRO Listing
+
+   Listing of Crypto.com Coin ERC20 token (CRO), and the following
+   market(s) USDT_CRO.
+
+2021-11-26 PEOPLE Listing
+
+   Listing of ConstitutionDAO ERC20 token (PEOPLE), and the
+   following market(s) USDT_PEOPLE.
+
+2021-11-25 ANY Listing
+
+   Listing of Anyswap ERC20 token (ANY), and the following
+   market(s) USDT_ANY.
+
+2021-11-25 DYP Listing
+
+   Listing of DeFiYieldProtocol ERC20 token (DYP), and the
+   following market(s) USDT_DYP.
+
+2021-11-25 TRIBE Listing
+
+   Listing of Tribe ERC20 token (TRIBE), and the following
+   market(s) USDT_TRIBE.
+
+2021-11-25 KEEP Listing
+
+   Listing of KEEP Token ERC20 token (KEEP), and the following
+   market(s) USDT_KEEP.
+
+2021-11-24 FREN Listing
+
+   Listing of fren ERC20 token (FREN), and the following market(s)
+   USDT_FREN.
+
+2021-11-24 HEX Listing
+
+   Listing of HEX ERC20 token (HEX), and the following market(s)
+   USDT_HEX.
+
+2021-11-24 FXS Listing
+
+   Listing of Frax Share ERC20 token (FXS), and the following
+   market(s) USDT_FXS.
+
+2021-11-24 MC Listing
+
+   Listing of Merit Circle ERC20 token (MC), and the following
+   market(s) USDT_MC.
+
+2021-11-23 POLYDOGE Listing
+
+   Listing of PolyDoge Polygon token (POLYDOGE), and the following
+   market(s) USDT_POLYDOGE.
+
+2021-11-23 RACA Listing
+
+   Listing of Radio Caca V2 BEP20 token (RACA), and the following
+   market(s) USDT_RACA.
+
+2021-11-22 SOL Listing
+
+   Listing of SOL native token (SOL), and the following market(s)
+   USDT_SOL, USDC_SOL, BTC_SOL.
+
+2021-11-22 BOBA Listing
+
+   Listing of Boba Network ERC20 token (BOBA).
+
+2021-11-17 O3 Listing
+
+   Listing of O3 ERC20 token (O3), and the following market(s)
+   USDT_O3.
+
+2021-11-10 DOE Listing
+
+   Listing of Dogs Of Elon ERC20 token (DOE), and the following
+   market(s) USDT_DOE.
+
+2021-11-08 USDC_SHIB Market Listing
+
+   Listing of the following markets: USDC_SHIB.
+
+2021-11-08 SQUID Listing
+
+   Listing of Squid Game BEP20 token (SQUID), and the following
+   market(s) USDT_SQUID.
+
+2021-11-03 ERN Listing
+
+   Listing of @EthernityChain $ERN Token ERC20 token (ERN), and
+   the following market(s) USDT_ERN.
+
+2021-11-03 LEASH Listing
+
+   Listing of DOGE KILLER ERC20 token (LEASH), and the following
+   market(s) USDT_LEASH.
+
+2021-11-03 eRSDL Listing
+
+   Listing of UnFederalReserveToken ERC20 token (eRSDL), and the
+   following market(s) USDT_eRSDL.
+
+2021-11-02 ILV Listing
+
+   Listing of Illuvium ERC20 token (ILV), and the following
+   market(s) USDT_ILV.
+
+2021-11-02 SUPER Listing
+
+   Listing of SuperFarm ERC20 token (SUPER), and the following
+   market(s) USDT_SUPER.
+
+2021-11-02 TLM Listing
+
+   Listing of Alien Worlds Trilium ERC20 token (TLM), and the
+   following market(s) USDT_TLM.
+
+2021-11-02 OGN Listing
+
+   Listing of OriginToken ERC20 token (OGN), and the following
+   market(s) USDT_OGN.
+
+2021-11-02 SLP Listing
+
+   Listing of Smooth Love Potion ERC20 token (SLP), and the
+   following market(s) USDT_SLP.
+
+2021-10-27 LATTE Listing
+
+   Listing of LatteSwap Token BEP20 token (LATTE), and the
+   following market(s) USDT_Latte.
+
+2021-10-26 IDIA Listing
+
+   Listing of Impossible Decentralized Incubator Access Token
+   BEP20 token (IDIA), and the following market(s) USDT_IDIA.
+
+2021-10-25 EFI Listing
+
+   Listing of Efinity Token ERC20 token (EFI), and the following
+   market(s) USDT_EFI.
+
+2021-10-22 WOOBSC Listing
+
+   Listing of Wootrade Network BEP20 token (WOOBSC)
+
+2021-10-22 WOO Listing
+
+   Listing of Wootrade Network ERC20 token (WOO), and the
+   following market(s) USDT_WOO.
+
+2021-10-21 WNCG Listing
+
+   Listing of Wrapped NCG ERC20 token (WNCG), and the following
+   market(s) USDT_WNCG.
+
+2021-10-20 CHZ Listing
+
+   Listing of chiliZ ERC20 token (CHZ), and the following
+   market(s) USDT_CHZ.
+
+2021-10-20 ENJ Listing
+
+   Listing of EnjinCoin ERC20 token (ENJ), and the following
+   market(s) USDT_ENJ.
+
+2021-10-20 SPELL Listing
+
+   Listing of Spell Token ERC20 token (SPELL), and the following
+   market(s) USDT_SPELL.
+
+2021-10-20 CHESS Listing
+
+   Listing of Tranchess BEP20 token (CHESS), and the following
+   market(s) USDT_CHESS.
+
+2021-10-20 ICE Listing
+
+   Listing of IceToken ERC20 token (ICE), and the following
+   market(s) USDT_ICE.
+
+2021-10-20 MLN Listing
+
+   Listing of Melon Token ERC20 token (MLN), and the following
+   market(s) USDT_MLN.
+
+2021-10-13 TOKE Listing
+
+   Listing of Tokemak ERC20 token (TOKE), and the following
+   market(s) USDT_TOKE.
+
+2021-10-13 FLOKIBSC Listing
+
+   Listing of FLOKI BEP20 token (FLOKIBSC)
+
+2021-10-13 FLOKI Listing
+
+   Listing of Token FLOKI ERC20 token (FLOKI), and the following
+   market(s) USDT_FLOKI.
+
+2021-10-13 BTRST Listing
+
+   Listing of Token BTRST ERC20 token (BTRST), and the following
+   market(s) USDT_BTRST.
+
+2021-10-13 BIFI Listing
+
+   Listing of beefy.finance BEP20 token (BIFI), and the following
+   market(s) USDT_BIFI.
+
+2021-10-13 UMBBSC Listing
+
+   Listing of Umbrella BEP20 token (UMBBSC)
+
+2021-10-13 UMB Listing
+
+   Listing of Umbrella ERC20 token (UMB), and the following
+   market(s) USDT_UMB.
+
+2021-09-16 markets listings
+
+   Listing of the following markets: USDC_MATIC, USDC_XEM,
+   USDC_MANA, USDC_BTT, USDC_SRM, USDT_XEM, BTC_SRM
+
+2021-09-15 LDO Listing
+
+   Listing of Lido DAO Token ERC20 token (LDO), and the following
+   market(s) USDT_LDO.
+
+2021-09-15 XCADBSC Listing
+
+   Listing of Chainport.io-Peg XCAD Token BEP20 token (XCADBSC).
+
+2021-09-15 XCAD Listing
+
+   Listing of XCAD Token ERC20 token (XCAD), and the following
+   market(s) USDT_XCAD.
+
+2021-09-14 GALABSC Listing
+
+   Listing of pTokens GALA in BSC BEP20 token (GALABSC).
+
+2021-09-14 GALA Listing
+
+   Listing of Gala ERC20 token (GALA), and the following market(s)
+   USDT_GALA.
+
+2021-09-09 BP Listing
+
+   Listing of BunnyPark BEP20 token (BP), and the following
+   market(s) USDT_BP.
+
+2021-09-08 DYDX Listing
+
+   Listing of DYDX Token ERC20 token (DYDX), and the following
+   market(s) USDT_DYDX.
+
+2021-09-03 AGLD Listing
+
+   Listing of Adventure Gold ERC20 token (AGLD), and the following
+   market(s) USDT_AGLD.
+
+2021-09-06 MATTER Listing
+
+   Listing of Antimatter.Finance Governance Token ERC20 token
+   (MATTER), and the following market(s) USDT_MATTER,TRX_MATTER.
+
+2021-09-02 DFA Listing
+
+   Listing of DeFine Art ERC20 (DFA), and the following market(s)
+   USDT_DFA.
+
+2021-08-27 LUMI Listing
+
+   Listing of LUMI Credits TRC20 token (LUMI), and the following
+   market(s) USDT_LUMI.
+
+2021-08-27 OSK Listing
+
+   Listing of OSK TRC20 token (OSK), and the following market(s)
+   USDT_OSK.
+
+2021-08-16 C98ETH Listing
+
+   Listing of Coin98 On ETH ERC20 token (C98ETH).
+
+2021-08-16 CLVBSC Listing
+
+   Listing of Clover BEP20 token (CLVBSC).
+
+2021-08-16 CLV Listing
+
+   Listing of Clover ERC20 token (CLV), and the following
+   market(s) USDT_CLV.
+
+2021-08-12 ACH1 Listing
+
+   Listing of Alchemy ERC20 token (ACH1), and the following
+   market(s) USDT_ACH1.
+
+2021-08-09 BUSDBSC Listing
+
+   Listing of Binance-Peg BUSD Token BEP20 token (BUSD).
+
+2021-08-06 PERP Listing
+
+   Listing of Perpetual ERC20 token (PERP), and the following
+   market(s) USDT_PERP.
+
+2021-07-30 C98 Listing
+
+   Listing of Coin98 BEP20 token (C98), and the following
+   market(s) USDT_C98.
+
+2021-07-26 ALPACA Listing
+
+   Listing of AlpacaToken BEP20 token (ALPACA), and the following
+   market(s) USDT_ALPACA.
+
+2021-07-26 BabyDoge Listing
+
+   Listing of Baby Doge Coin BEP20 token (BabyDoge), and the
+   following market(s) USDT_BabyDoge.
+
+2021-07-23 CAKE，XVS，EPS，AUTO，BURGER, NRV Listing
+
+   Listing of BEP20 token CAKE，XVS，EPS，AUTO，BURGER, NRV, and the
+   following market(s) USDT_CAKE, USDT_XVS, USDT_EPS, USDT_AUTO,
+   USDT_BURGER, USDT_NRV.
+
+2021-07-01 POL Listing
+
+   Listing of Proof Of Liquidity TRC20 token (POL), and the
+   following market(s) USDT_POL.
+
+2021-06-30 OKB Listing
+
+   Listing of OKB ERC20 token (OKB), and the following market(s)
+   USDT_OKB.
+
+2021-06-18 Multi Channel Websocket Subscriptions
+
+   Multiple websocket channels can be subscribed and unsubscribed
+   to at the same time.
+
+2021-08-17 AUDIO Listing
+
+   Listing of Audius ERC20 token (AUDIO), and the following
+   market(s) USDT_AUDIO.
+
+2021-08-17 RD Listing
+
+   Listing of Round Dollar TRC20 token (RD), and the following
+   market(s) USDT_RD.
+
+2021-08-16 ALICE Listing
+
+   Listing of My Neighbor Alice ERC20 token (ALICE), and the
+   following market(s) USDT_ALICE.
+
+2021-08-16 YGG Listing
+
+   Listing of Yield Guild Games Token ERC20 token (YGG), and the
+   following market(s) USDT_YGG.
+
+2021-07-12 YFX Listing
+
+   Listing of YFX ERC20 token (YFX), and the following market(s)
+   USDT_YFX.
+
+2021-07-12 AXS Listing
+
+   Listing of Axie Infinity Shard ERC20 token (AXS), and the
+   following market(s) USDT_AXS.
+
+2021-07-02 USDCTRON Listing
+
+   Listing of USD Coin TRC20 token (USDCTRON).
+
+2021-08-30 COOL Listing
+
+   Listing of Cool Cats ERC20 token (COOL), and the following
+   market(s) USDT_COOL.
+
+2021-08-30 MASK Listing
+
+   Listing of Hashmasks ERC20 token (MASK), and the following
+   market(s) USDT_MASK.
+
+2021-08-30 GLYPH Listing
+
+   Listing of Autoglyphs ERC20 token (GLYPH), and the following
+   market(s) USDT_GLYPH.
+
+2021-08-30 PUNK Listing
+
+   Listing of CryptoPunks ERC20 token (PUNK), and the following
+   market(s) USDT_PUNK.
+
+2021-08-20 MBOX Listing
+
+   Listing of Mobox BEP20 token (MBOX), and the following
+   market(s) USDT_MBOX.
+
+2021-08-20 BIT Listing
+
+   Listing of BitDAO ERC20 token (BIT), and the following
+   market(s) USDT_BIT.
+
+2021-06-08 Millisecond Websocket Timestamps
+
+   New epoch_ms fields will be added with the integer EPOCH
+   millisecond time format "1622562891014" to "p" and "t" messages
+   on account notification websocket and to "i", "o", and "t"
+   messages on aggregated price book websocket.
+
+2021-05-28 GTC Listing
+
+   Listing of Gitcoin ERC20 token (GTC), and the following
+   market(s) USDT_GTC.
+
+2021-05-21 NFT Listing
+
+   Listing of APENFT TRC20/ERC20 token (NFT), and the following
+   market(s) USDT_NFT, TRX_NFT.
+
+2021-05-18 MVL Listing
+
+   Listing of Mass Vehicle Ledger Token ERC20 token (MVL), and the
+   following market(s) USDT_MVL.
+
+2021-04-28 April 2021 markets delistings
+
+   Delisted the following markets: USDT_BAS, USDT_COVER, BTC_DMG,
+   USDT_DMG, TRX_DMG, USDT_PLT, BTC_XFIL, USDT_XFIL
+
+2021-04-28 KCS Listing
+
+   Listing of ERC20 token KCS, and the following market(s)
+   USDT_KCS.
+
+2021-04-27 ELON, MIST Listing
+
+   Listing of ERC20 token ELON, MIST, and the following market(s)
+   USDT_ELON, USDT_MIST.
+
+2021-04-25 LUSD, LQTY, WHALE, NFTX, MIR, UST, DEGO Listing
+
+   Listing of ERC20 token LUSD, LQTY, WHALE, NFTX, MIR, UST, DEGO,
+   and the following market(s) USDT_LUSD, USDT_LQTY, USDT_WHALE,
+   USDT_NFTX, USDT_MIR, USDT_UST, USDT_DEGO.
+
+2021-04-23 FORTH Listing
+
+   Listing of FORTH ERC20 token (FORTH), and the following
+   market(s) USDT_FORTH.
+
+2021-04-22 KLV Listing
+
+   Listing of KLV TRC20 token (KLV), and the following market(s)
+   USDT_KLV, TRX_KLV, BTC_KLV.
+
+2021-04-21 B20 Listing
+
+   Listing of B20 ERC20 token (B20), and the following market(s)
+   USDT_B20.
+
+2021-04-17 SHIB, AKITA Listing
+
+   Listing of ERC20 token SHIB, AKITA, and the following market(s)
+   USDT_SHIB, USDT_AKITA.
+
+2021-04-16 LIVE Listing
+
+   Listing of LIVE TRC20 token (LIVE), and the following market(s)
+   USDT_LIVE.
+
+2021-04-14 Update multiChain currency documentation
+
+   Added a full list of all multichain currencies and their
+   contract addresses to the [419]withdrawal API documentation.
+
+2021-04-13 FIL Listing
+
+   Listing of FIL, and the following market(s) USDT_FIL, BTC_FIL.
+
+2021-04-08 SFI Listing
+
+   Listing of SFI ERC20 token (SFI), and the following market(s)
+   USDT_SFI.
+
+2021-04-06 BTCST Listing
+
+   Listing of BTCST TRC20 token (BTCST), and the following
+   market(s) USDT_BTCST.
+
+2021-04-01 postOnly field added to returnTicker and returnOrderBook
+endpoints. postOnly and Maintenance Mode fields added to Ticker Data
+websocket
+
+   The postOnly field indicates that new orders posted to the
+   market must be non-matching orders (no taker orders). Any
+   orders that would match will be rejected. Mainetneance mode
+   indicates that maintenace is being performed and orders will be
+   rejected
+
+2021-03-18 ADD Listing
+
+   Listing of Add.xyz ERC20 token (ADD), and the following
+   market(s) USDT_ADD.
+
+2021-03-17 BDP Listing
+
+   Listing of Big Data Protocol ERC20 token (BDP), and the
+   following market(s) USDT_BDP.
+
+2021-02-22 BRG Listing
+
+   Listing of Bridge Oracle ERC20 token (BRG), and the following
+   market(s) USDT_BRG, TRX_BRG.
+
+2021-02-19 VSP Listing
+
+   Listing of Vesper Finance ERC20 token (VSP), and the following
+   market(s) USDT_VSP, TRX_VSP.
+
+2021-02-16 ZKS Listing
+
+   Listing of ZKSwap ERC20 token (ZKS), and the following
+   market(s) USDT_ZKS.
+
+2021-02-10 Swap Currencies API
+
+   Exposing swap currencies API.
+
+2021-02-05 ALPHA Listing
+
+   Listing of Alpha Finance ERC20 token (ALPHA), and the following
+   market(s) USDT_ALPHA.
+
+2020-02-03 TUSD Market Listing
+
+   TrueUSD (TUSD) new market listing, the following market(s)
+   added TUSD_BTC, TUSD_ETH.
+
+2021-01-22 FTT, SRM Listing and new LPT market added
+
+   Listing of FTX ERC20 token (FTT), Serum ERC20 token (SRM), and
+   the following market(s) USDT_FTT, USDT_SRM, USDT_LPT.
+
+2021-01-21 TRU, WETH Listing
+
+   Listing of TrueFi ERC20 token (TRU), Wrapped Ethereum on Tron
+   token (WETH), and the following market(s) BTC_TRU, USDT_TRU,
+   USDT_WETH.
+
+2021-01-20 ADABEAR, ADABULL, LTCBEAR, LTCBULL, XLMBEAR, XLMBULL
+Listing
+
+   Listing of Cardano, Litecoin, and Stellar 3x Long and Short
+   leveraged tokens, and the following market(s) USDT_ADABEAR,
+   USDT_ADABULL, USDT_LTCBEAR, USDT_LTCBULL, USDT_XLMBEAR,
+   USDT_XLMBULL.
+
+2021-01-19 TUSD Listing
+
+   Listing of TrueUSD ERC20 token (TUSD), and the following
+   market(s) USDT_TUSD, USDC_TUSD, BTC_TUSD, ETH_TUSD.
+
+2021-01-14 COMBO Listing
+
+   Listing of Furucombo ERC20 token (COMBO), and the following
+   market(s) USDT_COMBO.
+
+2021-01-13 BOND and PBTC35A Listing
+
+   Listing of BarnBridge ERC20 token (BOND), Poolin pBTC35A ERC20
+   token (PBTC35A), and the following market(s) USDT_BOND,
+   USDT_PBTC35A.
+
+2021-01-12 CUDOS Listing
+
+   Listing of Cudos ERC20 token (CUDOS), and the following
+   market(s) USDT_CUDOS.
+
+2021-01-06 LON Listing
+
+   Listing of Tokenlon ERC20 token (LON), and the following
+   market(s) USDT_LON.
+
+2020-12-30 WBTCTRON, BAC, BAS, and REEF Listing
+
+   Listing of WBTC on TRON TRC20 token (WBTCTRON), Basis Share
+   ERC20 token (BAS), Basis Cash ERC20 token (BAC), Reef Finance
+   ERC20 token (REEF), and the following market(s) USDT_BAS,
+   USDT_BAC, USDT_REEF.
+
+2020-12-24 ONEINCH Listing
+
+   Listing of 1INCH ERC20 token (ONEINCH), and the following
+   market(s) USDT_ONEINCH.
+
+2020-12-21 ESD and XFLR Listing
+
+   Listing of Empty Set Dollar ERC20 token (ESD), Spark [IOU]
+   (XFLR), and the following market(s) USDT_ESD, USDT_XFLR.
+
+2020-12-18 SUN Listing
+
+   Sun (SUN) new market listing, the following market added
+   TRX_SUN.
+
+2020-12-18 GRT Listing
+
+   Listing of The Graph ERC20 token (GRT), and the following
+   market(s) USDT_GRT.
+
+2020-12-17 DOT Listing
+
+   Polkadot (DOT) wallet enabled, and the following market added
+   BTC_DOT.
+
+2020-12-16 FARM Listing
+
+   Listing of Harvest Finance ERC20 token (FARM), and the
+   following market(s) BTC_FARM, USDT_FARM.
+
+2020-12-08 BADGER Listing
+
+   Listing of Badger DAO ERC20 token (BADGER), and the following
+   market(s) USDT_BADGER.
+
+2020-12-07 COVER Listing
+
+   Listing of Cover Protocol ERC20 token (COVER), and the
+   following market(s) USDT_COVER.
+
+2020-12-04 API3, FRONT Listing
+
+   Listing of API3 ERC20 token (API3), Frontier ERC20 token
+   (FRONT), and the following market(s) USDT_API3, BTC_FRONT,
+   USDT_FRONT.
+
+2020-12-01 NU Listing
+
+   Listing of NuCypher ERC20 token (NU), and the following
+   market(s) USDT_NU.
+
+2020-11-30 GLM Listing, GNT Delisting
+
+   Listing of Golem Network Token ERC20 token (GLM), and the
+   following market(s) BTC_GLM, USDT_GLM. Delisting of Golem Token
+   (GNT), and the following market(s) BTC_GNT, USDT_GNT.
+
+2020-11-25 WBTC Listing
+
+   Listing of Wrapped Bitcoin ERC20 token (WBTC), and the
+   following market(s) BTC_WBTC, USDT_WBTC.
+
+2020-11-24 ZLOT, HEGIC Listing
+
+   Listing of zLOT ERC20 token (ZLOT), Hegic ERC20 token (HEGIC),
+   and the following market(s) USDT_ZLOT, USDT_HEGIC.
+
+2020-11-23 MPH Listing
+
+   Listing of 88mph ERC20 token (MPH), and the following market(s)
+   USDT_MPH.
+
+2020-11-20 KP3R Listing
+
+   Listing of Keep3rV1 ERC20 token (KP3R), and the following
+   market(s) USDT_KP3R.
+
+2020-11-17 SENSO Listing
+
+   Listing of SENSO ERC20 token (SENSO), and the following
+   market(s) BTC_SENSO, USDT_SENSO.
+
+2020-11-15 BCH Listing, BCHABC, BCHN, TRUMPWIN, TRUMPLOSE Delisting
+
+   Listing of Bitcoin Cash (BCH), and the following market(s)
+   BTC_BCH, USDT_BCH, USDC_BCH. Delisting of Trump Wins Token
+   (TRUMPWIN), Trump Loses Token (TRUMPLOSE), Bitcoin cash
+   (BCHABC), Bitcoin Cash Node PF (BCHN) and the following markets
+   USDT_TRUMPWIN, USDT_TRUMPLOSE, BTC_BCHABC, USDT_BCHABC,
+   USDC_BCHABC, BTC_BCHN, USDT_BCHN.
+
+2020-11-11 STRAT Delisting
+
+   Delisting of Stratis (STRAT), and the following market(s)
+   BTC_STRAT.
+
+2020-11-05 returnOpenOrders output field added
+
+   Added clientOrderId to output field of returnOpenOrders.
+
+2020-10-29 INJ Listing
+
+   Listing of Injective Protocol ERC20 token (INJ), and the
+   following market(s) BTC_INJ, USDT_INJ.
+
+2020-10-27 Added multiChain Currencies
+
+   Updated information on [420]multiChain currencies and
+   withdrawals. Added USDTETH (used for withdrawing USDT on ETH),
+   USDTTRON (used for withdrawing USDT on TRON), and BTCTRON (used
+   for withdrawing BTC on TRON) to the currency list.
+
+2020-10-16 BID Listing
+
+   Listing of Bidao ERC20 token (BID), and the following market(s)
+   BTC_BID, USDT_BID.
+
+2020-10-09 BCHA, BCHN Listing
+
+   Listing of Bitcoin Cash ABC PF prefork (BCHA), Bitcoin Cash
+   Node PF prefork (BCHN) and the following market(s) BTC_BCHA,
+   USDT_BCHA, BTC_BCHN, USDT_BCHN.
+
+2020-10-08 AAVE Listing
+
+   Listing of Aave ERC20 token (AAVE), and the following market(s)
+   BTC_AAVE, USDT_AAVE.
+
+2020-09-28 POLS Listing
+
+   Listing of Polkastarter ERC20 token (POLS), and the following
+   market(s) USDT_POLS.
+
+2020-09-29 BREE, VALUE Listing
+
+   Listing of CBDAO Coinbreeder DAO ERC20 token (BREE), Value
+   Liquidity ERC20 token (VALUE) and the following market(s)
+   USDT_BREE, USDT_VALUE.
+
+2020-09-28 RFUEL Listing
+
+   Listing of Rio DeFi ERC20 token (RFUEL), and the following
+   market(s) USDT_RFUEL.
+
+2020-09-25 AMP Listing
+
+   Listing of AMP ERC20 token (AMP), and the following market(s)
+   BTC_AMP, TRX_AMP, and USDT_AMP.
+
+2020-09-25 SAND Listing
+
+   Listing of SAND ERC20 token (SAND), and the following market(s)
+   USDT_SAND and BTC_SAND.
+
+2020-09-23 REPV2, RARI, MEXP Listing
+
+   Listing of Augur ERC20 token (REPV2), Rarible ERC20 token
+   (RARI), MOJI Experience Points ERC20 token (MEXP) and the
+   following market(s) BTC_REPV2, USDT_REPV2, USDT_RARI, and
+   USDT_MEXP.
+
+2020-09-22 GHST CVP Listing
+
+   Listing of Aavegotchi ERC20 token (GHST), PowerPool
+   Concentrated Vot Power ERC20 token (CVP) and the following
+   market(s) USDT_GHST and USDT_CVP.
+
+2020-09-21 MEME Listing
+
+   Listing of Meme ERC20 token (MEME), and the following market(s)
+   USDT_MEME.
+
+2020-09-18 DHT Listing
+
+   Listing of dHedge DAO ERC20 token (DHT), and the following
+   market(s) USDT_DHT.
+
+2020-09-17 UNI Listing
+
+   Listing of Uniswap ERC20 token (UNI), and the following
+   market(s) USDT_UNI.
+
+2020-09-16 ADEL AKRO Listing
+
+   Listing of Akropolis Delphi ERC20 token (ADEL), Akropolis ERC20
+   token (AKRO) and the following market(s) USDT_ADEL, BTC_AKRO
+   and USDT_AKRO.
+
+2020-09-15 M messages [421]websocket-api
+
+   M messages added to show updates to margin positions.
+
+2020-09-14 HGET Listing
+
+   Listing of Uniswap ERC20 token (HGET), and the following
+   market(s) USDT_HGET and BTC_HGET.
+
+2020-09-11 SUN Listing
+
+   Listing of SUN TRC20 token (SUN), and the following market(s)
+   USDT_SUN.
+
+2020-09-10 CREAM Listing
+
+   Listing of CREAM ERC20 token (CREAM), and the following
+   market(s) USDT_CREAM.
+
+2020-09-09 FUND, SWRV, FSW Listings
+
+   Listing of FUND (Unification), Swerve ERC20 token (SWRV),
+   FalconSwap ERC20 token (FSW) and the following market(s)
+   USDT_FUND, TRX_FUND, BTC_FUND, USDT_SWRV, USDT_FSW.
+
+2020-09-04 PEARL, ANK, JFI, CRT, SAL, CORN Listings
+
+   Listing of Pearl Finance TRC20 token (PEARL), AlphaLink TRC20
+   token (ANK), JackPool.finance TRC20 token (JFI), Carrot Finance
+   TRC20 token (CRT), Salmon TRC20 token (SAL), Corn TRC20 token
+   (CORN), and the following market(s) USDT_PEARL, TRX_PEARL,
+   USDT_ANK, USDT_JFI, USDT_CRT, USDT_SAL, USDT_CORN.
+
+2020-09-02 YFV, YFL, TAI Listings
+
+   Listing of YFValue ERC20 token (YFV), SYF Link ERC20 token
+   (YFL), tBridge TRC20 token (TAI), and the following market(s)
+   USDT_YFV, USDT_YFL, USDT_TAI, TRX_TAI.
+
+2020-09-01 FCT2, SUSHI, YFII Listings
+
+   Listing of Firmachain ERC20 token (FCT2), SushiSwap ERC20 token
+   (SUSHI), DFI.money ERC20 token (YFII), and the following
+   market(s) USDT_FCT2, BTC_FCT2, USDT_SUSHI, USDT_YFII.
+
+2020-08-26 RSR and WNXM Listing
+
+   Listing of Reserve Rights ERC20 token, Wrapped NXM ERC20 token
+   (WNXM) and the following market(s) USDT_RSR, USDT_WNXM.
+
+2020-08-25 DMG Listing
+
+   Listing of DMM: Governance ERC20 token (DMG) and the following
+   market(s) USDT_DMG, BTC_DMG, TRX_DMG.
+
+2020-08-21 OPT, SWINGBY, and PRQ Listings
+
+   Listing of OpenPredict ERC20 token (OPT), Swingby BEP-2 token
+   (SWINGBY), PARSIQ ERC20 token (PRQ) and the following market(s)
+   USDT_OPT, USDT_SWINGBY, BTC_SWINGBY, TRX_SWINGBY, USDT_PRQ.
+
+2020-08-18 BLY Listing
+
+   Listing of Blocery ERC20 token (BLY) and the following
+   market(s) USDT_BLY.
+
+2020-08-18 OCEAN Listing
+
+   Listing of Ocean Protocol ERC20 token (OCEAN) and the following
+   market(s) USDT_OCEAN.
+
+2020-08-17 OM Listing
+
+   Listing of Mantra DAO ERC20 token (OM) and the following
+   market(s) USDT_OM.
+
+2020-08-13 DOT, DEXT, MCB, and CRV Listings
+
+   Listing of Polkadot [IOU] (DOT), DexTools ERC20 token (DEXT),
+   MCDex ERC20 token (MCB), Curve Finance ERC20 token (CRV) and
+   the following market(s) USDT_DOT, USDT_DEXT, USDT_MCB,
+   USDT_CRV.
+
+2020-08-12 SBREE, PERX, and TRB Listings
+
+   Listing of Coinbreeder DAO (SBREE), PeerEx Network (PERX), and
+   Tellor (TRB) and the following markets USDT_SBREE, USDT_PERX,
+   and USDT_TRB.
+
+2020-08-11 DOS, DIA, ZAP Listings
+
+   Listing of DOS Network (DOS), DIA (DIA), and Zap (ZAP) and the
+   following markets USDT_DOS, USDT_DIA, and USDT_ZAP.
+
+2020-08-10 BAND Listing
+
+   Listing of Band Protocol (BAND) and the following market
+   USDT_BAND.
+
+2020-08-06 GEEQ Listing
+
+   Listing of Geeq (GEEQ) and the following market USDT_GEEQ.
+
+2020-08-05 [422]transferBalance update
+
+   Added support to transfer funds from/to your futures account.
+
+2020-08-02 TRADE and EXE Listings
+
+   Listing of UniTrade (TRADE) and 8X8 Protocol (EXE) and the
+   following markets USDT_TRADE, BTC_EXE, USDT_EXE.
+
+2020-08-02 TEND Listing
+
+   Listing of Tendies (TEND) and the following market USDT_TEND.
+
+2020-08-01 SWAP Listings
+
+   Listing of Trustswap (SWAP) and the following markets BTC_SWAP
+   and USDT_SWAP.
+
+2020-07-31 KTON and RING Listings
+
+   Listing of Darwinia Commitment Token (KTON) and Darwinia
+   Network Native Token (RING) and the following markets USDT_KTON
+   and USDT_RING.
+
+2020-07-30 UMA Listing
+
+   Listing of UMA (UMA) and the following market USDT_UMA.
+
+2020-07-27 PLT Listing
+
+   Listing of PlutusDefi (PLT) and the following market USDT_PLT.
+
+2020-07-26 DEC Listing
+
+   Listing of Decentr (DEC) and the following market USDT_DEC.
+
+2020-07-24 TRUMPWIN and TRUMPLOSE Listings
+
+   Listing of Trump Wins Token (TRUMPWIN) and Trump Loses Token
+   (TRUMPLOSE) and the following markets USDT_TRUMPWIN and
+   USDT_TRUMPLOSE.
+
+2020-07-22 STPT Listings
+
+   Listing of Standard Tokenization Protocol (STPT) and the
+   following markets BTC_STPT, USDT_STPT, and TRX_STPT.
+
+2020-07-21 YFI Listing
+
+   Listing of yearn.finance (YFI) and the following market
+   USDT_YFI.
+
+2020-07-18 MTA Listing
+
+   Listing of Meta (MTA) and the following market USDT_MTA.
+
+2020-07-17 SXP Listings
+
+   Listing of Swipe (SXP) and the following markets BTC_SXP,
+   USDT_SXP, and TRX_SXP.
+
+2020-07-13 BZRX Listing
+
+   Listing of bZx Protocol Token (BZRX) and the following market
+   USDT_BZRX.
+
+2020-07-09 STAKE Listing
+
+   Listing of xDAI Stake (STAKE) and the following market
+   USDT_STAKE.
+
+2020-06-30 Withdraw API changes
+
+   Added output fields to the withdraw API command to make it
+   easier to reference later.
+
+2020-06-25 WRX Listings
+
+   Listing of WazirX (WRX) and the following markets BTC_WRX,
+   USDT_WRX, and TRX_WRX.
+
+2020-06-24 LEND, REN, LRC, and BAL Listings
+
+   Listing of Aave (Lend), Ren (REN), Loopring (LRC), and Balancer
+   (BAL) tokens and the following markets BTC_LEND, USDT_LEND,
+   BTC_REN, USDT_REN, BTC_LRC, USDT_LRC, USDT_BAL, and ETH_BAL.
+
+2020-06-19 Delisting Markets for BTC_GRIN, ETH_REP and USDT_NXT
+
+   Delisted the following markets BTC_GRIN, ETH_REP and USDT_NXT.
+
+2020-06-19 XFIL and CUSDT Listings
+
+   Listing of Filecoin IOU pre-mainnet trading (XFIL) and Compound
+   USDT (CUSDT) and the following markets BTC_XFIL, USDT_XFIL, and
+   USDT_CUSDT.
+
+2020-06-17 COMP Listings
+
+   Listing of Compound Governance Token (COMP) and the following
+   markets USDT_COMP and ETH_COMP.
+
+2020-06-12 BCHC Listing
+
+   Listing of BitCherry (BCHC) and the following market USDT_BCHC.
+
+2020-06-10 Token Fee API changes
+
+   Added output fields to the buy and sell API commands to support
+   fee payments using tokens.
+
+2020-06-05 BNB, BUSD, MDT Listings
+
+   Listing of Binance Coin (BNB), Binance USD (BUSD), and
+   Measurable Data Token (MDT) and the following markets BNB_BTC,
+   USDT_BNB, USDT_BUSD, TRX_BNB, BUSD_BNB, BUSD_BTC, BTC_MDT,
+   USDT_MDT, and TRX_MDT.
+
+2020-05-22 CHR Listings
+
+   Listing of Chromia (CHR) and the following markets BTC_CHR,
+   USDT_CHR, and TRX_CHR.
+
+2020-05-20 Delisting Markets for BTC_BCN ad BTC_BTT
+
+   Delisted the following markets BTC_BCN and BTC_BTT.
+
+2020-05-15 EOSBEAR, EOSBULL, LINKBEAR, LINKBULL, XRPBEAR, XRPBULL
+Listings
+
+   Listing of EOS, Chainlink, and Ripple 3x Long and Short
+   leveraged tokens (EOSBEAR, EOSBULL, LINKBEAR, LINKBULL,
+   XRPBEAR, XRPBULL) and the following markets USDT_EOSBEAR,
+   USDT_EOSBULL, USDT_LINKBEAR, USDT_LINKBULL, USDT_XRPBEAR, and
+   USDT_XRPBULL.
+
+2020-05-12 AVA Listings
+
+   Listing of Travala.com (AVA) token and the following markets
+   BTC_AVA, USDT_AVA, and TRX_AVA.
+
+2020-05-08 New Markets for BCN, STEEM, LINK, BTT
+
+   Added the following markets USDT_BCN, USDT_STEEM, USDT_LINK,
+   and USDJ_BTT.
+
+2020-05-08 FXC Listings
+
+   Listing of Flexacoin (FXC) and the following markets BTC_FXC,
+   USDT_FXC, and TRX_FXC.
+
+2020-05-07 JST Listings
+
+   Listing of Just (JST) and the following markets USDT_JST and
+   TRX_JST.
+
+2020-05-05 SWFTC Listings
+
+   Listing of SwftCoin (SWFTC) and the following markets
+   BTC_SWFTC, USDT_SWFTC, and TRX_SWFTC.
+
+2020-05-01 NEO Listings
+
+   Listing of Neo (NEO) and the following markets BTC_NEO,
+   USDT_NEO, and TRX_NEO.
+
+2020-04-29 DAI Listings
+
+   Listing of Dai stablecoin (DAI) and the following markets
+   DAI_BTC, DAI_ETH, and USDT_DAI.
+
+2020-04-23 BVOL and IBVOL Listings
+
+   Listing of Bitcoin Volatility and Inverse Bitcoin Volatility
+   tokens (BVOL, IBVOL) and the following markets USDT_BVOL and
+   USDT_IBVOL.
+
+2020-04-17 MKR Listing
+
+   Listing of Maker token (MKR) and the following markets BTC_MKR
+   and USDT_MKR.
+
+2020-04-14 BCHBEAR, BCHBULL, ETHBEAR, ETHBULL Listings
+
+   Listing of 3x Long and Short leveraged tokens (BCHBEAR,
+   BCHBULL, ETHBEAR, ETHBULL) and the following markets
+   USDT_BCHBEAR, USDT_BCHBULL, USDT_ETHBEAR, and USDT_ETHBULL.
+
+2020-04-10 MATIC Listing
+
+   Listing of Matic Network token (MATIC) and the following
+   markets BTC_MATIC, USDT_MATIC, and TRX_MATIC.
+
+2020-04-09 BSVBEAR and BSVBULL Listings
+
+   Listing of 3x Long and Short Bitcoin SV leveraged tokens
+   (BSVBEAR and BSVBULL) and the following markets USDT_BSVBEAR
+   and USDT_BSVBULL.
+
+2020-04-02 SNX Listing
+
+   Listing of Synthetix Network Token (SNX) and the following
+   markets BTC_SNX, USDT_SNX, and TRX_SNX.
+
+2020-03-31 PAX and USDJ Listings
+
+   Listing of Paxos Standard (PAX) and USDJ (USDJ) tokens and the
+   following markets USDJ_TRX, USDJ_BTC, USDT_USDJ, USDT_PAX,
+   PAX_ETH, and PAX_BTC.
+
+2020-03-26 BULL, BEAR, TRXBULL, TRXBEAR Listings
+
+   Listing of 3x Long and Short leveraged tokens (BULL, BEAR,
+   TRXBULL, TRXBEAR) and the following markets USDT_BULL,
+   USDT_BEAR, USDT_TRXBULL, and USDT_TRXBEAR.
+
+2020-03-24 XTZ Listing
+
+   Listing of Tezos (XTZ) and the following markets BTC_XTZ,
+   USDT_XTZ, and TRX_XTZ.
+
+2020-03-12 LINK Listing
+
+   Listing of Chainlink Token (LINK) and the following markets
+   BTC_LINK and TRX_LINK.
+
+2020-03-05 STEEM Listing
+
+   Listing of STEEM Token (STEEM) and the following markets
+   BTC_STEEM and TRX_STEEM.
+
+2020-02-13 WIN Listing
+
+   Listing of WINk Token (WIN) and the following markets USDT_WIN
+   and TRX_WIN.
+
+2020-02-06 BTT Listing
+
+   Listing of BitTorrent Token (BTT) and the following markets
+   BTC_BTT, USDT_BTT and TRX_BTT.
+
+2020-01-22 Clarifications to returnOpenOrders doc
+
+2020-01-16 ETHBNT Listing
+
+   Listing of Bancor ETH Smart Token Relay (ETHBNT) and the
+   following market BTC_ETHBNT.
+
+2019-12-30 Currency delistings
+
+   Delisting DigiByte (DGB), Factom (FCT), MaidSafeCoin (MAID),
+   Omni (OMNI), Primecoin (XPM), Vertcoin (VTC) and Viacoin (VIA)
+
+2019-11-19 Cancel order by clientOrderId
+
+   This change allows users to cancel both pending and open orders
+   by clientOrderId.
+
+2019-11-12 TRX Listing
+
+   Listing of Tron (TRX) and the following markets BTC_TRX,
+   USDC_TRX and USDT_TRX.
+
+2019-10-15 Currency delistings
+
+   Delisting Pascal (PASC), Steem (STEEM), Navcoin (NAV),
+   GameCredits (GAME), LBRY Credits (LBC), and Clams (CLAM).
+
+2019-08-20 Updates to clientOrderId documentation
+
+   Fixed newly introduced grammar issues for clientOrderID docs
+
+2019-08-16 XMR base delisting
+
+   XMR as a base was delisted, along with other pairs. See tweet
+   for details -
+   https://twitter.com/Poloniex/status/1162061407858417664
+
+2019-08-06 "k" and "p" account notifications
+
+   Introducing "k" (killed) and "p" (pending order) channel 1000
+   websocket account notifications
+
+2019-07-29 Updates to clientOrderId documentation
+
+   State clientOrderId is 64 bit integer, and when live, must be
+   unique per account
+
+2019-07-24 Add clientOrderId to private http methods and websocket
+messages
+
+   Some endpoints now support using a client specified integer
+   identifier which will be returned in http responses and "o",
+   "t", "n" websocket messages.
+
+2019-07-12 Newly listed USDC/T market IDs
+
+   Add recently listed market IDs to currency pair IDs list
+
+2019-06-26 Add currencyToWithdrawAs to withdraw
+
+   Include the currencyToWithdrawAs parameter to the withdrawal
+   API call (used to withdraw USDTTRON).
+
+2019-06-13 Add adjustments to returnDepositWithdrawals
+
+   Include special adjustments (e.g. Stellar inflation credits) as
+   part of the returnDepositWithdrawals response.
+
+2019-06-12 Update returnTradeHistory response to reflect new max
+
+   The max number of trades that can be fetched in a single call
+   has been reduced to 1,000.
+
+2019-06-12 Additional fields to channel 1000 o message
+
+   Channel 1000 o message has been appended to include the
+   orderType field at the end of the response.
+
+2019-06-04 cancelAllOrders trading method added
+
+   This new API method allows users to cancel all open orders or
+   all open orders by currencyPair.
+
+2019-05-09 Additional fields to channel 1000 t message
+
+   Channel 1000 t message has been appended to include the total
+   fee and date at the end of the response respectively.
+
+2019-05-08 Additional fields to buy and sell response
+
+   The buy and sell response will now include currencyPair and fee
+   multiplier.
+
+2019-04-04 Additional fields to returnDepositsWithdrawals response.
+
+   Document inclusion of new depositNumber field for deposits and
+   paymentID field for withdrawals in returnDepositsWithdrawals
+   response.
+
+2019-03-29 TLS 1.2 or greater required.
+
+   As of April 15, 2019, TLS version 1.2 or greater is required.
+
+2019-03-28 Add minimize latency instructions.
+
+   Instructions on how to minimize latency have been added to the
+   Getting Started section.
+
+2019-03-22 Margin parameters clarified.
+
+   In both "marginBuy" and "marginSell", the "rate" parameter
+   definition has been fixed. Additionally, the optional
+   "lendingRate" parameter has been defined and a note was added
+   about the default value and minimum setting.
+
+2018-12-27 API documentation overhaul
+
+   Refreshed look & feel and adds example code via the shell.
+
+2018-09-25 Order status trading method added
+
+   Returns the status of a given order.
+
+2018-09-16 Account notification channel added
+
+   The account notifications channel provides real-time updates of
+   trade and balance changes on your account.
+   [423]shell
+
+    [423] https://docs.legacy.poloniex.com/#returnchartdata
