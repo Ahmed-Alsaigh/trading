@@ -1,0 +1,69 @@
+import redis
+import aiohttp
+import asyncio
+import time
+
+# Retry configuration
+MAX_RETRIES = 5
+RETRY_INTERVAL = 5  # in seconds
+
+async def get_coin_price(session, symbol):
+    url = f"https://api.kucoin.com/api/v1/market/orderbook/level1?symbol={symbol}-USDT"
+    retry_count = 0
+    while retry_count < MAX_RETRIES:
+        try:
+            async with session.get(url) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    if data is not None and isinstance(data, dict) and 'data' in data and data['data'] is not None and 'price' in data['data']:
+                        coin_price = float(data['data']['price'])
+                        return coin_price
+        except aiohttp.ClientError as e:
+            print(f"Connection error while retrieving {symbol} price: {e}")
+
+        retry_count += 1
+        print(f"Retry #{retry_count}. Retrying in {RETRY_INTERVAL} seconds...")
+        await asyncio.sleep(RETRY_INTERVAL)
+
+    print(f"Failed to retrieve {symbol} price after {MAX_RETRIES} retries.")
+    return None
+
+async def update_coin_prices():
+    # Connect to Redis
+    r = redis.Redis(host='127.0.0.1', port=6379, db=0)
+
+    async with aiohttp.ClientSession() as session:
+        while True:
+            # Read coin names from file
+            with open('coinlist.txt', 'r') as file:
+                coin_names = file.read().splitlines()
+
+            tasks = []
+            for coin_name in coin_names:
+                tasks.append(get_coin_price(session, coin_name))
+
+            coin_prices = await asyncio.gather(*tasks)
+
+            for coin_name, coin_price in zip(coin_names, coin_prices):
+                if coin_price is not None:
+                    # Append coin price to existing data in Redis
+                    r.append(f"{coin_name}:prices", f",{coin_price}")
+
+                    # Get coin price history
+                    coin_price_history = r.get(f"{coin_name}:prices").decode()
+
+                    # Delete data older than 5 minutes
+                    current_time = int(time.time())
+                    five_minutes_ago = current_time - (5 * 60)
+                    r.zremrangebyscore(f"{coin_name}:timestamps", 0, five_minutes_ago)
+
+                    # Print coin price history
+                    print(f"{coin_name} Price History:", coin_price_history)
+
+            await asyncio.sleep(10)  # Wait for 10 seconds before the next update
+
+async def main():
+    await update_coin_prices()
+
+if __name__ == "__main__":
+    asyncio.run(main())
