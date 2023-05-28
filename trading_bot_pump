@@ -1,123 +1,264 @@
 import requests
 import time
-import hmac
 import hashlib
+import hmac
+import base64
+import redis
 
-# Define the API URL and the USDT balance
-api_url = "https://api.poloniex.com/"
-api_key = "YOUR_API_KEY"
-secret_key = "YOUR_SECRET_KEY"
+api_key = '646b9a16006ede0001c6ac5b'
+api_secret = '179e762a-5579-4c09-bce4-e02d4edf4ad6'
+api_passphrase = '12345678'
+url = "https://api.kucoin.com/api/v1/accounts"
 
-# Define a function to generate the API signature
-def generate_signature(url_path, payload):
-    # Compose the request string
-    request_string = url_path + '\n' + payload
-    
-    # Generate the signature using HMAC-SHA256
-    signature = hmac.new(secret_key.encode(), request_string.encode(), hashlib.sha256).hexdigest()
-    
-    return signature
+redis_host = '127.0.0.1'
+redis_port = 6379
+redis_db = 0
 
-# Define a function to make an authenticated request
-def make_request(method, url_path, params=None):
-    # Set the required headers
+log_file = 'trades.log'
+
+
+
+def get_account_balance():
+    now = int(time.time() * 1000)
+    str_to_sign = str(now) + "GET" + "/api/v1/accounts"
+    signature = base64.b64encode(
+        hmac.new(api_secret.encode("utf-8"), str_to_sign.encode("utf-8"), hashlib.sha256).digest()
+  	   )
+    passphrase = base64.b64encode(
+        hmac.new(api_secret.encode("utf-8"), api_passphrase.encode("utf-8"), hashlib.sha256).digest()
+ 	   )
+
     headers = {
-        'Content-Type': 'application/json',
-        'key': api_key,
-        'signatureMethod': 'HmacSHA256',
-        'signatureVersion': '2',
-        'signTimestamp': str(int(time.time() * 1000))
+        "KC-API-SIGN": signature,
+        "KC-API-TIMESTAMP": str(now),
+        "KC-API-KEY": api_key,
+        "KC-API-PASSPHRASE": passphrase,
+        "KC-API-KEY-VERSION": "2"
     }
-    
-    # Generate the API signature
-    if params:
-        payload = '&'.join([f'{key}={params[key]}' for key in sorted(params.keys())])
-        signature = generate_signature(url_path, payload)
-        headers['signature'] = signature
-    else:
-        signature = generate_signature(url_path, '')
-        headers['signature'] = signature
-    
-    # Make the request
-    response = requests.request(method, api_url + url_path, headers=headers, params=params)
-    
-    # Check if the response is successful
+
+    response = requests.get(url, headers=headers)
     if response.status_code == 200:
-        # Return the JSON data as a dictionary
-        return response.json()
+        data = response.json()
+        balances = {}
+        for account in data["data"]:
+            currency = account['currency']
+            available_balance = float(account['available'])
+            balances[currency] = available_balance
+        return balances
     else:
-        # Print an error message and return None
-        print(f"Error: {response.status_code}")
+        print(f"Error: {response.status_code}, {response.json()}")
         return None
 
-# Define a function to get the USDT balance
-def get_usdt_balance():
-    # Make a request to get the account balances
-    response = make_request('GET', '/account/balances')
-    
-    # Check if the response is valid
-    if response and 'balances' in response:
-        # Find the USDT balance
-        for balance in response['balances']:
-            if balance['currency'] == 'USDT':
-                return float(balance['available'])
-    
-    # Return None if the balance is not found or there was an error
-    return None
+# Check account balance on start
+balance = get_account_balance()
+if balance:
+    print("Account Balance:")
+    for currency, available_balance in balance.items():
+        print(f"{currency}: {available_balance}")
+else:
+    print("Failed to retrieve account balance.")
 
-# Define a function to get the current ticker data for all markets
-def get_ticker():
-    # Use the returnTicker method of the API
-    response = make_request('GET', '/public/ticker')
-    
-    # Return the ticker data
-    return response
 
-# Define a function to buy a coin at market price
-def buy(coin, amount):
-    # Use the buy method of the API
-    params = {
-        'symbol': coin,
-        'side': 'buy',
-        'type': 'market',
-        'quantity': str(amount)
+def execute_buy_order(coin_name, balance, buy_price):
+    # Execute buy order using KuCoin API
+    # Replace with actual implementation
+    # Example code:
+    url = "https://api.kucoin.com/api/v1/orders"
+    now = int(time.time() * 1000)
+    str_to_sign = str(now) + "GET" + "/api/v1/accounts"
+    signature = base64.b64encode(
+        hmac.new(api_secret.encode("utf-8"), str_to_sign.encode("utf-8"), hashlib.sha256).digest()
+  	   )
+    passphrase = base64.b64encode(
+        hmac.new(api_secret.encode("utf-8"), api_passphrase.encode("utf-8"), hashlib.sha256).digest()
+ 	   )
+
+    side = "buy"
+    symbol = coin_name + "-USDT"
+    type_ = "market"
+    funds = balance * 0.2						# 20% of usdt balance buy order
+    data = {
+        "clientOid": str(now),
+        "side": side,
+        "symbol": symbol,
+        "type": type_,
+        "funds": str(funds)
     }
-    
-    response = make_request('POST', '/orders', params)
-    
-    # Check if the response is successful
-    if response and 'orderId' in response:
-        # Return the order ID
-        return response['orderId']
-    else:
-        # Print an error message and return None
-        print(f"Error: {response}")
-        return None
-
-# Define a function to sell a coin at market price
-def sell(coin, amount):
-    # Use the sell method of the API
-    params = {
-        'symbol': coin,
-        'side': 'sell',
-        'type': 'market',
-        'quantity': str(amount)
+    headers = {
+        "KC-API-KEY": api_key,
+        "KC-API-PASSPHRASE": passphrase,					# code changed from  "KC-API-PASSPHRASE": api_passphrase, to 
+        "KC-API-TIMESTAMP": str(now),
+        "KC-API-SIGN": signature,
+        "KC-API-KEY-VERSION": "2"
     }
-    
-    response = make_request('POST', '/orders', params)
-    
-    # Check if the response is successful
-    if response and 'orderId' in response:
-        # Return the order ID
-        return response['orderId']
+    str_to_sign = str(now) + "POST" + "/api/v1/orders" + str(data)							#disabled for 
+    #str_to_sign = str(now) + "POST" + "/api/v1/orders" + json.dumps(data)
+
+    print(str_to_sign)															#diagnosis
+
+    signature = base64.b64encode(															# code disabled
+        hmac.new(api_secret.encode("utf-8"), str_to_sign.encode("utf-8"), hashlib.sha256).digest()				# code disabled
+    )																			# code disabled
+    #signature = base64.b64encode(														# code added
+    #    hmac.new(api_secret.encode("utf-8"), str_to_sign.encode("utf-8"), hashlib.sha256).digest()			# code added
+    #)																			# code added	
+    #passphrase = base64.b64encode(														# code added
+    #    hmac.new(api_secret.encode("utf-8"), api_passphrase.encode("utf-8"), hashlib.sha256).digest()			# code added
+    #)																			# I think I added this also
+
+    headers["KC-API-SIGN"] = signature													# edite   headers["KC-API-SIGN"] = signature
+
+    print(data)													# diagnosis code
+    print(headers)												# diagnosis code						
+
+    response = requests.post(url, json=data, headers=headers)
+    if response.status_code == 200:
+        trade_id = response.json()["data"]["orderId"]
+        print(f"Buy order executed for {coin_name} at price {buy_price}. Trade ID: {trade_id}")
+        return trade_id
     else:
-        # Print an error message and return None
-        print(f"Error: {response}")
+        print(f"Error: {response.status_code}, {response.json()}")
         return None
 
-# Example usage
-usdt_balance = get_usdt_balance()
-print(f"USDT balance: {usdt_balance}")
+def execute_sell_order(coin_name, balance, buy_price):
+    # Execute sell order using KuCoin API
+    # Replace with actual implementation
+    # Example code:
+    url = "https://api.kucoin.com/api/v1/orders"
+    now = int(time.time() * 1000)
+    str_to_sign = str(now) + "GET" + "/api/v1/accounts"
+    signature = base64.b64encode(
+        hmac.new(api_secret.encode("utf-8"), str_to_sign.encode("utf-8"), hashlib.sha256).digest()
+  	   )
+    passphrase = base64.b64encode(
+        hmac.new(api_secret.encode("utf-8"), api_passphrase.encode("utf-8"), hashlib.sha256).digest()
+ 	   )
 
-ticker_data = get_ticker()
-print(ticker_data)
+    side = "sell"
+    symbol = coin_name + "-USDT"
+    type_ = "market"
+    funds = balance
+    data = {
+        "clientOid": str(now),
+        "side": side,
+        "symbol": symbol,
+        "type": type_,
+        "funds": str(funds)
+    }
+    headers = {
+        "KC-API-KEY": api_key,
+        "KC-API-PASSPHRASE": passphrase,
+        "KC-API-TIMESTAMP": str(now),
+        "KC-API-SIGN": "",
+        "KC-API-KEY-VERSION": "2"
+    }
+    str_to_sign = str(now) + "POST" + "/api/v1/orders" + str(data)
+    signature = base64.b64encode(
+        hmac.new(api_secret.encode("utf-8"), str_to_sign.encode("utf-8"), hashlib.sha256).digest()
+    )
+    headers["KC-API-SIGN"] = signature
+
+    response = requests.post(url, json=data, headers=headers)
+    if response.status_code == 200:
+        trade_id = response.json()["data"]["orderId"]
+        print(f"Sell order executed for {coin_name} at price {buy_price * 2}. Trade ID: {trade_id}")
+        return trade_id
+    else:
+        print(f"Error: {response.status_code}, {response.json()}")
+        return None
+
+def cancel_order(trade_id):
+    # Cancel order using KuCoin API
+    # Replace with actual implementation
+    # Example code:
+    url = f"https://api.kucoin.com/api/v1/orders/{trade_id}/cancel"
+    now = int(time.time() * 1000)
+    str_to_sign = str(now) + "GET" + "/api/v1/accounts"
+    signature = base64.b64encode(
+        hmac.new(api_secret.encode("utf-8"), str_to_sign.encode("utf-8"), hashlib.sha256).digest()
+  	   )
+    passphrase = base64.b64encode(
+        hmac.new(api_secret.encode("utf-8"), api_passphrase.encode("utf-8"), hashlib.sha256).digest()
+ 	   )
+
+    headers = {
+        "KC-API-KEY": api_key,
+        "KC-API-PASSPHRASE": passphrase,
+        "KC-API-TIMESTAMP": str(now),
+        "KC-API-SIGN": "",
+        "KC-API-KEY-VERSION": "2"
+    }
+    str_to_sign = str(now) + "POST" + f"/api/v1/orders/{trade_id}/cancel"
+    signature = base64.b64encode(
+        hmac.new(api_secret.encode("utf-8"), str_to_sign.encode("utf-8"), hashlib.sha256).digest()
+    )
+    headers["KC-API-SIGN"] = signature
+
+    response = requests.post(url, headers=headers)
+    if response.status_code == 200:
+        print(f"Order {trade_id} cancelled successfully.")
+        return True
+    else:
+        print(f"Error: {response.status_code}, {response.json()}")
+        return False
+
+def log_trade(trade_data):
+    with open(log_file, 'a') as file:
+        file.write(f"{trade_data}\n")
+
+def analyze_coin_price(coin_name, increase_threshold, stop_loss):
+    #print(f"Analyzing coin price for {coin_name}")                              # I added it to view analyzing
+    r = redis.Redis(host=redis_host, port=redis_port, db=redis_db)
+    coin_price_history = r.get(f"{coin_name}:prices").decode()
+    coin_prices = coin_price_history.split(',')[1:]
+    if len(coin_prices) >= 2:
+        current_price = float(coin_prices[-1])
+        previous_price = float(coin_prices[-2])
+        price_difference = current_price - previous_price
+        price_change_percentage = (price_difference / previous_price) * 100
+        #print(f"Current price of {coin_name}: {current_price}")                  # I added it
+        #print(f"Percentage change in price: {price_change_percentage:.2f}%")     # I added it to view coin price
+        if price_change_percentage >= increase_threshold:
+            print(f"Coin: {coin_name}")
+            print(f"Price change: {price_change_percentage:.2f}% in the last minute")
+            balance = get_account_balance()
+            if balance is not None and 'USDT' in balance:
+                buy_price = current_price
+                buy_order_id = execute_buy_order(coin_name, balance['USDT'], buy_price)
+                if buy_order_id:
+                    time.sleep(180)  # Wait for 3 minutes
+                    sell_order_executed = False
+                    sell_price = buy_price * 1.01  # Sell at +100% of the buy price    I changed it from 2 to 1.01
+                    if current_price >= sell_price:
+                        sell_order_id = execute_sell_order(coin_name, balance[coin_name], sell_price)
+                        if sell_order_id:
+                            sell_order_executed = True
+                    else:
+                        cancel_order(buy_order_id)
+                        sell_price = buy_price   # Sell at -3% of the buy price I changed it from " sell_price = buy_price * 0.97 "
+                        sell_order_id = execute_sell_order(coin_name, balance[coin_name], sell_price)
+                        if sell_order_id:
+                            sell_order_executed = True
+                    if sell_order_executed:
+                        trade_data = {
+                            'Coin': coin_name,
+                            'Buy Price': buy_price,
+                            'Sell Price': sell_price,
+                            'Buy Order ID': buy_order_id,
+                            'Sell Order ID': sell_order_id
+                        }
+                        log_trade(trade_data)
+    else:
+        print(f"Not enough price data available for {coin_name}")
+
+def main():
+    while True:
+        r = redis.Redis(host=redis_host, port=redis_port, db=redis_db)
+        coin_names = r.keys("*:prices")
+        for coin_name in coin_names:
+            coin_name = coin_name.decode().split(':')[0]
+            analyze_coin_price(coin_name, 12, -3) 		   # Customize increase_threshold and stop_loss values  I changed , 12,
+        time.sleep(10)  # Adjust the interval as needed 	   # I changed it from 20 to 10
+
+if __name__ == "__main__":
+    main()
